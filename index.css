@@ -1,0 +1,243 @@
+/* Geral codicos */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+html,body{
+    height: 100%;
+
+}
+header{
+    width: 100%;
+    height: 13.5vh;
+    background-color: #f78e0c;
+    padding: 10px 4rem;
+    display: flex;
+    position: fixed;
+    box-shadow: 0 0 1rem 0.3rem black;
+    z-index: 1;
+    border-bottom: 1px solid black;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo{
+    background-image: url('../Imagens/Logo.png');
+    width: 12vw;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 11vh;
+}
+header ul{
+   display: flex;
+   gap: 40px;
+}
+header li{
+    list-style: none;
+}
+header li a{
+    text-decoration: none;
+    color: black;
+    font-size: 15pt;
+}
+header li a:hover{
+    font-weight: 800;
+}
+.backgraund-img{
+    height:90.5vh;
+    position: relative;
+    top: 89px;
+    width: 100%;
+    background-image: url('../Imagens/laptop-ge822041ce_1920.jpg');
+    background-size: cover;
+    background-position: left;
+}
+.opacity{   
+    height:90.5vh;
+    position: absolute;
+    padding: 8rem;
+    background-color: rgba(0, 0, 0, 0.274);
+    width: 100%;
+}
+.informacoes h1{
+    width: 450px;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+}
+.informacoes p{
+    color: #fff;
+    margin-top: 10px;
+    width: 450px;
+    font-size: 16pt;
+   
+}
+.button-inform{
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 11pt;
+    border-radius: 5px;
+    border: 0.5px solid black;
+    background-color: #f78e0c;
+}
+
+.container-box{
+    width: 100%;
+    position: relative;
+    top: 9vh;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-around;
+}
+.boxx{
+    height: 47vh;
+    width: 25vw;
+    padding: 5px;
+    text-align: center;
+    background-color: #f78e0c;
+    border-radius: 10px;
+}
+.boxx h2{
+    margin-top: -25px;
+}
+.boxx p{
+    margin-top: 15px;
+}
+
+.box-icone{
+    height: 16vh;
+    margin: 0 auto;
+    background-image: url('../Imagens/aperto-de-mao(1).png');
+    background-size: contain;
+    position: relative;
+    background-repeat: no-repeat;
+    top: -50px;
+    border-radius: 50px;
+    box-shadow: 0.2rem 0.2rem 5px 2px #fff;
+    width: 8vw;
+    background-color: #f78e0c;
+}
+.box-icone2{
+    height: 16vh;
+    margin: 0 auto;
+    background-image: url('../Imagens/aperto-de-mao(1).png');
+    background-size: contain;
+    position: relative;
+    background-repeat: no-repeat;
+    top: -50px;
+    border-radius: 50px;
+    box-shadow: 0.2rem 0.2rem 5px 2px #fff;
+    width: 8vw;
+    background-color: #f78e0c;
+}
+.Conteiner-portfolio{
+    margin-top: 20vh;
+    width: 100%;
+    padding: 0 40px;
+    height: 80vh;
+}
+
+.Titulo{
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 20px;
+    text-align: center;
+    font-size: 16pt;
+} 
+.box-portifolio{
+    display: flex;
+    width: 50vw;
+    border: 1px solid #fff;
+    height: 27vh;
+    padding: 10px;
+    background-color: rgb(243, 243, 243);
+}
+.container-box1{
+  display: flex;   
+  justify-content:space-evenly;                                        
+  position: relative;
+  margin-top: 60px;
+}
+.caixa-box{
+    display: block;
+    background-color: #f78e0c;
+    height: 65vh;
+    width: 35vw;
+    padding: 1%;    
+    border-radius: 0px 0px 20px 20px;
+    text-align: center;
+    margin: 0 auto;
+
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.estudante,.empresa{
+    height: 25vh;
+    background-position:center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    text-align: center;
+    border-bottom: 1px solid black; 
+    margin-bottom: 15px;
+    
+}
+.estudante{
+    background-image: url('../Imagens/estudante-masculino.png');
+    
+}
+.empresa{
+    background-image: url('../Imagens/companhia.png');
+    
+}
+.sub-titulo{
+    padding: 4%;
+}
+.box-flex{
+    margin-top: 50px;
+    gap: 20px;
+    display: flex;
+}
+.text-box{
+    margin-left: 20px;
+}
+.img{
+    width: 8vw;
+    height: 16vh;
+}
+.container-contato{
+    width: 100%;
+    margin-top: 30px;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-image: url("Imagens/background1.jpg");
+}
+.opacity-2{
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.322);
+}
+.flex-contato{
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+}
+.box-login,.box-empresa{
+    margin-top: 40px;
+    text-align: center;
+    width: 25vw;
+    font-size: 20pt;
+    height: 50vh;
+    background-color: #f78e0c;
+}
+.opacity-2 .Titulo h2{
+    color: #fff;
+}
+.teste{
+    width: 100%;
+    height: 100vh;
+}

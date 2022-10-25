@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro do Estudante</title>
+    <link rel="stylesheet" href="cad-estudante2.css">
+
+    <!-- Link de Font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="logo"></div>
+
+        <nav>
+            <ul>
+                <li><a href="loginEstudante.html">Estudante</a></li>
+                <li><a href="login-Empresa.html">Empresa</a></li>
+                <li><a href="">Vagas</a></li>
+                <li><a href="index.html"> | Inicio</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="backgraund-img">
+            <div class="opacity">
+                <div class="container-box">
+                    <div class="box">
+                        <h1 class="title-box">Cadastro Estudantil</h1>
+                        <div class="itens-box">
+                            <label for="nome" class="label-input">Nome:</label>
+                            <input type='text' id='nome' name='nome' required class="inputUser">
+                            <br>
+                            <label for="dtnasc">Data de nascimento:</label>
+                            <input type='date' id='dtnasc' name='dtnasc' class="inputUser"><br>
+                            <label for="cpf" class="label-input">Cpf:</label>
+                            <input type='number' id='cpf' name='cpf' class="inputUser">
+                            <label for="telefone" class="label-input" id="tel">Nº telefone:</label>
+
+                            <input type='number' id='telefone' name='telefone' class="inputUser">
+                            <br>
+                            <label for="email" class="label-input">E-mail:</label>
+                            <input type='email' id='email' name='email' required class="inputUser">
+                            <br>
+                            <p>Sexo:</p>
+                            <input type="radio" id="sexo-m" name="sexo" value="Masculino">
+                            <label for="sexo-m">Masculino</label><br>
+                            <input type="radio" id="sexo-f" name="sexo" value="Feminino">
+                            <label for="sexo-f">Feminino</label>
+                            <br>
+                            <br>
+                            <label for="endereco" class="label-input">Endereço:</label>
+                            <input type='text' id='endereco' name='endereco' required class="inputUser">
+                            <label for="n-casa" class="label-input">N° da casa:</label>
+                            <input type='number' id='n-casa' name='casa' class="inputUser">
+                            <br>
+                            <label for="curso">Curso:</label>
+                            <select id="curso" name="curso" class="inputUser">
+                                <option value="adm">ADMINISTRAÇÃO</option>
+                                <option value="auto-industrial">AUTOMAÇÃO INDUSTRIAL</option>
+                                <option value="dev">DESENVOLVIMENTO DE SISTEMAS</option>
+                                <option value="edificacoes">EDIFICAÇÕES</option>
+                                <option value="eletromecanina">ELETROMECÂNICA</option>
+                                <option value="eletrotecnica">ELETROTÉCNICA</option>
+                                <option value="logistica">LOGÍSTICA</option>
+                                <option value="mtc-automotiva">MANUTENÇÃO AUTOMOTIVA</option>
+                                <option value="mecanica">MECÂNICA</option>
+                                <option value="mecatronica">MECATRÔNICA</option>
+                                <option value="petroquimica">PETROQUÍMICA</option>
+                                <option value="quimica">QUÍMICA</option>
+                                <option value="r-computadores">REDE DE COMPUTADORES</option>
+                                <option value="refri-clima">REFRIGERAÇÃO E CLIMATIZAÇÃO</option>
+                                <option value="seguranca-trabalho">SEGURANÇA DO TRABALHO</option>
+                            </select>
+                            <br>
+                            <label for="modulo">Módulo atual:</label>
+                            <select id="modulo" name="modulo" class="inputUser">
+                                <option value="m-1">I</option>
+                                <option value="m-2">II</option>
+                                <option value="m-3">III</option>
+                                <option value="m-4">IV</option>
+                            </select>
+                            <br class="Teste4">
+                            <label for="periodo">Período:</label>
+                            <select id="turno" name="curso" class="inputUser ">
+                                <option value="mat">MATUTINO </option>
+                                <option value="vesp">VESPERTINO </option>
+                                <option value="noturno">NOTURNO</option>
+                            </select>
+                            <div class="margin">
+                                <label for="senha" class="label-input">Nova senha:</label>
+                                <input type='password' id='nova-senha' name='senha' required class="inputUser">
+                                <label for="senha" class="label-input">Confirmar senha:</label>
+                                <input type='password' id='senha' name='senha' required class="inputUser">
+                                <br>
+                            </div>
+                            <a href="loginEstudante.html"><input type="button" value="Cadastrar"
+                                    class="btn-cadastrar"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </main>
+    <footer class="rodape">
+        <div class="caixaRodape">
+
+        </div>
+    </footer>
+</body>
+
+</html>
