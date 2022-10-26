@@ -80,6 +80,7 @@ header li a:hover{
     border-radius: 5px;
     border: 0.5px solid black;
     background-color: #f78e0c;
+    cursor: pointer;
 }
 
 .container-box{
@@ -132,10 +133,11 @@ header li a:hover{
     background-color: #f78e0c;
 }
 .Conteiner-portfolio{
-    margin-top: 20vh;
+    
     width: 100%;
     padding: 0 40px;
     height: 80vh;
+    margin-top: -100px;
 }
 
 .Titulo{
@@ -152,23 +154,28 @@ header li a:hover{
     height: 27vh;
     padding: 10px;
     background-color: rgb(243, 243, 243);
+
 }
 .container-box1{
   display: flex;   
   justify-content:space-evenly;                                        
   position: relative;
-  margin-top: 60px;
+  top: -15vh;
 }
 .caixa-box{
     display: block;
     background-color: #f78e0c;
-    height: 65vh;
-    width: 35vw;
+    height: 50vh;
+    width: 25vw;
     padding: 1%;    
-    border-radius: 0px 0px 20px 20px;
+    border-radius: 20px 20px 20px 20px;
     text-align: center;
     margin: 0 auto;
 
+}
+.caixa-box:hover{
+    transform: scale(1.1);
+    transition: .2s;
 }
 a{
     text-decoration: none;
@@ -178,7 +185,7 @@ a{
 .estudante,.empresa{
     height: 25vh;
     background-position:center;
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
     text-align: center;
     border-bottom: 1px solid black; 
@@ -186,11 +193,16 @@ a{
     
 }
 .estudante{
-    background-image: url('../Imagens/estudante-masculino.png');
+    background-image: url('Imagens/img-estudante.jpg');
+    border-radius: 20px 20px 0px 0px ;
+    
     
 }
 .empresa{
-    background-image: url('../Imagens/companhia.png');
+    background-image: url('Imagens/img-empresario.jpg');
+    background-position: 20% 25%;
+    border-radius: 20px 20px 0px 0px ;
+
     
 }
 .sub-titulo{
@@ -208,24 +220,7 @@ a{
     width: 8vw;
     height: 16vh;
 }
-.container-contato{
-    width: 100%;
-    margin-top: 30px;
-    height: 100vh;
-    background-size: cover;
-    background-position: center;
-    background-image: url("Imagens/background1.jpg");
-}
-.opacity-2{
-    width: 100%;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.322);
-}
-.flex-contato{
-    display: flex;
-    gap: 40px;
-    justify-content: center;
-}
+
 .box-login,.box-empresa{
     margin-top: 40px;
     text-align: center;
