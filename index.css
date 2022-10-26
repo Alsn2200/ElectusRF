@@ -147,6 +147,7 @@ header li a:hover{
     text-align: center;
     font-size: 16pt;
 } 
+
 .box-portifolio{
     display: flex;
     width: 50vw;
@@ -165,7 +166,7 @@ header li a:hover{
 .caixa-box{
     display: block;
     background-color: #f78e0c;
-    height: 50vh;
+    height: 52vh;
     width: 25vw;
     padding: 1%;    
     border-radius: 20px 20px 20px 20px;
@@ -199,14 +200,25 @@ a{
     
 }
 .empresa{
-    background-image: url('Imagens/img-empresario.jpg');
+    background-image: url('Imagens/empresario.jpg');
     background-position: 20% 25%;
     border-radius: 20px 20px 0px 0px ;
-
     
 }
+.opacity-empresa{
+    border-radius: 20px 20px 0px 0px ;
+    height: 25vh;
+    background-color: rgba(0, 0, 0, 0.432);
+}
+.opacity-estudante{
+    border-radius: 20px 20px 0px 0px ;
+    height: 25vh;
+    background-color: rgba(0, 0, 0, 0.274);
+}
+
 .sub-titulo{
     padding: 4%;
+    font-weight: 400;
 }
 .box-flex{
     margin-top: 50px;
