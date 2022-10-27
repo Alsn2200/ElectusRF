@@ -27,7 +27,7 @@ header {
 }
 
 .logo {
-    background-image: url('../Imagens/Logo.png');
+    background-image: url('Imagens/Logo.png');
     width: 12vw;
     background-size: contain;
     background-repeat: no-repeat;
@@ -130,7 +130,7 @@ main {
 .box-icone {
     height: 16vh;
     margin: 0 auto;
-    background-image: url('../Imagens/aperto-de-mao(1).png');
+    background-image: url('Imagens/aperto-de-mao(1).png');
     background-size: contain;
     position: relative;
     background-repeat: no-repeat;

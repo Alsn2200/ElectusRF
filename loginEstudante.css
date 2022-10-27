@@ -27,7 +27,7 @@ header {
 }
 
 .logo {
-    background-image: url('../Imagens/Logo.png');
+    background-image: url('Imagens/Logo.png');
     width: 12vw;
     background-size: contain;
     background-repeat: no-repeat;
@@ -56,7 +56,7 @@ header li a:hover {
 .backgraund-img {
     height: 90vh;
     width: 100%;
-    background-image: url('../Imagens/laptop-ge822041ce_1920.jpg');
+    background-image: url('Imagens/img-Principal.jpg');
     background-size: cover;
     background-position: left;
 }
@@ -108,7 +108,7 @@ hr{
 .box-icone {
     height: 16vh;
     margin: 0 auto;
-    background-image: url('../Imagens/aperto-de-mao(1).png');
+    background-image: url('Imagens/aperto-de-mao(1).png');
     background-size: contain;
     position: relative;
     background-repeat: no-repeat;
