@@ -243,12 +243,38 @@ a {
     margin-top: 10%;
 
 }
-
+/* FOOTER */
 .caixaRodape {
     width: 100%;
+    display: flex;
+    padding: 4% 1.5%;
     height: 40vh;
+    align-items: center;
+    justify-content: space-between;
     background-color: #f78e0c;
     border-top: 1px solid black;
+}
+.caixaRodape .logo{
+    width: 25vw;
+    height: 28vh;
+}
+.footer-inform{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+.caixaRodape ul{
+    list-style: none;
+}
+.caixaRodape .footer-inform h4{
+    font-size: calc(5pt + 1vw);
+}
+.caixaRodape ul li{
+    font-size: 9pt;
+}
+a{
+    text-decoration: none;
+    color: black;
 }
 
 @media (max-width: 2000px) {
