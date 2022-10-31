@@ -305,6 +305,35 @@ a{
         justify-content: space-around
     }
 }
+@media (max-width: 940px){
+    .caixaRodape{
+    margin-top: 100px;
+    width: 100%;
+    display: flex;
+    padding: 4% 1.5%;
+    height: 80vh;
+    align-items: center;
+    justify-content: center;
+    background-color: #f78e0c;
+    border-top: 1px solid black;
+    flex-wrap: wrap;
+    }
+    .caixaRodape .footer-inform h4 {
+        font-size: calc(5pt + 2.5vw);
+        text-align: center;
+    }
+    .caixaRodape ul li {
+        font-size: 13pt;
+        text-align: center;
+    }
+    .footer-inform {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 48px;
+    }
+}
 @media (max-width: 851px){
     
     header{
@@ -420,3 +449,33 @@ a{
     
     
 }   
+@media (max-width: 644px){
+   .caixaRodape {
+    margin-top: 100px;
+    width: 100%;
+    display: block;
+    padding: 4% 1.5%;
+    height: 62vh;
+   }
+   .caixaRodape .logo {
+    width: 25vw;
+    height: 28vh;
+    margin: 0 auto;
+    }
+   .footer-inform {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 35px;
+    
+    }
+    .caixaRodape ul li {
+        font-size: 9pt;
+        text-align: center;
+    }
+    .caixaRodape .footer-inform h4 {
+        font-size: calc(5pt + 1.9vw);
+    }
+}
