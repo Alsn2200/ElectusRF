@@ -141,11 +141,10 @@ header li a:hover{
     background-color: #f78e0c;
 }
 .Conteiner-portfolio{
-    
     width: 100%;
     padding: 0 40px;
-    height: 80vh;
-    margin-top: -80px;
+   
+   
 }
 
 .Titulo{
@@ -158,7 +157,7 @@ header li a:hover{
 
 .box-portifolio{
     display: flex;
-    width: 50vw;
+    width: 23rem;
     border: 1px solid #fff;
     height: 25vh;
     padding: 10px 10px 5px 10px;
@@ -232,6 +231,8 @@ a{
     margin-top: 50px;
     gap: 20px;
     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 .text-box{
     margin-left: 20px;
@@ -242,9 +243,9 @@ a{
    text-align: right;
    margin-top: 13px;
 }
-.img{
-    width: 8vw;
-    height: 16vh;
+.img {
+    width: 8rem;
+    height: 21vh;
 }
 
 .box-login,.box-empresa{
@@ -298,7 +299,13 @@ a{
 .hover{
     background-color: #1b1b1bcb;
 }
-@media (max-width: 800px){
+@media (max-width: 1100){
+    .box-flex {
+        display: flex;
+        justify-content: space-around
+    }
+}
+@media (max-width: 851px){
     
     header{
         height: 14.5vh;
@@ -357,11 +364,32 @@ a{
     .color-text{
         color:black;
     }
+    .opacity {
+        padding: 1rem;
+        display: flex;
+        align-content: center;
+        align-items: center;
+        justify-content: center;
+    }
+    .informacoes h1 {
+        
+        text-align: center;
+    }
     .caixa-box {
         display: block;
         height: 61vh;
         width: 69vw;
         margin: 34px auto;
+    }
+    .button-inform {
+        margin: 10px auto;
+        padding: 10px;
+        font-size: 11pt;
+        display: block;
+        border-radius: 5px;
+        border: 0.5px solid black;
+        background-color: #f78e0c;
+        cursor: pointer;
     }
     .container-box1 {
         display: block;
@@ -370,8 +398,25 @@ a{
         top: 5rem;
     }
     .Conteiner-portfolio {
-      
-       margin-top: 0; 
+        overflow-x:scroll;
+        overflow-y:hidden;
+        padding: 1rem 1rem 2rem 1rem;   
+        display: flex;
+        flex-wrap: nowrap;
     }
+    .box-portifolio {
+        height: 31vh; 
+    }
+    .box-flex{
+        margin-top: 50px;
+        
+     
+        display: flex;
+        flex-wrap: nowrap;
+        
+    }
+    
+    
+    
     
 }   
