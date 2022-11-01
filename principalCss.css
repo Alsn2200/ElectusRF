@@ -1,0 +1,139 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+html,body{
+    height: 100%;
+
+}
+header{
+    width: 100%;
+    height: 13.5vh;
+    background-color: #f78e0c;
+    padding: 10px 4rem;
+    display: flex;
+    position: fixed;
+    box-shadow: 0 0 1rem 0.3rem black;
+    z-index: 1;
+    border-bottom: 1px solid black;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo{
+    background-image: url('Imagens/Logo.png');
+    width: 14vw;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 8vh;
+}
+header ul{
+   display: flex;
+   gap: 40px;
+}
+header li{
+    list-style: none;
+}
+.color-text{
+    color: white;
+    transition: 2s;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+header li a{
+    text-decoration: none;
+    color: black;
+    font-size: 15pt;
+}
+header li a:hover{
+    font-weight: 800;
+}
+
+
+
+.teste{
+    height: 100vh;
+    width: 100%;
+}
+
+
+/* FOOTER */
+.caixaRodape {
+    width: 100%;
+    display: flex;
+    padding: 4% 1.5%;
+    height: 40vh;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f78e0c;
+    border-top: 1px solid black;
+}
+.caixaRodape .logo{
+    width: 25vw;
+    height: 14vh;
+}
+.footer-inform{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+.linha-mobile{
+    display: none;
+}
+.caixaRodape ul{
+    list-style: none;
+}
+.caixaRodape .footer-inform h4{
+    font-size: calc(5pt + 1vw);
+}
+.caixaRodape ul li{
+    font-size: 9pt;
+}
+@media (max-width: 940px){
+    .caixaRodape{
+    margin-top: 100px;
+    width: 100%;
+    display: flex;
+    padding: 4% 1.5%;
+    height: 85vh;
+    align-items: center;
+    justify-content: center;
+    background-color: #f78e0c;
+    border-top: 1px solid black;
+    flex-wrap: wrap;
+    }
+    .caixaRodape .footer-inform h4 {
+        font-size: calc(5pt + 2.5vw);
+        text-align: center;
+    }
+    .caixaRodape ul li {
+        font-size: 13pt;
+        text-align: center;
+    }
+    .footer-inform {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 48px;
+    }
+    .estudante, .empresa {
+        height: 46vh;
+    }
+    .opacity-estudante {
+        height: 46vh;
+    }
+    .opacity-empresa {
+        
+        height: 46vh;
+       
+    }   
+    .caixa-box{
+        height: 78vh;
+        width: 44vw;
+    }
+}

@@ -41,10 +41,6 @@ header li{
     color: white;
     transition: 2s;
 }
-
-#navegacao{
-    display: none;
-}
 header li a{
     text-decoration: none;
     color: black;
@@ -299,6 +295,11 @@ a{
 .hover{
     background-color: #1b1b1bcb;
 }
+@media (max-width: 1920px){
+    .box-portifolio{
+        width: 34rem;
+    }
+}
 @media (max-width: 1400px){
     .box-flex {
         display: flex;
@@ -321,10 +322,17 @@ a{
         height: 42vh;
     }
 }
+/* @media (max-height: 800px){
+  
+    .box{
+        height: 80vh;
+    }
+    
+} */
 @media (max-width: 1000px){
   
     .caixa-box{
-        height: 80vh;
+        height: 50rem;
         width: 33vw;
     }
     
