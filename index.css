@@ -157,9 +157,9 @@ header li a:hover{
 
 .box-portifolio{
     display: flex;
-    width: 23rem;
+    width: 24rem;
     border: 1px solid #fff;
-    height: 25vh;
+    height: 31vh;
     padding: 10px 10px 5px 10px;
     background-color: rgb(243, 243, 243);
     align-items: center;
@@ -374,7 +374,11 @@ a{
     }
 }
 @media (max-width: 851px){
-    
+    .backgraund-img {
+        
+        top:2px;
+        
+    }
     header{
         height: 14.5vh;
         padding: 10px 1rem;

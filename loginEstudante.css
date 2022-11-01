@@ -64,7 +64,9 @@ header li a:hover {
 .opacity {
     height: 90vh;
     position: absolute;
-    padding: 4rem;
+    display: flex;
+    align-items: center;
+    padding: 1.5rem;
     background-color: rgba(0, 0, 0, 0.596);
     width: 100%;
 }
@@ -258,7 +260,38 @@ a{
     }
 
 }
-
+@media (max-width: 850px){
+    .caixaRodape {
+     width: 100%;
+     display: block;
+     padding: 4% 1.5%;
+     height: 73vh;
+    }
+    .caixaRodape .logo {
+     width: 25vw;
+     height: 25vh;
+     margin: 15px auto;
+     }
+    .footer-inform {
+     display: flex;
+     width: 100%;
+     justify-content: center;
+     flex-wrap: wrap;
+     gap: 35px;
+     
+     }
+     .caixaRodape ul {
+        font-size: 9pt;
+        text-align: center;
+    }
+     .caixaRodape ul li {
+         font-size: 9pt;
+         text-align: center;
+     }
+     .caixaRodape .footer-inform h4 {
+         font-size: calc(5pt + 2vw);
+     }
+ }
 @media (max-width: 800px) {
     .box {
         width: 55vw;

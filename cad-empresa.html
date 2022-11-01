@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastrar Vagas</title>
     <link rel="stylesheet" href="cad-empresa.css">
-
+    <link rel="stylesheet" href="Styles/Menu.css">
     <!-- Link de Font  -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,12 +20,14 @@
     <header>
         <div class="logo"></div>
 
-        <nav>
-            <ul>
-                <li><a href="loginEstudante.html">Estudante</a></li>
-                <li><a href="login-Empresa.html">Empresa</a></li>
-                <li><a href="">Vagas</a></li>
-                <li><a href="index.html"> | Inicio</a></li>
+        <div id="hamburg-mobile"></div>
+        <nav id="navegacao">
+            <ul id="mobile">
+                <li><a href="loginEstudante.html" id="link-1">Estudante</a></li>
+                <hr class="linha-mobile">
+                <li><a href="" id="link-3">Vagas</a></li>
+                <hr class="linha-mobile">
+                <li><a href="index.html"id="link-4"> | Inicio</a></li>
             </ul>
         </nav>
     </header>
@@ -121,9 +123,9 @@
                             </div>
                             <a href="login-Empresa.html"><input type="button" value="Cadastrar"
                                     class="btn-cadastrar"></a>
-                                    <div class="itens-secundarios">
+                                    <!-- <div class="itens-secundarios">
                                     <a href="cadastro-vaga.html" class="btn-secundario">Cadastrar vaga</a>
-                                </div>
+                                </div> -->
                         </div>
                     </div>
                 </div>
@@ -174,6 +176,7 @@
             </div>
         </div>
     </footer>
+    <script src="Scripts/Script-hamburg.js"></script>
 </body>
 
 </html>
