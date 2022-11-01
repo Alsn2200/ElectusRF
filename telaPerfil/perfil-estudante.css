@@ -128,12 +128,29 @@ display: flex;
 }
 .descricao-usuario{
 display: block;
-width: 20%;
-margin-top: 10px;
+width: 25%;
+margin-top: 50px;
 }
+#p-descricao{
+    margin-bottom: 20px;
+}
+
 #add-descricao{
     background-color:#f78e0c;
     border: solid 1px black;
+    width: 20vw;
+    height: 15vh;
+}
+#btn-enviar-descricao{
+    width: 10vw;
+    margin-top: 5%;
+    height: 3vh;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+}
+#btn-upload{
+    width: 50%;
 }
 .box h2 {
     margin-top: -25px;
