@@ -15,9 +15,10 @@ public class Aluno{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int Id;
+    private String aluno;
+    // @DateTimeFormat(pattern = "dd/mm/yyyy")
+    private String data_nascimento;
     
-    @DateTimeFormat(pattern = "dd/MM/yyyy")
-    private Date data_nascimento;
     private String cpf;
     private String numero_telefone;
     private String email;
@@ -34,6 +35,18 @@ public class Aluno{
     }
     public void setId(int id){
          this.Id = id;
+    }
+    public String getAluno(){
+        return this.aluno;
+    }
+    public void setAluno(String Aluno){
+         this.aluno = Aluno;
+    }
+    public String getData_nascimento(){
+        return this.data_nascimento;
+    }
+    public void setData_nascimento(String Data_nascimento){
+         this.data_nascimento = Data_nascimento;
     }
     
     public String getCpf(){
@@ -95,7 +108,7 @@ public class Aluno{
     public String getSenha(){
         return this.senha;
     }
-    public void setSenha( String senha){
+    public void setSenha(String senha){
         this.senha = senha;
     }
 }

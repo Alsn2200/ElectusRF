@@ -29,7 +29,11 @@ public class UsuarioController {
     public List<Aluno> ListUsuario(){
         return (List<Aluno>) acessoBanco.findAll();
     }
-
+    // @GetMapping("127.0.0.1:5500/usuarios/{id}")
+    // public Optional<Aluno> Retorno(@PathVariable int id){
+    //     return acessoBanco.findById(id);
+    // }
+   
     @GetMapping("/usuarios/{id}")
     public Optional<Aluno> peguePorId(@PathVariable int id){
         return acessoBanco.findById(id);
