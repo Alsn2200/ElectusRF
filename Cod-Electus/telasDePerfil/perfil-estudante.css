@@ -127,10 +127,28 @@ display: flex;
     background-color: black;
 }
 .descricao-usuario{
-display: block;
-width: 25%;
-margin-top: 50px;
+    margin-top: 2vh;
+    display: flex;
+    width: 20vw;
+    height: 30vh;
+    flex-direction: column;
+    
+
 }
+.descricao-usuario1{
+    margin-top: 2vh;
+    display: flex;
+    width: 20vw;
+    height: 30vh;
+    flex-direction: column;
+    margin-left: 2vw;
+    
+
+}
+.caixaDesc{
+    display: flex;
+}
+
 #p-descricao{
     margin-bottom: 20px;
 }
@@ -141,6 +159,7 @@ margin-top: 50px;
     width: 20vw;
     height: 15vh;
 }
+
 #btn-enviar-descricao{
     width: 10vw;
     margin-top: 5%;
@@ -150,7 +169,10 @@ margin-top: 50px;
     cursor: pointer;
 }
 #btn-upload{
-    width: 50%;
+    width: 40%;
+    text-align: center;
+    margin-top: 20px;
+    display: block;
 }
 .box h2 {
     margin-top: -25px;
