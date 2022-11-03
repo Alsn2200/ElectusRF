@@ -14,7 +14,7 @@
     #navegacao{
         display: none;
         position: absolute;
-        top: 89px;
+        top: 114px;
         left:-0px;
         transition: 1s;
         border-bottom: 1px solid black;
@@ -24,7 +24,7 @@
         text-align: center;
         width: 100%;
         padding: 0.8rem;
-        height: 47vh;
+        height: 19rem;
         transition: 1s;
     }
     header ul{

@@ -295,11 +295,7 @@ a{
 .hover{
     background-color: #1b1b1bcb;
 }
-@media (max-width: 1920px){
-    .box-portifolio{
-        width: 34rem;
-    }
-}
+
 @media (max-width: 1400px){
     .box-flex {
         display: flex;

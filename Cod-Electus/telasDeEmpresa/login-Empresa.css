@@ -27,7 +27,7 @@ header {
 }
 
 .logo {
-    background-image: url('Imagens/Logo.png');
+    background-image: url('../Imagens/Logo.png');
     width: 12vw;
     background-size: contain;
     background-repeat: no-repeat;
@@ -56,7 +56,7 @@ header li a:hover {
 .backgraund-img {
     height: 90vh;
     width: 100%;
-    background-image: url('Imagens/img-Principal.jpg');
+    background-image: url('../Imagens/background2.jpg');
     background-size: cover;
     background-position: left;
 }
@@ -64,10 +64,10 @@ header li a:hover {
 .opacity {
     height: 90vh;
     position: absolute;
+    padding: 2rem;
     display: flex;
     align-items: center;
-    padding: 1.5rem;
-    background-color: rgba(0, 0, 0, 0.596);
+    background-color: rgba(0, 0, 0, 0.349);
     width: 100%;
 }
 
@@ -85,9 +85,7 @@ main {
     display: flex;
     justify-content: space-around;
 }
-hr{
-    border: 1px solid black;
-}
+
 .box {
     height: 50vh;
     width: 35vw;
@@ -100,9 +98,12 @@ hr{
 
 .title-box {
     font-weight: bold;
+ 
     padding: 15px 0 20px 0;
 }
-
+hr{
+    border: 1px solid black;
+}
 .box h2 {
     margin-top: -25px;
 }
@@ -110,7 +111,7 @@ hr{
 .box-icone {
     height: 16vh;
     margin: 0 auto;
-    background-image: url('Imagens/aperto-de-mao(1).png');
+    background-image: url('../Imagens/aperto-de-mao(1).png');
     background-size: contain;
     position: relative;
     background-repeat: no-repeat;
@@ -195,7 +196,7 @@ hr{
     margin-top: 10%;
 
 }
-
+/* ------FOOTER---------- */
 .caixaRodape {
     width: 100%;
     display: flex;
@@ -260,6 +261,32 @@ a{
     }
 
 }
+
+@media (max-width: 800px) {
+    .box {
+        width: 55vw;
+        height: 23rem;
+
+    }
+
+    .inputUser1 {
+        width: 100%;
+        padding: 0 5px;
+        height: 25px;
+        font-size: 15px;
+        border: none;
+        background: none;
+        outline: none;
+        position: relative;
+        border-bottom: 1px solid black;
+        margin: 15px 0;
+        font-weight: 500;
+    }
+
+    .Teste4 {
+        display: block;
+    }
+}
 @media (max-width: 850px){
     .caixaRodape {
      width: 100%;
@@ -292,32 +319,6 @@ a{
          font-size: calc(5pt + 2vw);
      }
  }
-@media (max-width: 800px) {
-    .box {
-        width: 55vw;
-        height: 23rem;
-
-    }
-
-    .inputUser1 {
-        width: 100%;
-        padding: 0 5px;
-        height: 25px;
-        font-size: 15px;
-        border: none;
-        background: none;
-        outline: none;
-        position: relative;
-        border-bottom: 1px solid black;
-        margin: 15px 0;
-        font-weight: 500;
-    }
-
-    .Teste4 {
-        display: block;
-    }
-}
-
 @media (max-width: 730px) {
     .box {
         width: 60vw;
@@ -347,3 +348,4 @@ a{
         width: 100%;
     }
 }
+

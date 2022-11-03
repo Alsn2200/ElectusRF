@@ -27,7 +27,7 @@ header {
 }
 
 .logo {
-    background-image: url('Imagens/Logo.png');
+    background-image: url('../Imagens/Logo.png');
     width: 12vw;
     background-size: contain;
     background-repeat: no-repeat;
@@ -56,7 +56,7 @@ header li a:hover {
 .backgraund-img {
     height: 140vh;
     width: 100%;
-    background-image: url('Imagens/background2.jpg');
+    background-image: url('../Imagens/img-Principal.jpg');
     background-size: cover;
     background-position: left;
 }
@@ -64,10 +64,10 @@ header li a:hover {
 .opacity {
     height: 140vh;
     position: absolute;
+    padding: 2rem;
     display: flex;
     align-items: center;
-    padding: 2rem;
-    background-color: rgba(0, 0, 0, 0.288);
+    background-color: rgba(0, 0, 0, 0.596);
     width: 100%;
 }
 
@@ -106,7 +106,7 @@ main {
 
 .box {
     height: 105vh;
-    width: 69vw;
+    width: 35vw;
     padding: 5px;
     text-align: center;
     background-color: #f78e0c;
@@ -183,15 +183,6 @@ main {
     width: 50%;
 }
 
-#cidade{
-    width: 60%;
-}
-#uf{
-    width: 33%;
-}
-#bairro{
-    width: 39%;
-}
 #n-casa {
     width: 28%;
 }
@@ -221,7 +212,6 @@ main {
     font-weight: 700;
     cursor: pointer;
     background-color: rgba(255, 255, 255, 0.548);
-    margin-bottom: 25px;
 
 
 }
@@ -252,27 +242,6 @@ a {
 .margin {
     margin-top: 10%;
 
-}
-
-
- .itens-secundarios{
-    display: flex;
-    margin: 0 auto;
-    text-align: center;
-    justify-content: space-evenly;    
-    text-align: center;
-}
-.btn-secundario{
-    text-decoration: none;
-    color: black;
-    transition: calc(0.3s);
-    text-align: center;
-    font-size: 20px;
-
-} 
-.btn-secundario:hover{
-    width: 10vw;
-    height: 4vh;
 }
 /* FOOTER */
 .caixaRodape {
@@ -308,40 +277,22 @@ a{
     color: black;
 }
 
-
-/* ------------------------------- */
 @media (max-width: 2000px) {
     .box {
-        width: 69vw;
-        height: 58rem;
+        width: 40vw;
+        height:52rem;
     }
-   
-        #cidade{
-        width: 20vw;
-            }
-   
 }
 
 
 @media (max-width: 1400px) {
     .box {
-        width: 69vw;
-        height: 58rem;
+        width: 58vw;
+        height: 53rem;
     }
     .margin {
         margin-top: 5%;
     }
-    #uf{
-    display: block;        
-    }
-    #uff{
-    display: block;
-    }
-    #cidade{
-    width: 100%;
-        }
-        
-  
     .backgraund-img {
         height: 160vh;
         width: 100%;
@@ -359,16 +310,15 @@ a{
 @media (max-width: 1100px) {
     .box {
         width: 48vw;
-        height: 58rem;
+        height:52rem;
     }
-  
 
 }
 
 @media (max-width: 800px) {
     .box {
         width: 55vw;
-        height:58rem;
+        height: 52rem;
     }
 
     .inputUser1 {
@@ -424,32 +374,22 @@ a{
 @media (max-width: 730px) {
     .box {
         width: 60vw;
-        height: 58rem;
+        height:52rem;
     }
 }
 
 @media (max-width: 640px) {
     .box {
         width: 70vw;
-        height: 58rem;
+        height:52rem;
     }
 }
 
 @media(max-width: 572px) {
     .box {
-        width: 90vh;
-        height: 61rem;
+        width: 80vh;
+        height: 56rem;
 
-    }
-    #nova-senha{
-        width: 100%;
-    }
-    #senha{
-        display: block;
-        width: 100%;
-    }
-    #conf-senha{
-        display: block;
     }
 
     #tel {
