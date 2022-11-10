@@ -1,0 +1,141 @@
+
+<!-- ---- -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro da Empresa</title>
+    <link rel="stylesheet" th:href="@{/telasDeEmpresa/cadastro-vaga.css}">
+
+    <!-- Link de Font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="logo"></div>
+
+        <nav>
+            <ul>
+                <li><a href="loginEstudante.html">Estudante</a></li>
+                <li><a href="login-Empresa.html">Empresa</a></li>
+                <li><a href="">Vagas</a></li>
+                <li><a href="/index"> | Inicio</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="backgraund-img">
+            <div class="opacity">
+                <div class="container-box">
+                    <div class="box">
+                        <h1 class="title-box">Cadastrar  Vagas</h1>
+                        <div class="itens-box">
+                            <label for="nome" class="label-input">Nome da Empresa</label>
+                            <input type='text' id='nome' name='nome' required class="inputUser">
+                            <br>
+                            <label for="email" class="label-input">E-mail da empresa:</label>
+                            <input type='email' id='email' name='email' required class="inputUser">
+                            <br>
+                            <label for="telefone" class="label-input" id="tel">Nº telefone:</label>
+                            <input type='number' id='telefone' name='telefone' class="inputUser">
+                            <br>
+                            <label for="tipo-vaga">Tipo da vaga:</label>
+                            <select id="tipo-vaga" name="curso" class="inputUser">
+                                <option value="adm">ADMINISTRAÇÃO</option>
+                                <option value="auto-industrial">AUTOMAÇÃO INDUSTRIAL</option>
+                                <option value="dev">DESENVOLVIMENTO DE SISTEMAS</option>
+                                <option value="edificacoes">EDIFICAÇÕES</option>
+                                <option value="eletromecanina">ELETROMECÂNICA</option>
+                                <option value="eletrotecnica">ELETROTÉCNICA</option>
+                                <option value="logistica">LOGÍSTICA</option>
+                                <option value="mtc-automotiva">MANUTENÇÃO AUTOMOTIVA</option>
+                                <option value="mecanica">MECÂNICA</option>
+                                <option value="mecatronica">MECATRÔNICA</option>
+                                <option value="petroquimica">PETROQUÍMICA</option>
+                                <option value="quimica">QUÍMICA</option>
+                                <option value="r-computadores">REDE DE COMPUTADORES</option>
+                                <option value="refri-clima">REFRIGERAÇÃO E CLIMATIZAÇÃO</option>
+                                <option value="seguranca-trabalho">SEGURANÇA DO TRABALHO</option>
+                            </select>
+                            <br>
+                            <label for="turno" id="n-turno">Turno:</label>
+                            <select id="turno" name="turno" class="inputUser">
+                                <option value="estado">Matutino</option>
+                                <option value="estado">Verpertino</option>
+                                <option value="estado">Noturno</option>
+                                <option value="estado">Matutino e Verpertino</option>
+                                <option value="estado">Verpertino e Noturno</option>
+                            </select>
+                            <label for="cargo" class="label-input" id="n-cargo">Cargo</label>
+                            <input type='text' id='cargo' name='nome' required class="inputUser">
+                            <br>
+                            <label for="uf" id="n-descricao-vaga">Descrição da vaga:</label>
+                                <textarea name="descricao-vaga" id="descricao-vaga" cols="30" rows="10"></textarea>
+                                <label for="uf" id="n-requisitos-vaga">Requisitos da vaga:</label>
+                                <textarea name="descrição-vaga" id="requisitos-vaga" cols="30" rows="10"></textarea>
+                           
+                            <a href="login-Empresa.html"><input type="button" value="Cadastrar Vaga"
+                                    class="btn-cadastrar"></a>
+                                    
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </main>
+    <footer class="rodape">
+        <div class="caixaRodape">
+            <div class="logo"></div>
+            <div class="footer-inform">
+                <ul>
+                    <h4>Geral</h4>
+                    <li>Cadastre-se</li>
+                    <li>Centrar de Ajuda</li>
+                    <li>Sobre</li>
+                </ul>
+                <ul>
+                    <h4>Navegar pelo Electrus</h4>
+                    <li>Leading</li>
+                    <li>Vagas</li>
+                    <li>Salario</li>
+                </ul>
+                <ul>
+                    <h4>Soluções Business</h4>
+                    <li>Talentos</li>
+                    <li>Marketing</li>
+                    <li>Vendas</li>
+                </ul>
+                <ul>
+                    <h4>Diretórios</h4>
+                    <li>Usuarios</li>
+                    <li>Vagas</li>
+                    <li>Empresas</li>
+                    <li>Soluções</li>
+                    <li>Publicações</li>
+                    <li>Artigos</li>
+                </ul>
+
+                <ul>
+                    <h4>Programadores</h4>
+                    <li><a href="https://github.com/Alsn2200">Alisson Brito</a></li>
+                    <li><a href="">Beatriz Rodrigues</a></li>
+                    <li><a href="https://github.com/FellipeS13">Felipe do Santos</a></li>
+                    <li><a href="https://github.com/Thiag0nery">Thiago Nery</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

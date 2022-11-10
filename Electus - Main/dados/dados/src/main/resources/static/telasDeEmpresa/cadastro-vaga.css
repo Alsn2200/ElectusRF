@@ -1,0 +1,433 @@
+/* Geral codicos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+
+html,
+body {
+    height: 100%;
+
+}
+
+header {
+    width: 100%;
+    height: 13.5vh;
+    background-color: #f78e0c;
+    padding: 10px 4rem;
+    display: flex;
+    box-shadow: 0 0 1rem 0.3rem black;
+    z-index: 1;
+    border-bottom: 1px solid black;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    background-image: url('../Imagens/Logo.png');
+    width: 12vw;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 11vh;
+}
+
+header ul {
+    display: flex;
+    gap: 40px;
+}
+
+header li {
+    list-style: none;
+}
+
+header li a {
+    text-decoration: none;
+    color: black;
+    font-size: 15pt;
+}
+
+header li a:hover {
+    font-weight: 800;
+}
+
+.backgraund-img {
+    height: 140vh;
+    width: 100%;
+    background-image: url('../Imagens/background2.jpg');
+    background-size: cover;
+    background-position: left;
+}
+
+.opacity {
+    height: 140vh;
+    position: absolute;
+    padding: 4rem;
+    background-color: rgba(0, 0, 0, 0.288);
+    width: 100%;
+}
+
+main {
+    background-color: rgb(216, 216, 216);
+
+}
+
+.informacoes h1 {
+    width: 450px;
+    color: white;
+}
+
+.informacoes p {
+    color: #fff;
+    margin-top: 10px;
+    width: 450px;
+    font-size: 16pt;
+
+}
+
+.button-inform {
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 11pt;
+    border-radius: 5px;
+    border: 0.5px solid black;
+    background-color: #f78e0c;
+}
+
+.container-box {
+    width: 100%;
+
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.box {
+    height: 105vh;
+    width: 35vw;
+    padding: 5px;
+    text-align: center;
+    background-color: #f78e0c;
+    border-radius: 0px 0px 20px 20px;
+
+}
+
+.title-box {
+    font-weight: bold;
+    border: solid 1px black;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    padding: 15px 0 20px 0;
+}
+
+.box h2 {
+    margin-top: -25px;
+}
+
+.box-icone {
+    height: 16vh;
+    margin: 0 auto;
+    background-image: url('../Imagens/aperto-de-mao(1).png');
+    background-size: contain;
+    position: relative;
+    background-repeat: no-repeat;
+    top: -50px;
+    border-radius: 50px;
+    box-shadow: 0.2rem 0.2rem 5px 2px #fff;
+    width: 8vw;
+    background-color: #e99a39;
+}
+
+.itens-box {
+    text-align: left;
+    padding: 20px 40px;
+}
+
+.label-input {
+    position: absolute;
+    transform: translateY(-50%);
+    font-size: 15px;
+    pointer-events: none;
+
+
+}
+
+.inputUser {
+    width: 100%;
+    padding: 0 5px;
+    height: 25px;
+    font-size: 15px;
+    border: none;
+    background: none;
+    outline: none;
+    position: relative;
+    border-bottom: 1px solid black;
+    margin: 15px 0;
+    font-weight: 500;
+}
+/* ---- */
+
+#telefone {
+    width: 100%;
+}
+#turno {
+    width: 100%;
+
+}
+#descricao-vaga{
+    margin-top: 20px;
+    display: block;
+    background-color: #f78e0c;
+    width: 100%;
+    height: 7vh;
+    border: solid 1px black;
+    margin-bottom: 25px;
+}
+#requisitos-vaga{   
+    margin-top: 20px;
+    display: block;
+    background-color: #f78e0c;
+    width: 100%;
+    height: 7vh;
+    border: solid 1px black;
+}
+.btn-cadastrar {
+    display: block;
+    width: 100%;
+    height: 50px;
+    border: 1px solid black;
+    border-radius: 50px;
+    margin-top: 3%;
+    font-size: 20px;
+    font-weight: 700;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.548);
+    margin-bottom: 25px;
+
+
+}
+
+a {
+    text-decoration: none;
+}
+
+.Teste4 {
+    display: none;
+}
+
+.btn-cadastrar:hover {
+    transform: scale(1.1);
+    transition: .1s;
+
+}
+
+#nova-senha {
+
+    width: 49%;
+}
+
+#senha {
+    width: 49%;
+}
+
+.margin {
+    margin-top: 10%;
+
+}
+
+
+.itens-secundarios {
+    display: flex;
+    margin: 0 auto;
+    text-align: center;
+    justify-content: space-evenly;
+    text-align: center;
+}
+
+.btn-secundario {
+    text-decoration: none;
+    color: black;
+    transition: calc(0.3s);
+    text-align: center;
+    font-size: 20px;
+
+}
+
+.btn-secundario:hover {
+    width: 10vw;
+    height: 4vh;
+    transform: scale(1.1);
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+
+/* FOOTER */
+.caixaRodape {
+    width: 100%;
+    display: flex;
+    padding: 4% 1.5%;
+    height: 40vh;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f78e0c;
+    border-top: 1px solid black;
+}
+.caixaRodape .logo{
+    width: 25vw;
+    height: 28vh;
+}
+.footer-inform{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+.caixaRodape ul{
+    list-style: none;
+}
+.caixaRodape .footer-inform h4{
+    font-size: calc(5pt + 1vw);
+}
+.caixaRodape ul li{
+    font-size: 9pt;
+}
+
+/* ------------------------------- */
+@media (max-width: 2000px) {
+    .box {
+        width: 40vw;
+        height: 90vh;
+    }
+
+    #cidade {
+        width: 20vw;
+    }
+
+}
+
+
+@media (max-width: 1400px) {
+    .box {
+        width: 35vw;
+        height: 100vh
+    }
+
+    #uf {
+        display: block;
+    }
+
+    #uff {
+        display: block;
+    }
+
+    #cidade {
+        width: 100%;
+    }
+
+
+    .backgraund-img {
+        height: 160vh;
+        width: 100%;
+    }
+
+    .opacity {
+        height: 160vh;
+    }
+
+    .Teste4 {
+        display: block;
+    }
+}
+
+@media (max-width: 1100px) {
+    .box {
+        width: 48vw;
+        height: 100vh;
+    }
+
+
+}
+
+@media (max-width: 800px) {
+    .box {
+        width: 55vw;
+        height: 100vh;
+    }
+
+    .inputUser1 {
+        width: 100%;
+        padding: 0 5px;
+        height: 25px;
+        font-size: 15px;
+        border: none;
+        background: none;
+        outline: none;
+        position: relative;
+        border-bottom: 1px solid black;
+        margin: 15px 0;
+        font-weight: 500;
+    }
+
+    .Teste4 {
+        display: block;
+    }
+}
+
+@media (max-width: 730px) {
+    .box {
+        width: 60vw;
+        height: 100vh;
+    }
+}
+
+@media (max-width: 640px) {
+    .box {
+        width: 70vw;
+        height: 100vh;
+    }
+}
+
+@media(max-width: 572px) {
+    .box {
+        width: 90vh;
+        height: 115vh;
+
+    }
+
+    #nova-senha {
+        width: 100%;
+    }
+
+    #senha {
+        display: block;
+        width: 100%;
+    }
+
+    #conf-senha {
+        display: block;
+    }
+
+    #tel {
+        display: block;
+    }
+
+    #telefone {
+        width: 100%;
+    }
+
+    #cpf {
+        width: 100%;
+    }
+
+    #modulo {
+        width: 50%;
+    }
+
+    #turno {
+        width: 100%;
+    }
+}

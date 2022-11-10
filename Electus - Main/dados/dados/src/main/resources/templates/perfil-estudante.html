@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil do Estudante</title>
+    <link rel="stylesheet" th:href="@{/telasDePerfil/perfil-estudante.css}">
+    <link rel="stylesheet" th:href="@{/Styles/Menu.css}">
+
+    <!-- Link de Font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="logo"></div>
+
+        <div id="hamburg-mobile"></div>
+        <nav id="navegacao">
+
+            <ul id="mobile">
+                <h1 class="header-titulo">Perfil do Estudante</h1>
+
+                <li><a href="/index" id="link-4"> | Inicio</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+      
+
+        <div class="backgraund-img">
+            <div class="opacity">
+                <div class="container-box">
+                   
+                    <div class="box">
+                        
+                        <div class="dados-usuario">
+                            <div class="d-flex">
+                                <img src="https://2.bp.blogspot.com/-l5VD8eu2Rz8/Wpnaex5c5dI/AAAAAAABRbU/nosxjQKo9p0gWynzw72e3b0bZeE8GDqQACLcBGAs/s1600/estudante.jpg" style="width: 150px; height: 150px;" alt="">
+                            <div class="caixaDesc">
+                                <form action="/alterar" method="POST">
+                                <div class="descricao-usuario">
+                                    <label for="add-descricao" id="p-descricao">Adcione uma descrição para perfil:</label>
+                                    <textarea type="text" name="descricao-vaga" id="add-descricao" cols="30" rows="10" placeholder="Digite algo aqui..."></textarea>
+                                    <input type="button" value="Enviar" id="btn-enviar-descricao">
+                                    
+                                </div>
+                               
+                                <div class="descricao-usuario1">
+                                    <label for="add-descricao" id="p-descricao">Adcione outras formações:</label>
+                                    <textarea type="text" name="descricao-vaga" id="add-formacao" cols="30" rows="10" placeholder="Digite algo aqui..."></textarea>
+                                    <a href=""><input type="button" value="Enviar" id="btn-enviar-descricao"></a>
+                                </div>
+                                 
+                                </form>
+                                <!-- <form th:action="|/Alea/${session.usuarioLogado.id}|" method="POST" enctype="multipart/form-data" th:object="${teste}">
+                                    <p th:text="${session.usuarioLogado.id}" id="teste"  style="display: none;"></p>
+                                    <input type="file" name="fileProduto" id="imgamem">
+                                    <button type="submit" id="enviando">Enviar</button>
+                                </form>
+                                <img th:src="|/imagem/${session.usuarioLogado.id}|" style="width: 50px; height:50px;"> -->
+                            </div>
+                            </div>
+                            <div class="d-informacao">
+                                <div class="informacoes-usuario">
+                                    <h1 th:text="${session.usuarioLogado.aluno}" class="Nome-aluno" id="Nome-aluno"></h1>
+                                    <div class="flex-informacoes">
+                                        <div class="itens-informacoes">
+                                            <p>Curso: </p>
+                                            <p th:text="${session.usuarioLogado.curso}" id="curso"></p>
+                                        </div>
+                                        <div class="itens-informacoes">
+                                            <p>Modulo: </p>
+                                            <p th:text="${session.usuarioLogado.modulo}" id="modulo"></p>
+                                        </div>
+                                    </div>
+                                    <div class="flex-informacoes">
+                                    <div class="itens-informacoes">
+                                        <p>Periodo: </p>
+                                        <p th:text="${session.usuarioLogado.periodo}" id="periodo"></p>
+                                    </div>
+                                    <div class="itens-informacoes">
+                                        <p>Sexo: </p>
+                                        <p th:text="${session.usuarioLogado.sexo}" id="sexo"></p>
+                                    </div>
+                                    </div>
+                                    
+                                </div>
+                                <div>
+                                   
+                                        <h2 class="descricao">Descrição sobre o estudante: </h2>
+                                        <!-- <p th:text="${session.usuarioLogado.descricao}"></p> -->
+                                        <p>Seja um estudante, não um seguidor. Não vá simplesmente fazer o que alguém diz. Tenha interesse pelo que alguém diz, então debata, pondere e considere de todos os ângulos.</p>
+                                    
+                                </div>
+                                <div class="titulo">
+                                    <p>Adcione seus curiculos</p>
+                                </div>
+                                <div class="flex">
+                                    
+                                    <div class="div">
+                                        <p>Adcionar PDF</p>
+                                    </div>
+    
+                                    <div class="div">
+                                        <p>Adcionar PDF</p>
+                                    </div>
+                                       
+                                    <div class="div">
+                                        <p>Adcionar PDF</p>
+                                    </div>
+
+                                </div>
+
+                              
+                                   <div class="marias">
+                                    <button id="btn1">Alterar dados</button>
+                                    <button id="btn2">Excluir conta</button>
+                                    <button id="btn3">Vagas de estagio</button>
+                                   </div>
+                                
+                            </div>
+                           
+                        </div>
+                        <!-- <input type="file" name="upload" value="arquivo" id="btn-upload"> -->
+
+                       
+
+                        
+                            
+                       
+                    </div>
+                    
+                </div>
+              
+            </div>
+        </div>
+       
+    </main>
+    <footer class="rodape">
+        <div class="caixaRodape">
+            <div class="logo"></div>
+            <div class="footer-inform">
+                <ul>
+                    <h4>Geral</h4>
+                    <li>Cadastre-se</li>
+                    <li>Centrar de Ajuda</li>
+                    <li>Sobre</li>
+                </ul>
+                <ul>
+                    <h4>Navegar pelo Electrus</h4>
+                    <li>Leading</li>
+                    <li>Vagas</li>
+                    <li>Salario</li>
+                </ul>
+                <ul>
+                    <h4>Soluções Business</h4>
+                    <li>Talentos</li>
+                    <li>Marketing</li>
+                    <li>Vendas</li>
+                </ul>
+                <ul>
+                    <h4>Diretórios</h4>
+                    <li>Usuarios</li>
+                    <li>Vagas</li>
+                    <li>Empresas</li>
+                    <li>Soluções</li>
+                    <li>Publicações</li>
+                    <li>Artigos</li>
+                </ul>
+               
+                <ul>
+                    <h4>Programadores</h4>
+                    <li><a href="https://github.com/Alsn2200">Alisson Brito</a></li>
+                    <li><a href="">Beatriz Rodrigues</a></li>
+                    <li><a href="https://github.com/FellipeS13">Felipe do Santos</a></li>
+                    <li><a href="https://github.com/Thiag0nery">Thiago Nery</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script th:src="@{/Scripts/Script-hamburg.js}"></script>
+    <script th:src="@{/Electus_Scripts/EstudanteLogin.js}"></script>
+    <script th:src="@{/Electus_Scripts/alunoperfil.js}"></script>
+</body>
+
+</html>

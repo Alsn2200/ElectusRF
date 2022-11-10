@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" th:href="@{/Styles/Menu.css}">
+    <link rel="stylesheet" th:href="@{/telasDePerfil/perfil-empresa.css}">
+    <title>Perfil Empresa</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+</head>
+<body>
+    <header id="header">
+        <div class="logo"></div>
+        <div id="hamburg-mobile"></div>
+            <nav id="navegacao">
+                <ul id="mobile">
+                    <li><a href="/Vagas" id="link-3">Vagas</a></li>
+                    <hr class="linha-mobile">
+                    <li><a href="/index"id="link-4"> | Inicio</a></li>
+                    
+                </ul>
+            </nav>     
+        
+    </header>
+    <main>
+        <div class="backgraund-img">
+            <div class="opacity">
+                <div class="container-box">
+                   
+                    <div class="box">
+                        
+                        <div class="dados-usuario">
+                            <div class="d-flex">
+                                <div class="imagemPerfil"></div>
+                            <div class="caixaDesc">
+                                <form action="/alterar" method="POST">
+                                <div class="descricao-usuario">
+                                    <label for="add-descricao" id="p-descricao">Adcione uma descrição para sua empresa:</label>
+                                    <textarea type="text" name="descricao-vaga" id="add-descricao" cols="30" rows="10" placeholder="Digite algo aqui..."></textarea>
+                                    <input type="button" value="Enviar" id="btn-enviar-descricao">
+                                    
+                                </div>
+        
+                                 
+                                </form>
+                            </div>
+                            </div>
+                            <div class="d-informacao">
+                                <div class="informacoes-usuario">
+                                    <h1 th:text="${session.empresa.nome}" class="Nome-aluno" id="Nome-aluno"></h1>
+                                    <div class="flex-informacoes">
+                                        <div class="itens-informacoes">
+                                            <p>Area de atuação: </p>
+                                            <p th:text="${session.empresa.area}" id="curso"></p>
+                                        </div>
+                                        <div class="itens-informacoes">
+                                            <p>Cidade: </p>
+                                            <p th:text="${session.empresa.cidade}"></p>
+                                            <p th:text="${session.empresa.uf}"></p>
+                                        </div>
+                                    </div>
+                                    <div class="flex-informacoes">
+                                    <div class="itens-informacoes">
+                                        <p>Data de criação</p>
+                                        <p th:text="${session.empresa.data}"></p>
+                                    </div>
+                                    <div class="itens-informacoes">
+                                        <p>Responsavel:</p>
+                                        <p th:text="${session.empresa.responsavel}"></p>
+                                    </div>
+                                    </div>
+                                    
+                                </div>
+                                <div>
+                                   
+                                <!--        adcionar descrição             -->
+                                    
+                                </div>
+                                   
+                                        
+                                        
+                                        <div class="vaga" id="select1">
+                                            <form>
+                                                <div class="titulo">
+                                                    <div class="d-block">
+                                                        <h3>Cargo</h3>
+                                                        <input type="text" id="cargo">
+                                                    </div>
+                                                    <div class="d-block">
+                                                        <h3>Departamento</h3>
+                                                        <input type="text" id="Departamento">
+                                                    </div>
+                                                    
+                                                    <div class="d-block">
+                                                        <h3>Cbo</h3>
+                                                        <input type="text" id="cbo">
+                                                    </div>
+                                                    
+                                                </div>
+                                                <h3>ATRIBUIÇÃO PRINCIPAIS</h3>
+                                                <input type="text" id="atribuicoes">
+    
+                                                <h3>Tarefas e Descrição detalhada:</h3>
+                                                <input type="text" id="tarefas">
+    
+                                                <h3>Formação academica:</h3>
+                                                <input type="text" id="formacao">
+    
+                                                <h3>Experiencia profiossional</h3>
+                                                <input type="text" id="profissional">
+    
+                                                <h3>Habilidades comportamentais</h3>
+                                                <input type="text" id="comportamentais">
+    
+                                                <h3>Habilidades tecnicas, cursos e idiomas</h3>
+                                                <input type="text" id="tecnicas">
+
+                                                <button id="vaga-1" type="button" >Cadastrar vaga</button>
+                                            </form>
+                                        </div>
+
+                                        
+<p th:text="${session.empresa.id}" id="teste"  style="display: none;"></p>    
+
+<p th:text="${session.empresa.nome}" id="nome"  style="display: none;"></p>   
+<p th:text="${session.empresa.area}" id="area"  style="display: none;"></p>     
+<p th:text="${session.empresa.email}" id="email"  style="display: none;"></p>   
+<p th:text="${session.empresa.tel}" id="tel"  style="display: none;"></p>   
+<p th:text="${session.empresa.cidade}" id="cidade"  style="display: none;"></p>   
+<p th:text="${session.empresa.uf}" id="uf"  style="display: none;"></p>   
+<p th:text="${session.empresa.endereco}" id="endereco"  style="display: none;"></p>                                    
+                                 
+                            </div>
+                           
+                        </div>
+
+                        
+                            <button type="submit">Salvar dados</button>
+                        </form>
+                    </div>
+                    
+                </div>
+              
+            </div>
+        </div>
+    </main>
+    <script th:src="@{/Electus_Scripts/perfilEmpresa.js}"></script>
+</body>
+</html>
