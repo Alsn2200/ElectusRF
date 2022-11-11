@@ -1,0 +1,1 @@
+Inves de o id ser a palavra chave vai ser um codico, ele vai pegar o ID da empresa mais vai excluir por codico para n dar conflito 

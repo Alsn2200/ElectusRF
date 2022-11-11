@@ -92,10 +92,9 @@ public class UsuarioController {
     @PostMapping("/efetuarLogin")
     public String efetuarLogin(Aluno usuario, HttpSession session){
         usuario = this.acessoBanco.findByCpfAndSenha(usuario.getCpf(), usuario.getSenha());
-        //int id = usuario.getId();
-        // T
+       
         if(usuario != null){
-            // session.setAttribute("lista", bancoT.findById(id));
+           
             session.setAttribute("usuarioLogado", usuario);
             return "redirect:/perfil-estudante";
         }
@@ -135,12 +134,16 @@ public class UsuarioController {
            }
           
            return "redirect:/index";
-                   
-
-      
+                
     }
     @GetMapping("/index")
     public String index(){
         return "index";
+    }
+
+    @GetMapping("/deletar/{id}")
+    public String deletarUsuario(@PathVariable int id){
+        acessoBanco.deleteById(id);
+        return "redirect:/index";
     }
 }

@@ -39,3 +39,7 @@ ocument.getElementById('imgamem').addEventListener('click', function Enviarrr(){
     
     })
 })
+document.getElementById('btn2').addEventListener('click', function Excluir(){
+    var escolha = confirm("Deseja excluir a conta? ")
+    if(escolha == true){}
+})

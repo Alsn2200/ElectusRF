@@ -294,6 +294,13 @@ a{
 .hover{
     background-color: #1b1b1bcb;
 }
+.text-box p{
+    margin-top: 10px;
+    font-size: 11pt;
+}
+.text-box h4{
+    font-size: 12pt;
+}
 
 @media (max-width: 1400px){
     .box-flex {

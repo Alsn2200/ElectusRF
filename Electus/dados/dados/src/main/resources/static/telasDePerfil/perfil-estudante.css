@@ -91,7 +91,7 @@ main {
 }
 
 .box {
-    height: 50rem;
+    height: 56rem;
     width: 90vw;
     padding: 25px;
     background-color: #f78e0c;
@@ -210,8 +210,37 @@ main {
     text-align: left;
     padding: 20px 40px;
 }
+#add-formacao{
+    background-color: #f78e0c;
+    border: solid 1px black;
+    width: 20vw;
+    color: black;
+    resize: none;
+    height: 15vh;
+}
 
-
+#imagem{
+    border-radius: 15px;
+    box-shadow: 0 0 1rem 0.2rem black;
+    width: 286px;
+    background-image: url('../Imagens/icone-utilisateur-gris.png');
+    background-position: center;
+    background-size: contain;
+    border: none;
+    height: 286px;
+}
+#imgamem{
+    
+    display: block;
+    margin: 5px auto;
+    width: 7rem;
+    height: 2rem;
+}
+#enviando{
+    width: 4rem;
+    height: 2rem;
+    border-radius: 4px;
+}
 
 /* FOOTER */
 .caixaRodape {

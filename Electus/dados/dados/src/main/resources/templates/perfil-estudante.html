@@ -35,6 +35,7 @@
       
 
         <div class="backgraund-img">
+            <p th:text="${session.usuarioLogado.id}" id="teste"  style="display: none;"></p>
             <div class="opacity">
                 <div class="container-box">
                    
@@ -42,7 +43,15 @@
                         
                         <div class="dados-usuario">
                             <div class="d-flex">
-                                <img src="https://2.bp.blogspot.com/-l5VD8eu2Rz8/Wpnaex5c5dI/AAAAAAABRbU/nosxjQKo9p0gWynzw72e3b0bZeE8GDqQACLcBGAs/s1600/estudante.jpg" style="width: 150px; height: 150px;" alt="">
+                                
+                                    <img  th:src="|/imagem/${session.usuarioLogado.id}|" id="imagem">
+                             
+
+                                <form th:action="|/Alea/${session.usuarioLogado.id}|" method="POST" enctype="multipart/form-data" th:object="${teste}">
+                                    <input type="file" name="fileProduto" id="imgamem" placeholder="none">
+                                    <button type="submit" id="enviando">Enviar</button>
+                                </form>
+                                
                             <div class="caixaDesc">
                                 <form action="/alterar" method="POST">
                                 <div class="descricao-usuario">
@@ -59,12 +68,7 @@
                                 </div>
                                  
                                 </form>
-                                <!-- <form th:action="|/Alea/${session.usuarioLogado.id}|" method="POST" enctype="multipart/form-data" th:object="${teste}">
-                                    <p th:text="${session.usuarioLogado.id}" id="teste"  style="display: none;"></p>
-                                    <input type="file" name="fileProduto" id="imgamem">
-                                    <button type="submit" id="enviando">Enviar</button>
-                                </form>
-                                <img th:src="|/imagem/${session.usuarioLogado.id}|" style="width: 50px; height:50px;"> -->
+                            
                             </div>
                             </div>
                             <div class="d-informacao">
@@ -95,8 +99,8 @@
                                 <div>
                                    
                                         <h2 class="descricao">Descrição sobre o estudante: </h2>
-                                        <!-- <p th:text="${session.usuarioLogado.descricao}"></p> -->
-                                        <p>Seja um estudante, não um seguidor. Não vá simplesmente fazer o que alguém diz. Tenha interesse pelo que alguém diz, então debata, pondere e considere de todos os ângulos.</p>
+                                        <p th:text="${session.usuarioLogado.descricao}"></p>
+                                       
                                     
                                 </div>
                                 <div class="titulo">
@@ -121,7 +125,9 @@
                               
                                    <div class="marias">
                                     <button id="btn1">Alterar dados</button>
-                                    <button id="btn2">Excluir conta</button>
+                                  
+                                        <a th:href="|/deletar/${session.usuarioLogado.id}|" id="btn2">Excluir conta</a>
+                                  
                                     <button id="btn3">Vagas de estagio</button>
                                    </div>
                                 

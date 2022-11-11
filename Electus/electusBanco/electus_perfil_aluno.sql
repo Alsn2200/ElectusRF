@@ -18,43 +18,35 @@ USE `electus`;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `vaga`
+-- Table structure for table `perfil_aluno`
 --
 
-DROP TABLE IF EXISTS `vaga`;
+DROP TABLE IF EXISTS `perfil_aluno`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `vaga` (
+CREATE TABLE `perfil_aluno` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `nome` varchar(50) NOT NULL,
-  `area` varchar(45) NOT NULL,
-  `email` varchar(45) NOT NULL,
-  `tell` varchar(45) NOT NULL,
-  `cidade` varchar(45) NOT NULL,
-  `uf` varchar(45) NOT NULL,
-  `endereco` varchar(45) NOT NULL,
-  `atribuicao` varchar(255) DEFAULT NULL,
-  `cargo` varchar(255) DEFAULT NULL,
-  `cbo` varchar(255) DEFAULT NULL,
-  `departamento` varchar(255) DEFAULT NULL,
-  `experiencia` varchar(255) DEFAULT NULL,
-  `formacao` varchar(255) DEFAULT NULL,
-  `habilidade_comportamentais` varchar(255) DEFAULT NULL,
-  `habilidades_tecnicas` varchar(255) DEFAULT NULL,
-  `tarefas` varchar(255) DEFAULT NULL,
-  `teste` varchar(255) DEFAULT NULL,
+  `aluno` varchar(55) DEFAULT NULL,
+  `sexo` varchar(15) DEFAULT NULL,
+  `curso` varchar(30) DEFAULT NULL,
+  `email` varchar(30) DEFAULT NULL,
+  `modulo` varchar(20) DEFAULT NULL,
+  `periodo` varchar(10) DEFAULT NULL,
+  `img` polygon DEFAULT NULL,
+  `descricao` varchar(150) DEFAULT NULL,
+  `formacao` varchar(150) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `vaga`
+-- Dumping data for table `perfil_aluno`
 --
 
-LOCK TABLES `vaga` WRITE;
-/*!40000 ALTER TABLE `vaga` DISABLE KEYS */;
-INSERT INTO `vaga` VALUES (1,'aaaaaaaaaa','Seguranca do trabalho','thiagos@gmail.com','4','Bahia','MS','Rua vereador jose','2','2','2','2','2','2','2','2','2','6'),(2,'tectudo','Desenvimento de Sistemas','tecmundo@456','7589456589','Feira de santana','BA','Rua alves','na','Gerente','78946','ADm','na','na','na','na','na','7'),(3,'tectudo','Desenvimento de Sistemas','tecmundo@456','7589456589','Feira de santana','BA','Rua alves','na','Gerente','78946','ADm','na','na','na','na','na','7');
-/*!40000 ALTER TABLE `vaga` ENABLE KEYS */;
+LOCK TABLES `perfil_aluno` WRITE;
+/*!40000 ALTER TABLE `perfil_aluno` DISABLE KEYS */;
+INSERT INTO `perfil_aluno` VALUES (1,'THiago','Masculino','seguranca-trabalho',NULL,'m-3','vesp',NULL,'dasdasd','asdasd');
+/*!40000 ALTER TABLE `perfil_aluno` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -66,4 +58,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-11-10  1:11:08
+-- Dump completed on 2022-11-11  0:03:18
