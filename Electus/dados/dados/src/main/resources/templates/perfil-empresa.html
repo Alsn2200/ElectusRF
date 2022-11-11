@@ -121,10 +121,15 @@
                                                 <button id="vaga-1" type="button" >Cadastrar vaga</button>
                                             </form>
                                         </div>
+                                        <div th:each="vagas : ${lista}">
+                                            <p th:text="${vagas.cnpj}"></p>
+                                        </div>
+
+
+
 
                                         
 <p th:text="${session.empresa.id}" id="teste"  style="display: none;"></p>    
-
 <p th:text="${session.empresa.nome}" id="nome"  style="display: none;"></p>   
 <p th:text="${session.empresa.area}" id="area"  style="display: none;"></p>     
 <p th:text="${session.empresa.email}" id="email"  style="display: none;"></p>   

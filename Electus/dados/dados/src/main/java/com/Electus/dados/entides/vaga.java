@@ -8,8 +8,9 @@ import javax.persistence.Id;
 @Entity
 public class vaga{
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int codico;
     private String nome;
     private String area;
     private String email;

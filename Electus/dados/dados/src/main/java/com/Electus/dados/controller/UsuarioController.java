@@ -100,7 +100,7 @@ public class UsuarioController {
         }
         else{
            
-            return "a";
+            return "redirect:/Login-estudante";
         }
 
     } 
@@ -110,7 +110,7 @@ public class UsuarioController {
 
         if(Empresa != null){
             session.setAttribute("empresa", Empresa);
-            return "redirect:/perfil-empresa";
+            return "redirect:/perfil-empresa/" + Empresa.getId();
         }
         else{
             ra.addFlashAttribute("mensagem", "Login/usuario incoretos");
@@ -121,6 +121,8 @@ public class UsuarioController {
     public String aVant(){
         return "perfil-estudante";
     }
+     
+  
     @PostMapping("/Alea/{Id}")
     public String Imagem(teste T, @RequestParam ("fileProduto") MultipartFile file, @PathVariable("Id") Integer id){
     

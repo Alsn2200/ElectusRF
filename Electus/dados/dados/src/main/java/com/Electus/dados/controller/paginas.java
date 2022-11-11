@@ -2,12 +2,20 @@ package com.Electus.dados.controller;
 
 import java.lang.ProcessBuilder.Redirect;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.converter.BufferedImageHttpMessageConverter;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+
+import com.Electus.dados.banco.bancoVagas;
 
 @Controller
 public class paginas {
+
+    @Autowired
+    private bancoVagas salvamentoVaga;
    
     @GetMapping("/Login-empresa")
     public String LoginEmpresa(){
@@ -29,8 +37,9 @@ public class paginas {
     public String CadastroEstudante(){
         return "cad-estudante2";
     }
-    @GetMapping("/perfil-empresa")
-    public String Empresa(){
+    @GetMapping("/perfil-empresa/{id}")
+    public String Empresa(@PathVariable int id, Model model){
+        model.addAttribute("lista", salvamentoVaga.findById(id));
         return "perfil-empresa";
     }
     
