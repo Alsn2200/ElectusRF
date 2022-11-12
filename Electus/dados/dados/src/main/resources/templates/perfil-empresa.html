@@ -79,8 +79,7 @@
                                 <!--        adcionar descrição             -->
                                     
                                 </div>
-                                   
-                                        
+                                   <div id="id" th:text="${session.empresa.id}" style="Display:none;"></div>                                   
                                         
                                         <div class="vaga" id="select1">
                                             <form>
@@ -118,14 +117,14 @@
                                                 <h3>Habilidades tecnicas, cursos e idiomas</h3>
                                                 <input type="text" id="tecnicas">
 
-                                                <button id="vaga-1" type="button" >Cadastrar vaga</button>
+                                                <button id="vaga-1" type="button">Cadastrar vaga</button>
                                             </form>
                                         </div>
-                                        <div th:each="vagas : ${lista}">
-                                            <p th:text="${vagas.cnpj}"></p>
-                                        </div>
 
-
+                                      <div th:each="cont : ${lista}">
+                                        <p th:if="${cont.nome == session.empresa.nome}" th:text="${cont.nome}"></p>
+                                        <a th:if="${cont.nome == session.empresa.nome}" th:href="|/deletarVaga/${cont.id}|">Excluir vaga</a>
+                                      </div>
 
 
                                         

@@ -1,6 +1,9 @@
 package com.Electus.dados.controller;
 
 import java.lang.ProcessBuilder.Redirect;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.converter.BufferedImageHttpMessageConverter;
@@ -10,6 +13,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
 import com.Electus.dados.banco.bancoVagas;
+import com.Electus.dados.entides.vaga;
 
 @Controller
 public class paginas {
@@ -37,12 +41,17 @@ public class paginas {
     public String CadastroEstudante(){
         return "cad-estudante2";
     }
-    @GetMapping("/perfil-empresa/{id}")
-    public String Empresa(@PathVariable int id, Model model){
-        model.addAttribute("lista", salvamentoVaga.findById(id));
+    List<vaga> Vaga = new ArrayList<>();
+    @GetMapping("/perfil-empresa")
+    public String Empresa(Model model){
+        
+        model.addAttribute("lista",   salvamentoVaga.findAll());
         return "perfil-empresa";
     }
-    
+    @GetMapping("/index")
+    public String index(){
+        return "index";
+    }    
     // @GetMapping("/Perfil")
     // public String PerfilEstudane(){
     //     return ("redirect:/a");

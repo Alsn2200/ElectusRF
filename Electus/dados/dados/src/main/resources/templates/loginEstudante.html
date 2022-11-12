@@ -32,6 +32,9 @@
         </nav>
     </header>
     <main>
+        <div class="vazia">
+            <div th:text="${mensagem}" th:if="${mensagem != null}" class="mensagem"></div>
+        </div>
         <div class="backgraund-img">
             <div class="opacity">
                 <div class="container-box">

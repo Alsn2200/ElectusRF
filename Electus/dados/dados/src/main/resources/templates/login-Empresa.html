@@ -18,6 +18,7 @@
 
 <body>
     <header>
+       
         <div class="logo"></div>
 
         <div id="hamburg-mobile"></div>
@@ -31,8 +32,14 @@
             </ul>
         </nav>
     </header>
+   
     <main>
+        
         <div class="backgraund-img">
+            <div class="vazia">
+                <div th:text="${mensagem}" th:if="${mensagem != null}" class="mensagem"></div>
+            </div>
+            
             <div class="opacity">
                 <div class="container-box">
                     <div class="box">

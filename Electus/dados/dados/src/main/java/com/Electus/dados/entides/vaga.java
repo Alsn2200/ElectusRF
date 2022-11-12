@@ -7,10 +7,18 @@ import javax.persistence.Id;
 
 @Entity
 public class vaga{
-    @Id
+     @Id
+     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+   
+  
     private int codico;
+    public int getCodico() {
+        return codico;
+    }
+    public void setCodico(int codico) {
+        this.codico = codico;
+    }
     private String nome;
     private String area;
     private String email;

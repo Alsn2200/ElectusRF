@@ -1,8 +1,6 @@
 package com.Electus.dados.controller;
 import java.io.File;
 import java.io.IOException;
-import java.lang.ProcessBuilder.Redirect;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 import javax.servlet.http.HttpSession;
@@ -50,26 +48,25 @@ public class UsuarioController {
     @Autowired
     private testeBanco bancoT;
     
-
-    
-
     @GetMapping("/Vagas")
     public String ListaEmpresa(Model model){
         model.addAttribute("lista", (List<vaga>) salvamentoVaga.findAll());
         return "principal";
     }
-
+ 
     @GetMapping("/usuarios/{id}")
     public Optional<Aluno> peguePorId(@PathVariable int id){
         return acessoBanco.findById(id);
     }
+  
     
     @PostMapping("/recarregar")
     public String recarregar(Aluno usuario, HttpSession session){
         session.setAttribute("usuarioLogado", usuario);
         return "/perfil-estudante";
     }
-
+    
+    
     
     @GetMapping("/imagem/{id}")
     @ResponseBody
@@ -90,7 +87,7 @@ public class UsuarioController {
     }
     
     @PostMapping("/efetuarLogin")
-    public String efetuarLogin(Aluno usuario, HttpSession session){
+    public String efetuarLogin(Aluno usuario, HttpSession session, RedirectAttributes ra){
         usuario = this.acessoBanco.findByCpfAndSenha(usuario.getCpf(), usuario.getSenha());
        
         if(usuario != null){
@@ -99,7 +96,7 @@ public class UsuarioController {
             return "redirect:/perfil-estudante";
         }
         else{
-           
+            ra.addFlashAttribute("mensagem", "Login/usuario incoretos");
             return "redirect:/Login-estudante";
         }
 
@@ -110,13 +107,14 @@ public class UsuarioController {
 
         if(Empresa != null){
             session.setAttribute("empresa", Empresa);
-            return "redirect:/perfil-empresa/" + Empresa.getId();
+            return "redirect:/perfil-empresa";
         }
         else{
             ra.addFlashAttribute("mensagem", "Login/usuario incoretos");
             return "redirect:/Login-empresa";
         }
     }
+    
     @GetMapping("/perfil-estudante")
     public String aVant(){
         return "perfil-estudante";
@@ -138,14 +136,16 @@ public class UsuarioController {
            return "redirect:/index";
                 
     }
-    @GetMapping("/index")
-    public String index(){
-        return "index";
-    }
+   
 
     @GetMapping("/deletar/{id}")
     public String deletarUsuario(@PathVariable int id){
         acessoBanco.deleteById(id);
+        return "redirect:/index";
+    }
+    @GetMapping("/deletarVaga/{id}")
+    public String deletarVaga(@PathVariable int id){
+        salvamentoVaga.deleteById(id);
         return "redirect:/index";
     }
 }
