@@ -24,11 +24,13 @@ document.getElementById('Enviar').addEventListener('click', function Enviar(){
             nome_empresa: document.getElementById('nome').textContent,
             cbo:document.getElementById('cbo').textContent,
             departamento:document.getElementById('departamento').textContent,
-            nome:document.getElementById('aluno').textContent
+            nome:document.getElementById('aluno').textContent,
+            curso: document.getElementById('curso').textContent,
+            modulo: document.getElementById('modulo').textContent
         })
     
     })
-    .catch(
-        alert("Parece que você ja se inscreveu nessa vaga! confira o seu perfil")
+    .finally(
+        alert("Cadastro feito com sucesso!!! confira o seu perfil")
     )
 })

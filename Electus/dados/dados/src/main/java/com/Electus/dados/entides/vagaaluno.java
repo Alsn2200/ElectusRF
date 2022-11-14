@@ -16,6 +16,20 @@ public class vagaaluno{
     private String cbo;
     private String departamento;
     private String nome;
+    private String curso;
+    private String modulo;
+    public String getCurso() {
+        return curso;
+    }
+    public void setCurso(String curso) {
+        this.curso = curso;
+    }
+    public String getModulo() {
+        return modulo;
+    }
+    public void setModulo(String modulo) {
+        this.modulo = modulo;
+    }
     public int getId() {
         return id;
     }

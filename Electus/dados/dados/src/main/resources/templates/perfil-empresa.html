@@ -31,11 +31,12 @@
                 <div class="container-box">
                    
                     <div class="box">
-                        
+                        <div class="imagemPerfil"></div>
+                        <h1 th:text="${session.empresa.nome}" class="Nome-aluno" id="Nome-aluno"></h1>
                         <div class="dados-usuario">
                             <div class="d-flex">
-                                <div class="imagemPerfil"></div>
-                            <div class="caixaDesc">
+                              
+                            <!-- <div class="caixaDesc">
                                 <form action="/alterar" method="POST">
                                 <div class="descricao-usuario">
                                     <label for="add-descricao" id="p-descricao">Adcione uma descrição para sua empresa:</label>
@@ -46,11 +47,11 @@
         
                                  
                                 </form>
-                            </div>
+                            </div> -->
                             </div>
                             <div class="d-informacao">
                                 <div class="informacoes-usuario">
-                                    <h1 th:text="${session.empresa.nome}" class="Nome-aluno" id="Nome-aluno"></h1>
+                                  
                                     <div class="flex-informacoes">
                                         <div class="itens-informacoes">
                                             <p>Area de atuação: </p>
@@ -79,55 +80,87 @@
                                 <!--        adcionar descrição             -->
                                     
                                 </div>
-                                   <div id="id" th:text="${session.empresa.id}" style="Display:none;"></div>                                   
-                                        
-                                        <div class="vaga" id="select1">
-                                            <form>
-                                                <div class="titulo">
-                                                    <div class="d-block">
-                                                        <h3>Cargo</h3>
-                                                        <input type="text" id="cargo">
-                                                    </div>
-                                                    <div class="d-block">
-                                                        <h3>Departamento</h3>
-                                                        <input type="text" id="Departamento">
-                                                    </div>
+                                   <div id="id" th:text="${session.empresa.id}" style="Display:none;"></div> 
+                                      
+                                <div class="container-flex">
+                                    <div class="flex-coluna">
+                                        <div th:each="cont : ${lista}" class="vagaDisponiveis">
+                                            <div class="vagas-flex">
+                                               <div class="vaga-header">
+                                                <div class="item-header">
+                                                    <p th:if="${cont.nome == session.empresa.nome}" text="Cargo">Cargo</p>
+                                                    <p th:if="${cont.nome == session.empresa.nome}" th:text="${cont.cargo}"></p>
                                                     
-                                                    <div class="d-block">
-                                                        <h3>Cbo</h3>
-                                                        <input type="text" id="cbo">
-                                                    </div>
                                                     
                                                 </div>
-                                                <h3>ATRIBUIÇÃO PRINCIPAIS</h3>
-                                                <input type="text" id="atribuicoes">
+                                                <div class="item-header">
+                                                    <p th:if="${cont.nome == session.empresa.nome}" text="Departamneto">Departamento</p>
+                                                    <p th:if="${cont.nome == session.empresa.nome}" th:text="${cont.departamento}"></p>
+                                                </div>
+                                                <div class="item-header">
+                                                   
+                                                    <p th:if="${cont.nome == session.empresa.nome}" text="Cbo">Cbo</p>
+                                                    <p th:if="${cont.nome == session.empresa.nome}" th:text="${cont.cbo}"></p>
+                                                </div>
+                                               </div>
+                                               <div class="exclusao">
+                                                <a th:if="${cont.nome == session.empresa.nome}" th:href="|/deletarVaga/${cont.id}/${cont.departamento}|">Excluir vaga</a>
+                                               </div>
+                                            </div>
+                                                
+                                            <div th:each="ins : ${inscricoes}" class="candidatos">
+                                                <p th:if="${session.empresa.nome == ins.nome_empresa}" th:text="${ins.nome}"></p>
+                                            </div>
+                                            </div>
+                                    </div>
+                                   
+                                    <div class="vaga" id="select1">
+                                        <form>
+                                            <div class="titulo">
+                                                <div class="d-block">
+                                                    <h3>Cargo</h3>
+                                                    <input type="text" id="cargo">
+                                                </div>
+                                                <div class="d-block">
+                                                    <h3>Departamento</h3>
+                                                    <input type="text" id="Departamento">
+                                                </div>
+                                                
+                                                <div class="d-block">
+                                                    <h3>Cbo</h3>
+                                                    <input type="text" id="cbo">
+                                                </div>
+                                                
+                                            </div>
+                                            <h3>ATRIBUIÇÃO PRINCIPAIS</h3>
+                                            <input type="text" id="atribuicoes">
     
-                                                <h3>Tarefas e Descrição detalhada:</h3>
-                                                <input type="text" id="tarefas">
+                                            <h3>Tarefas e Descrição detalhada:</h3>
+                                            <input type="text" id="tarefas">
     
-                                                <h3>Formação academica:</h3>
-                                                <input type="text" id="formacao">
+                                            <h3>Formação academica:</h3>
+                                            <input type="text" id="formacao">
     
-                                                <h3>Experiencia profiossional</h3>
-                                                <input type="text" id="profissional">
+                                            <h3>Experiencia profiossional</h3>
+                                            <input type="text" id="profissional">
     
-                                                <h3>Habilidades comportamentais</h3>
-                                                <input type="text" id="comportamentais">
+                                            <h3>Habilidades comportamentais</h3>
+                                            <input type="text" id="comportamentais">
     
-                                                <h3>Habilidades tecnicas, cursos e idiomas</h3>
-                                                <input type="text" id="tecnicas">
+                                            <h3>Habilidades tecnicas, cursos e idiomas</h3>
+                                            <input type="text" id="tecnicas">
+    
+                                            <button id="vaga-1" type="button">Cadastrar vaga</button>
+                                        </form>
+                                    </div>
+                                  </div>
+                                 
+                                  
+                                </div>
+                                   
+                                        
 
-                                                <button id="vaga-1" type="button">Cadastrar vaga</button>
-                                            </form>
-                                        </div>
-
-                                      <div th:each="cont : ${lista}">
-                                        <p th:if="${cont.nome == session.empresa.nome}" th:text="${cont.nome}"></p>
-                                        <a th:if="${cont.nome == session.empresa.nome}" th:href="|/deletarVaga/${cont.id}/${cont.departamento}|">Excluir vaga</a>
-                                        <div th:each="ins : ${inscricoes}">
-                                            <p th:if="${session.empresa.nome == ins.nome_empresa}" th:text="${ins.nome}"></p>
-                                        </div>
-                                      </div>
+                                      
 
 
                                    
@@ -145,7 +178,6 @@
                         </div>
 
                         
-                            <button type="submit">Salvar dados</button>
                         </form>
                     </div>
                     

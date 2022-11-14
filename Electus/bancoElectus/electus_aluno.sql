@@ -1,10 +1,10 @@
 CREATE DATABASE  IF NOT EXISTS `electus` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
 USE `electus`;
--- MySQL dump 10.13  Distrib 8.0.31, for Win64 (x86_64)
+-- MySQL dump 10.13  Distrib 8.0.30, for Win64 (x86_64)
 --
--- Host: localhost    Database: electus
+-- Host: 127.0.0.1    Database: electus
 -- ------------------------------------------------------
--- Server version	8.0.31
+-- Server version	8.0.28
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -18,34 +18,46 @@ USE `electus`;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `vagaaluno`
+-- Table structure for table `aluno`
 --
 
-DROP TABLE IF EXISTS `vagaaluno`;
+DROP TABLE IF EXISTS `aluno`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `vagaaluno` (
+CREATE TABLE `aluno` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `nome_empresa` varchar(50) NOT NULL,
-  `cbo` varchar(50) NOT NULL,
-  `departamento` varchar(50) NOT NULL,
-  `nome` varchar(50) NOT NULL,
+  `aluno` varchar(50) DEFAULT NULL,
+  `data_nascimento` varchar(20) DEFAULT NULL,
+  `cpf` varchar(11) DEFAULT NULL,
+  `numero_telefone` varchar(50) DEFAULT NULL,
+  `email` varchar(30) DEFAULT NULL,
+  `sexo` varchar(15) DEFAULT NULL,
+  `endereco` varchar(55) DEFAULT NULL,
+  `numero_casa` varchar(30) DEFAULT NULL,
+  `curso` varchar(50) DEFAULT NULL,
+  `modulo` varchar(40) DEFAULT NULL,
+  `periodo` varchar(15) DEFAULT NULL,
+  `senha` varchar(20) DEFAULT NULL,
+  `descricao` varchar(80) DEFAULT NULL,
+  `formacao` varchar(255) DEFAULT NULL,
+  `teste` varchar(1000) DEFAULT NULL,
+  `nomeimagem` varchar(255) DEFAULT NULL,
+  `imagem` longblob,
   PRIMARY KEY (`id`),
-  UNIQUE KEY `nome_empresa_UNIQUE` (`nome_empresa`),
-  UNIQUE KEY `cbo_UNIQUE` (`cbo`),
-  UNIQUE KEY `departamento_UNIQUE` (`departamento`),
-  UNIQUE KEY `nome_UNIQUE` (`nome`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+  UNIQUE KEY `cpf_UNIQUE` (`cpf`),
+  UNIQUE KEY `numero_telefone_UNIQUE` (`numero_telefone`),
+  UNIQUE KEY `email_UNIQUE` (`email`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `vagaaluno`
+-- Dumping data for table `aluno`
 --
 
-LOCK TABLES `vagaaluno` WRITE;
-/*!40000 ALTER TABLE `vagaaluno` DISABLE KEYS */;
-INSERT INTO `vagaaluno` VALUES (1,'TecMundo','','7','Beatriz');
-/*!40000 ALTER TABLE `vagaaluno` ENABLE KEYS */;
+LOCK TABLES `aluno` WRITE;
+/*!40000 ALTER TABLE `aluno` DISABLE KEYS */;
+INSERT INTO `aluno` VALUES (1,'Beatriz','2002-08-07','456','456','466','Feminino','Rua Vereador Jose Braga','45','Desenvimento de Sistemas','Modulo 2','Noturno','45',NULL,NULL,NULL,NULL,NULL);
+/*!40000 ALTER TABLE `aluno` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -57,4 +69,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-11-13 23:01:09
+-- Dump completed on 2022-11-14 11:36:33

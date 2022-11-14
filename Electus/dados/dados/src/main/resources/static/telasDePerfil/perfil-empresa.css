@@ -56,7 +56,7 @@ header li a:hover{
     background-position: left;
 }
 .opacity {
-    height: 140vh;
+    height: 142vh;
     position: absolute;
     padding: 2rem;
     display: flex;
@@ -74,12 +74,11 @@ header li a:hover{
 }
 
 .box {
-    height: 50rem;
-    width: 90vw;
-    padding: 25px;
+    height: 67rem;
+    width: 78vw;
+    padding: 10px;
     background-color: #f78e0c;
     border-radius: 20px
-
 }
 /* DADOS */
 .title-box {
@@ -104,12 +103,20 @@ header li a:hover{
 .itens-informacoes{
     display: flex;
     gap: 8px;
-    width: 22rem;
     margin-top: 6px;
+}
+.flex{
+    display: flex;
+    justify-content: space-between;
+}
+.container-flex{
+    display: flex;
+    gap: 25px;
+    justify-content: space-between;
 }
 .imagemPerfil{
     height: 35vh;
-    width: 20vw;
+    width: 100%;
     background-color: black;
 }
 .descricao-usuario{
@@ -133,7 +140,6 @@ header li a:hover{
 }
 .d-informacao{
     width: 100%;
-    padding: 0 19px;
 }
 .caixaDesc{
     display: flex;
@@ -141,7 +147,7 @@ header li a:hover{
 }
 .flex-informacoes{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 #p-descricao{
@@ -172,6 +178,7 @@ header li a:hover{
     display: block;
 }
 .Nome-aluno{
+    margin-top: 10px;
     text-align: center;
 }
 
@@ -188,7 +195,38 @@ header li a:hover{
     width: 8vw;
     background-color: #e99a39;
 }
+.vagas-flex{
+    margin-top: 15px;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
 
+}
+.vaga-header{
+    width: 77%;
+    display: flex;
+    padding: 2px;
+    justify-content: space-around;
+}
+.candidatos{
+    margin-top: 5px;
+    border-top: 1px solid;
+}
+.flex-coluna{
+    width: 100%;
+}
+.item-header{
+    text-align: center;
+}
+.exclusao{
+    border-radius: 8px;
+    box-shadow: 0 0 8px 1px black;
+    background-color: #f51b1bf5;
+    display: flex;
+    align-items: center;
+    width: 19%;
+    justify-content: center;
+}
 .itens-box {
     text-align: left;
     padding: 20px 40px;
@@ -202,11 +240,16 @@ header li a:hover{
     display: flex;
     flex-wrap: wrap;
 }
+.vagaDisponiveis{
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 0 8px 1px black;
+    background-color: #fffffff5;
+}
 .vaga{
     display: flex;
     width: 38rem;
     padding: 5px;
-    margin: 0 auto;
     background-color: #fff7ecba;
     border-radius: 5px;
     box-shadow: 0 0 16px 1px;
