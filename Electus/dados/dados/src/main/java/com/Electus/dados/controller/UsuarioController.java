@@ -24,12 +24,14 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.Electus.dados.banco.UsuarioBanco;
 import com.Electus.dados.banco.bancoEmpresa;
+import com.Electus.dados.banco.bancoVagaAluno;
 import com.Electus.dados.banco.bancoVagas;
 import com.Electus.dados.banco.testeBanco;
 import com.Electus.dados.entides.Aluno;
 import com.Electus.dados.entides.empresa;
 import com.Electus.dados.entides.teste;
 import com.Electus.dados.entides.vaga;
+import com.Electus.dados.entides.vagaaluno;
 
 
 @Controller
@@ -47,9 +49,20 @@ public class UsuarioController {
 
     @Autowired
     private testeBanco bancoT;
-    
-    @GetMapping("/Vagas")
-    public String ListaEmpresa(Model model){
+
+    @Autowired
+    private bancoVagaAluno bancoVagaAluno;
+
+     
+    @GetMapping("/Vagas/{id}")
+    public String ListaEmpresa(Model model,Aluno usuario, HttpSession session, @PathVariable int id){
+        usuario = this.acessoBanco.getOne(id);
+        model.addAttribute("lista", (List<vaga>) salvamentoVaga.findAll());
+        session.setAttribute("aluno", usuario);
+        return "principal";
+    }
+    @GetMapping("/EmpresaVagas")
+    public String VagasEmpresa(Model model){
         model.addAttribute("lista", (List<vaga>) salvamentoVaga.findAll());
         return "principal";
     }
@@ -58,7 +71,6 @@ public class UsuarioController {
     public Optional<Aluno> peguePorId(@PathVariable int id){
         return acessoBanco.findById(id);
     }
-  
     
     @PostMapping("/recarregar")
     public String recarregar(Aluno usuario, HttpSession session){
@@ -143,9 +155,25 @@ public class UsuarioController {
         acessoBanco.deleteById(id);
         return "redirect:/index";
     }
-    @GetMapping("/deletarVaga/{id}")
-    public String deletarVaga(@PathVariable int id){
-        salvamentoVaga.deleteById(id);
+
+    @GetMapping("/deletarVaga/{t}/{nome}")
+    public String deletarVaga(@PathVariable int t, @PathVariable String nome, vagaaluno Aluno){
+        salvamentoVaga.deleteById(t);
+        // Aluno =  this.bancoVagaAluno.findByNome(nome);
+        // List<vagaaluno> aaa;
+       
+        // Aluno = bancoVagaAluno.findByDepartamento(nome);
+        // while(Aluno.getNome().equals(nome)){
+            
+            // bancoVagaAluno.deleteById(Aluno.getId());
+            
+          
+        //  }
+         
+        System.out.println(Aluno.getId());
+            
+      
         return "redirect:/index";
     }
+   
 }

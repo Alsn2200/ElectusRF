@@ -17,7 +17,7 @@
         <div id="hamburg-mobile"></div>
             <nav id="navegacao">
                 <ul id="mobile">
-                    <li><a href="/Vagas" id="link-3">Vagas</a></li>
+                    <li><a href="/EmpresaVagas" id="link-3">Vagas</a></li>
                     <hr class="linha-mobile">
                     <li><a href="/index"id="link-4"> | Inicio</a></li>
                     
@@ -123,11 +123,14 @@
 
                                       <div th:each="cont : ${lista}">
                                         <p th:if="${cont.nome == session.empresa.nome}" th:text="${cont.nome}"></p>
-                                        <a th:if="${cont.nome == session.empresa.nome}" th:href="|/deletarVaga/${cont.id}|">Excluir vaga</a>
+                                        <a th:if="${cont.nome == session.empresa.nome}" th:href="|/deletarVaga/${cont.id}/${cont.departamento}|">Excluir vaga</a>
+                                        <div th:each="ins : ${inscricoes}">
+                                            <p th:if="${session.empresa.nome == ins.nome_empresa}" th:text="${ins.nome}"></p>
+                                        </div>
                                       </div>
 
 
-                                        
+                                   
 <p th:text="${session.empresa.id}" id="teste"  style="display: none;"></p>    
 <p th:text="${session.empresa.nome}" id="nome"  style="display: none;"></p>   
 <p th:text="${session.empresa.area}" id="area"  style="display: none;"></p>     
