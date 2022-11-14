@@ -18,6 +18,7 @@
 </head>
 
 <body>
+    <!-- Header -->
     <header>
         <div class="logo"></div>
 
@@ -31,124 +32,87 @@
             </ul>
         </nav>
     </header>
+    <!-- Main -->
     <main>
-      
+        <div class="containerMain">
+            <div class="box1">
+                <h1 th:text="${session.usuarioLogado.aluno}" class="Nome-aluno" id="Nome-aluno">
+                </h1>
+                <div class="descricao">
+                    <h5 class="titleDescricao">Descrição do perfil: </h5>
+                    <p th:text="${session.usuarioLogado.descricao}" id="respDesc"></p>
+                    <div class="barra"></div>
 
-        <div class="backgraund-img">
-            <p th:text="${session.usuarioLogado.id}" id="teste"  style="display: none;"></p>
-            <div class="opacity">
-                <div class="container-box">
-                   
-                    <div class="box">
-                        
-                        <div class="dados-usuario">
-                            <div class="d-flex">
-                                
-                                    <img  th:src="|/imagem/${session.usuarioLogado.id}|" id="imagem">
-                             
-
-                                <form th:action="|/Alea/${session.usuarioLogado.id}|" method="POST" enctype="multipart/form-data" th:object="${teste}">
-                                    <input type="file" name="fileProduto" id="imgamem" placeholder="none">
-                                    <button type="submit" id="enviando">Enviar</button>
-                                </form>
-                                
-                            <div class="caixaDesc">
-                                <form action="/alterar" method="POST">
-                                <div class="descricao-usuario">
-                                    <label for="add-descricao" id="p-descricao">Adcione uma descrição para perfil:</label>
-                                    <textarea type="text" name="descricao-vaga" id="add-descricao" cols="30" rows="10" placeholder="Digite algo aqui..."></textarea>
-                                    <input type="button" value="Enviar" id="btn-enviar-descricao">
-                                    
-                                </div>
-                               
-                                <div class="descricao-usuario1">
-                                    <label for="add-descricao" id="p-descricao">Adcione outras formações:</label>
-                                    <textarea type="text" name="descricao-vaga" id="add-formacao" cols="30" rows="10" placeholder="Digite algo aqui..."></textarea>
-                                    <a href=""><input type="button" value="Enviar" id="btn-enviar-descricao"></a>
-                                </div>
-                                 
-                                </form>
-                            
-                            </div>
-                            </div>
-                            <div class="d-informacao">
-                                <div class="informacoes-usuario">
-                                    <h1 th:text="${session.usuarioLogado.aluno}" class="Nome-aluno" id="Nome-aluno"></h1>
-                                    <div class="flex-informacoes">
-                                        <div class="itens-informacoes">
-                                            <p>Curso: </p>
-                                            <p th:text="${session.usuarioLogado.curso}" id="curso"></p>
-                                        </div>
-                                        <div class="itens-informacoes">
-                                            <p>Modulo: </p>
-                                            <p th:text="${session.usuarioLogado.modulo}" id="modulo"></p>
-                                        </div>
-                                    </div>
-                                    <div class="flex-informacoes">
-                                    <div class="itens-informacoes">
-                                        <p>Periodo: </p>
-                                        <p th:text="${session.usuarioLogado.periodo}" id="periodo"></p>
-                                    </div>
-                                    <div class="itens-informacoes">
-                                        <p>Sexo: </p>
-                                        <p th:text="${session.usuarioLogado.sexo}" id="sexo"></p>
-                                    </div>
-                                    </div>
-                                    
-                                </div>
-                                <div>
-                                   
-                                        <h2 class="descricao">Descrição sobre o estudante: </h2>
-                                        <p th:text="${session.usuarioLogado.descricao}"></p>
-                                       
-                                    
-                                </div>
-                                <div class="titulo">
-                                    <p>Adcione seus curiculos</p>
-                                </div>
-                                <div class="flex">
-                                    
-                                    <div class="div">
-                                        <p>Adcionar PDF</p>
-                                    </div>
-    
-                                    <div class="div">
-                                        <p>Adcionar PDF</p>
-                                    </div>
-                                       
-                                    <div class="div">
-                                        <p>Adcionar PDF</p>
-                                    </div>
-
-                                </div>
-
-                              
-                                   <div class="marias">
-                                    <button id="btn1">Alterar dados</button>
-                                  
-                                        <a th:href="|/deletar/${session.usuarioLogado.id}|" id="btn2">Excluir conta</a>
-                                  
-                                    <button id="btn3">Vagas de estagio</button>
-                                   </div>
-                                
-                            </div>
-                           
-                        </div>
-                        <!-- <input type="file" name="upload" value="arquivo" id="btn-upload"> -->
-
-                       
-
-                        
-                            
-                       
-                    </div>
-                    
                 </div>
-              
+             
+                <div class="colunaDados">
+                    <div class="coluna1">
+                        <div class="itenColuna">
+                            <p>Data de nascimento:</p>
+                        </div>
+                        <div class="itenColuna">
+                            <p>CPF:</p>
+                        </div>
+                        <div class="itenColuna">
+                            <p>Nº telefone:</p>
+                        </div>
+                        <div class="itenColuna">
+                            <p>Sexo:</p>
+                            <p th:text="${session.usuarioLogado.sexo}" id="sexo"></p>
+                        </div>
+                        <div class="itenColuna">
+                            <p>E-mail:</p>
+                        </div>
+                    </div>
+                    <div class="coluna2">
+                        <div class="itenColuna">
+                            <p>Curso:</p>
+                            <p th:text="${session.usuarioLogado.curso}" id="curso"></p>
+                        </div>
+                        <div class="itenColuna">
+                            <p>Módulo:</p>
+                            <p th:text="${session.usuarioLogado.modulo}" id="modulo"></p>
+                        </div>
+                        <div class="itenColuna">
+                            <p>Período:</p>
+                            <p th:text="${session.usuarioLogado.periodo}" id="periodo"></p>
+                        </div>
+                        <div class="itenColuna">
+                            <p>Endereço:</p>
+                            <p th:text="${session.usuarioLogado.endereco}" id="endereco"></p>
+
+                        </div>
+                        <div class="itenColuna">
+                            <p>Número da Casa:</p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="box2">
+                <div class="d-flex">
+                    <img th:src="|/imagem/${session.usuarioLogado.id}|" id="imagemPerfil">
+                    <form th:action="|/Alea/${session.usuarioLogado.id}|" method="POST" enctype="multipart/form-data"
+                        th:object="${teste}">
+                        <input type="file" name="fileProduto" id="imgAtualizar" placeholder="none">
+                        <button type="submit" id="enviando"> Enviar </button>
+                    </form>
+                </div>
             </div>
         </div>
-       
+        <div class="botoesPerfil">
+
+            <button id="btnAlterar">Alterar dados</button>
+            <button id="btnVerVagas">Vagas Cadastradas</button>
+            <a th:href="|/deletar/${session.usuarioLogado.id}|" id="btnExcluir">Excluir conta</a>
+        </div>
+
+
+        <!-- teste ^ -->
+
+        <!-- <input type="file" name="upload" value="arquivo" id="btn-upload"> -->
     </main>
+    <!-- footer -->
     <footer class="rodape">
         <div class="caixaRodape">
             <div class="logo"></div>
@@ -180,7 +144,7 @@
                     <li>Publicações</li>
                     <li>Artigos</li>
                 </ul>
-               
+
                 <ul>
                     <h4>Programadores</h4>
                     <li><a href="https://github.com/Alsn2200">Alisson Brito</a></li>
@@ -191,6 +155,7 @@
             </div>
         </div>
     </footer>
+
 
     <script th:src="@{/Scripts/Script-hamburg.js}"></script>
     <script th:src="@{/Electus_Scripts/EstudanteLogin.js}"></script>
