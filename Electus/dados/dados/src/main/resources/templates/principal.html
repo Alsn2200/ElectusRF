@@ -42,7 +42,8 @@
      </div>      
     <div class="teste">
         <div th:each=" cont : ${lista}" class="vagas">
-            <h3 th:text="${cont.nome}"></h3>
+            <h3 th:text="${cont.nome}" id="nome"></h3>
+            <p th:text="${cont.cbo}" id="cbo" style="display: none;"></p>
             <div class="d-flex">
                <div class="contato">
                 <div class="informacoes">
@@ -73,7 +74,7 @@
                
                     <div class="informacoes">
                         <p>Departamento: </p>
-                        <p th:text="${cont.departamento}"></p>
+                        <p th:text="${cont.departamento}" id="departamento"></p>
                     </div>
 
                     <div class="informacoes">
@@ -109,10 +110,13 @@
                     <p>Habilidades tecnicas: </p>
                     <p th:text="${cont.habilidades_tecnicas}"></p>
                 </div>
-   
+                
             </div>
-
+            <button th:if="${session.aluno != null}" type="button" id="Enviar">Inscreve-se</button>
         </div>
+        
+        <p th:if="${session.aluno != null}" th:text="${session.aluno.aluno}" style="display: none;" id="aluno"></p>
+       
        
     </div>
     </main>

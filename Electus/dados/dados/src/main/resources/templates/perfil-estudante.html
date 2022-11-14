@@ -43,6 +43,118 @@
                     <p th:text="${session.usuarioLogado.descricao}" id="respDesc"></p>
                     <div class="barra"></div>
 
+<<<<<<< HEAD
+=======
+        <div class="backgraund-img">
+            <p th:text="${session.usuarioLogado.id}" id="teste"  style="display: none;"></p>
+            <div class="opacity">
+                <div class="container-box">
+                   
+                    <div class="box">
+                        
+                        <div class="dados-usuario">
+                            <div class="d-flex">
+                                
+                                    <img  th:src="|/imagem/${session.usuarioLogado.id}|" id="imagem">
+                             
+
+                                <form th:action="|/Alea/${session.usuarioLogado.id}|" method="POST" enctype="multipart/form-data" th:object="${teste}">
+                                    <input type="file" name="fileProduto" id="imgamem" placeholder="none">
+                                    <button type="submit" id="enviando">Enviar</button>
+                                </form>
+                                
+                            <div class="caixaDesc">
+                                <form action="/alterar" method="POST">
+                                <div class="descricao-usuario">
+                                    <label for="add-descricao" id="p-descricao">Adcione uma descrição para perfil:</label>
+                                    <textarea type="text" name="descricao-vaga" id="add-descricao" cols="30" rows="10" placeholder="Digite algo aqui..."></textarea>
+                                    <input type="button" value="Enviar" id="btn-enviar-descricao">
+                                    
+                                </div>
+                               
+                                <div class="descricao-usuario1">
+                                    <label for="add-descricao" id="p-descricao">Adcione outras formações:</label>
+                                    <textarea type="text" name="descricao-vaga" id="add-formacao" cols="30" rows="10" placeholder="Digite algo aqui..."></textarea>
+                                    <a href=""><input type="button" value="Enviar" id="btn-enviar-descricao"></a>
+                                </div>
+                                 
+                                </form>
+                            
+                            </div>
+                            </div>
+                            <div class="d-informacao">
+                                <div class="informacoes-usuario">
+                                    <h1 th:text="${session.usuarioLogado.aluno}" class="Nome-aluno" id="Nome-aluno"></h1>
+                                    <div class="flex-informacoes">
+                                        <div class="itens-informacoes">
+                                            <p>Curso: </p>
+                                            <p th:text="${session.usuarioLogado.curso}" id="curso"></p>
+                                        </div>
+                                        <div class="itens-informacoes">
+                                            <p>Modulo: </p>
+                                            <p th:text="${session.usuarioLogado.modulo}" id="modulo"></p>
+                                        </div>
+                                    </div>
+                                    <div class="flex-informacoes">
+                                    <div class="itens-informacoes">
+                                        <p>Periodo: </p>
+                                        <p th:text="${session.usuarioLogado.periodo}" id="periodo"></p>
+                                    </div>
+                                    <div class="itens-informacoes">
+                                        <p>Sexo: </p>
+                                        <p th:text="${session.usuarioLogado.sexo}" id="sexo"></p>
+                                    </div>
+                                    </div>
+                                    
+                                </div>
+                                <div>
+                                   
+                                        <h2 class="descricao">Descrição sobre o estudante: </h2>
+                                        <p th:text="${session.usuarioLogado.descricao}"></p>
+                                       
+                                    
+                                </div>
+                                <div class="titulo">
+                                    <p>Adcione seus curiculos</p>
+                                </div>
+                                <div class="flex">
+                                    
+                                    <div class="div">
+                                        <p>Adcionar PDF</p>
+                                    </div>
+    
+                                    <div class="div">
+                                        <p>Adcionar PDF</p>
+                                    </div>
+                                       
+                                    <div class="div">
+                                        <p>Adcionar PDF</p>
+                                    </div>
+
+                                </div>
+
+                              
+                                   <div class="marias">
+                                    <button id="btn1">Alterar dados</button>
+                                  
+                                        <a th:href="|/deletar/${session.usuarioLogado.id}|" id="btn2">Excluir conta</a>
+                                  
+                                    <a id="btn3" th:href="|/Vagas/${session.usuarioLogado.id}|">Vagas de estagio</a>
+                                   </div>
+                                
+                            </div>
+                           
+                        </div>
+                        <!-- <input type="file" name="upload" value="arquivo" id="btn-upload"> -->
+
+                       
+
+                        
+                            
+                       
+                    </div>
+                    
+>>>>>>> ed408ed3d7727caeb4429068bf494e510cb88479
                 </div>
              
                 <div class="colunaDados">

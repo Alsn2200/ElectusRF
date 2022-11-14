@@ -18,44 +18,46 @@ USE `electus`;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `vaga`
+-- Table structure for table `aluno`
 --
 
-DROP TABLE IF EXISTS `vaga`;
+DROP TABLE IF EXISTS `aluno`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `vaga` (
-  `codico` int NOT NULL,
+CREATE TABLE `aluno` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `nome` varchar(50) NOT NULL,
-  `area` varchar(45) NOT NULL,
-  `email` varchar(45) NOT NULL,
-  `tell` varchar(45) NOT NULL,
-  `cidade` varchar(45) NOT NULL,
-  `uf` varchar(45) NOT NULL,
-  `endereco` varchar(45) NOT NULL,
-  `atribuicao` varchar(255) DEFAULT NULL,
-  `cargo` varchar(255) DEFAULT NULL,
-  `cbo` varchar(255) DEFAULT NULL,
-  `departamento` varchar(255) DEFAULT NULL,
-  `experiencia` varchar(255) DEFAULT NULL,
+  `aluno` varchar(50) DEFAULT NULL,
+  `data_nascimento` varchar(20) DEFAULT NULL,
+  `cpf` varchar(11) DEFAULT NULL,
+  `numero_telefone` varchar(50) DEFAULT NULL,
+  `email` varchar(30) DEFAULT NULL,
+  `sexo` varchar(15) DEFAULT NULL,
+  `endereco` varchar(55) DEFAULT NULL,
+  `numero_casa` varchar(30) DEFAULT NULL,
+  `curso` varchar(50) DEFAULT NULL,
+  `modulo` varchar(40) DEFAULT NULL,
+  `periodo` varchar(15) DEFAULT NULL,
+  `senha` varchar(20) DEFAULT NULL,
+  `descricao` varchar(80) DEFAULT NULL,
   `formacao` varchar(255) DEFAULT NULL,
-  `habilidade_comportamentais` varchar(255) DEFAULT NULL,
-  `habilidades_tecnicas` varchar(255) DEFAULT NULL,
-  `tarefas` varchar(255) DEFAULT NULL,
-  `teste` varchar(255) DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+  `teste` varchar(1000) DEFAULT NULL,
+  `nomeimagem` varchar(255) DEFAULT NULL,
+  `imagem` longblob,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `cpf_UNIQUE` (`cpf`),
+  UNIQUE KEY `numero_telefone_UNIQUE` (`numero_telefone`),
+  UNIQUE KEY `email_UNIQUE` (`email`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `vaga`
+-- Dumping data for table `aluno`
 --
 
-LOCK TABLES `vaga` WRITE;
-/*!40000 ALTER TABLE `vaga` DISABLE KEYS */;
-INSERT INTO `vaga` VALUES (0,12,'TecMundo','Refrigeração e Climatização','Methus@gmail.com','456789','Salvador','BA','São Jorge','456','4567','456','456','456','456','456','46','456','4');
-/*!40000 ALTER TABLE `vaga` ENABLE KEYS */;
+LOCK TABLES `aluno` WRITE;
+/*!40000 ALTER TABLE `aluno` DISABLE KEYS */;
+INSERT INTO `aluno` VALUES (1,'Beatriz','2002-08-07','456','456','466','Feminino','Rua Vereador Jose Braga','45','Desenvimento de Sistemas','Modulo 2','Noturno','45',NULL,NULL,NULL,NULL,NULL);
+/*!40000 ALTER TABLE `aluno` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -67,4 +69,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-11-12 18:03:49
+-- Dump completed on 2022-11-13 23:01:08

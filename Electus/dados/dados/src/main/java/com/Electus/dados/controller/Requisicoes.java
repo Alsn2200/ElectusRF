@@ -1,27 +1,15 @@
 package com.Electus.dados.controller;
 
-import java.io.IOException;
-import java.lang.ProcessBuilder.Redirect;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.util.ArrayList;
 import java.util.List;
 
-import javax.websocket.server.PathParam;
-
-import org.apache.tomcat.jni.File;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.CrossOrigin;
 
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.multipart.MultipartFile;
+import com.Electus.dados.banco.bancoVagaAluno;
 
 import com.Electus.dados.banco.UsuarioBanco;
 import com.Electus.dados.banco.bancoEmpresa;
@@ -29,6 +17,7 @@ import com.Electus.dados.banco.bancoVagas;
 import com.Electus.dados.entides.Aluno;
 import com.Electus.dados.entides.empresa;
 import com.Electus.dados.entides.vaga;
+import com.Electus.dados.entides.vagaaluno;
 
 
 
@@ -45,9 +34,17 @@ public class Requisicoes {
     @Autowired
     private bancoVagas salvamentoVaga;
 
+    @Autowired
+    private bancoVagaAluno bancoVagaAluno;
+
     @GetMapping("/Lista")
     public List<empresa> ListaEmpresa(){
         return (List<empresa>) salvamentoEmpresa.findAll();
+    }
+
+    @PostMapping("/vagaAluno")
+    public void candidatura(@RequestBody vagaaluno Cadastro){
+        bancoVagaAluno.save(Cadastro);
     }
 
     @PostMapping("/cadastrar")
