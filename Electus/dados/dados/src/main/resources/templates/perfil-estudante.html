@@ -43,8 +43,7 @@
                     <p th:text="${session.usuarioLogado.descricao}" id="respDesc"></p>
                     <div class="barra"></div>
 
-<<<<<<< HEAD
-=======
+
         <div class="backgraund-img">
             <p th:text="${session.usuarioLogado.id}" id="teste"  style="display: none;"></p>
             <div class="opacity">
@@ -145,7 +144,7 @@
                             </div>
                            
                         </div>
-                        <!-- <input type="file" name="upload" value="arquivo" id="btn-upload"> -->
+                       
 
                        
 
@@ -154,7 +153,7 @@
                        
                     </div>
                     
->>>>>>> ed408ed3d7727caeb4429068bf494e510cb88479
+
                 </div>
              
                 <div class="colunaDados">
@@ -201,6 +200,18 @@
                     </div>
                 </div>
             </div>
+            <p th:text="${session.usuarioLogado.estrela}" id="Avaliacao"></p>
+            <p th:if="${session.usuarioLogado.estrela == null}" > Parece que voce ainda não foi avaliado</p>
+                <ul class="avaliacao">
+                    <li class="star-icon " data-avaliacao="1" value="1"></li>
+                    <li class="star-icon " data-avaliacao="2"  value="2"></li>
+                    <li class="star-icon" data-avaliacao="3"  value="3"></li>
+                    <li class="star-icon" data-avaliacao="4"  value="4"></li>
+                    <li class="star-icon " data-avaliacao="5"  value="5"></li>
+                </ul>
+           
+           
+            
             <div class="box2">
                 <div class="d-flex">
                     <img th:src="|/imagem/${session.usuarioLogado.id}|" id="imagemPerfil">
@@ -269,8 +280,7 @@
     </footer>
 
 
-    <script th:src="@{/Scripts/Script-hamburg.js}"></script>
-    <script th:src="@{/Electus_Scripts/EstudanteLogin.js}"></script>
+    
     <script th:src="@{/Electus_Scripts/alunoperfil.js}"></script>
 </body>
 

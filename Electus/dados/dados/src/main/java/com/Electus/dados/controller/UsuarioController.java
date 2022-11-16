@@ -28,6 +28,7 @@ import com.Electus.dados.banco.bancoVagaAluno;
 import com.Electus.dados.banco.bancoVagas;
 import com.Electus.dados.banco.testeBanco;
 import com.Electus.dados.entides.Aluno;
+import com.Electus.dados.entides.docente;
 import com.Electus.dados.entides.empresa;
 import com.Electus.dados.entides.teste;
 import com.Electus.dados.entides.vaga;
@@ -65,6 +66,16 @@ public class UsuarioController {
     public String VagasEmpresa(Model model){
         model.addAttribute("lista", (List<vaga>) salvamentoVaga.findAll());
         return "principal";
+    }
+
+    @PostMapping("/login-docente")
+    public String loginDocente(docente Docente){
+        if(Docente.getCodico().equals("789456") && Docente.getSenha().equals("123456")){
+            return "redirect:/Docente";
+        }
+        else{
+            return "/login-docente";
+        }
     }
  
     @GetMapping("/usuarios/{id}")

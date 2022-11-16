@@ -22,7 +22,24 @@ btnButton.addEventListener('click', function Enviar(){
     })
     
 })
-ocument.getElementById('imgamem').addEventListener('click', function Enviarrr(){
+var stars = document.querySelectorAll('.star-icon')
+var avaliacao = document.getElementById('Avaliacao').textContent
+
+
+    
+    stars.forEach(function(star){
+        if(star.value == avaliacao){
+            star.classList += " ativo"
+        }
+       
+        
+    });
+   
+   
+  
+
+
+document.getElementById('imgamem').addEventListener('click', function Enviarrr(){
     var teste = document.getElementById('teste').textContent
    
     console.log(formacao)

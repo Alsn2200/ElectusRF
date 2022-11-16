@@ -81,9 +81,10 @@
                                     
                                 </div>
                                    <div id="id" th:text="${session.empresa.id}" style="Display:none;"></div> 
-                                      
+                                     
                                 <div class="container-flex">
                                     <div class="flex-coluna">
+                                        <h2 class="titulo-vaga">Vagas lançadas</h2>
                                         <div th:each="cont : ${lista}" class="vagaDisponiveis">
                                             <div class="vagas-flex">
                                                <div class="vaga-header">
@@ -104,17 +105,38 @@
                                                 </div>
                                                </div>
                                                <div class="exclusao">
+                                                
                                                 <a th:if="${cont.nome == session.empresa.nome}" th:href="|/deletarVaga/${cont.id}/${cont.departamento}|">Excluir vaga</a>
                                                </div>
                                             </div>
-                                                
+                                            <table>
+                                                <div class="candidatos-titulo" th:if="${lista != null}">
+                                                    
+                                                    <tr>
+                                                        <th>Candidatos(as)</th>
+                                                        <th class="borda">Curso</th>
+                                                        <th>Modulo</th>
+                                                    </tr>
+                                                   
+                                                    <!-- <p  class="curso-candidato"></p> -->
+                                                   
+                                                   
+                                                </div>
                                             <div th:each="ins : ${inscricoes}" class="candidatos">
-                                                <p th:if="${session.empresa.nome == ins.nome_empresa}" th:text="${ins.nome}"></p>
+                                                <tr>
+                                                    <td th:if="${session.empresa.nome == ins.nome_empresa}" th:text="${ins.nome}"></td>
+                                                    <td th:if="${session.empresa.nome == ins.nome_empresa}" th:text="${ins.curso}" class="borda"></td>
+                                                    <td h:if="${session.empresa.nome == ins.nome_empresa}" th:text="${ins.modulo}"></td>
+                                                </tr>
+                                                
                                             </div>
+                                            </table>
                                             </div>
                                     </div>
-                                   
+                                    <div class="formulario-vaga">
+                                        <h2>Deseja lançar uma vaga? Preença o formulario!</h2>
                                     <div class="vaga" id="select1">
+                                       
                                         <form>
                                             <div class="titulo">
                                                 <div class="d-block">
@@ -133,25 +155,27 @@
                                                 
                                             </div>
                                             <h3>ATRIBUIÇÃO PRINCIPAIS</h3>
-                                            <input type="text" id="atribuicoes">
+                                         
+                                            <textarea type="text" id="atribuicoes"cols="30" rows="10"></textarea>
     
                                             <h3>Tarefas e Descrição detalhada:</h3>
-                                            <input type="text" id="tarefas">
-    
+                                            <textarea type="text" id="tarefas" cols="30" rows="10"></textarea>
+                                        
                                             <h3>Formação academica:</h3>
-                                            <input type="text" id="formacao">
+                                            <textarea type="text" id="formacao" cols="30" rows="10"></textarea>                
     
                                             <h3>Experiencia profiossional</h3>
-                                            <input type="text" id="profissional">
-    
+                                            <textarea type="text" id="profissional" cols="30" rows="10"></textarea>
+                                         
                                             <h3>Habilidades comportamentais</h3>
-                                            <input type="text" id="comportamentais">
-    
+                                            <textarea type="text" id="comportamentais" cols="30" rows="10"></textarea>
+                                        
                                             <h3>Habilidades tecnicas, cursos e idiomas</h3>
-                                            <input type="text" id="tecnicas">
-    
-                                            <button id="vaga-1" type="button">Cadastrar vaga</button>
+                                            <textarea type="text" id="tecnicas" cols="30" rows="10"></textarea>
+                                          
+                                            <button id="vaga-1" type="button">Lançar vaga</button>
                                         </form>
+                                    </div>
                                     </div>
                                   </div>
                                  

@@ -38,6 +38,10 @@ public class Aluno{
     private String descricao;
     private String formacao;
     private String teste;
+    private String estrela;
+    public void setEstrela(String estrela) {
+        this.estrela = estrela;
+    }
     @Lob
     private byte[] imagem;
 
@@ -46,6 +50,10 @@ public class Aluno{
     }
     public void setImagem(byte[] imagem) {
         this.imagem = imagem;
+    }
+
+    public String getEstrela() {
+        return estrela;
     }
     public int getId(){
         return this.Id;

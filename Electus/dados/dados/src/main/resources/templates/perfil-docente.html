@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" th:href="@{/Styles/Menu.css}">
+    <link rel="stylesheet" th:href="@{/telasDePerfil/perfil-docente.css}">
+    <title>Principal</title>
+    <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+
+</head>
+<body>
+    <header id="header">
+        <div class="logo"></div>
+        <div id="hamburg-mobile"></div>
+            <nav id="navegacao">
+                <ul id="mobile">
+                    <li><a href="loginEstudante.html" id="link-1">Estudante</a></li>
+                    <hr class="linha-mobile">
+                    <li><a href="login-Empresa.html" id="link-2" >Empresa</a></li>
+                    <hr class="linha-mobile">
+                    <li><a href="" id="link-3">Vagas</a></li>
+                    <hr class="linha-mobile">
+                    <li><a href="index.html"id="link-4"> | Inicio</a></li>
+                </ul>
+            </nav>     
+        
+    </header>
+    <main>
+     
+    
+       <div class="turmas" id="Turma"> 
+            <h2>Desenvolvimento de Sistemas</h2>
+        </div>
+    </main>
+    <script th:src="@{/btnMenu-scripts/Script-hamburg.js}"></script>
+    <script th:src="@{/Electus_Scripts/vagas.js}"></script>
+    <script th:src="@{/Electus_Scripts/docente.js}"></script>
+</body>
+</html>

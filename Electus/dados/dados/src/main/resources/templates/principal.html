@@ -39,40 +39,42 @@
                 <p class="sub-titulo">aajopjskojopjajsklçjaklçjlkjlkjsfdçljljfgdçjgljfdljgdflgdçlfg~dfjjg~çdfj~djdgj~çjfjgkljçlkj</p>
             </div>
        
-     </div>      
+    </div>      
     <div class="teste">
         <div th:each=" cont : ${lista}" class="vagas">
             <h3 th:text="${cont.nome}" id="nome"></h3>
             <p th:text="${cont.cbo}" id="cbo" style="display: none;"></p>
-            <div class="d-flex">
-               <div class="contato">
-                <div class="informacoes">
-                    <p>Area: </p>
-                    <p th:text="${cont.area}"></p>
-                </div>
+           
 
-                <div class="informacoes">
-                    <p>Cidade: </p>
-                    <p th:text="${cont.cidade}"></p>
-                </div>
+               <div class="informacoes espaco">
+               
+                <div class="contato">
+                    <div class="informacoes">
+                        <p>Cidade: </p>
+                        <p th:text="${cont.cidade}"></p>
+                    </div>
+                    <div class="informacoes">
+                        <p>Telefone: </p>
+                        <p th:text="${cont.tell}"></p>
+                    </div>
+                    <div class="informacoes">
+                        <p>Email: </p>
+                        <p th:text="${cont.email}"></p>
+                    </div>
+                   </div>
                </div>
-               <div class="contato">
-                <div class="informacoes">
-                    <p>Telefone: </p>
-                    <p th:text="${cont.tell}"></p>
-                </div>
-                <div class="informacoes">
-                    <p>Email: </p>
-                    <p th:text="${cont.email}"></p>
-                </div>
-               </div>
+              
                 
              
                 
-            </div>
-            <div class="d-flex2">
+            
+            
                
-                    <div class="informacoes">
+                    <div class="informacoes espaco">
+                        <div class="informacoes">
+                            <p>Area: </p>
+                            <p th:text="${cont.area}"></p>
+                        </div>
                         <p>Departamento: </p>
                         <p th:text="${cont.departamento}" id="departamento"></p>
                     </div>
@@ -84,9 +86,9 @@
 
                     
                 
-            </div>
-            <div class="d-flex2">
-                <div class="informacoes">
+           
+           
+                <div class="informacoes espaco">
                     <p>Tarefas: </p>
                     <p th:text="${cont.tarefas}"></p>
                 </div>
@@ -94,15 +96,16 @@
                     <p>Formacao: </p>
                     <p th:text="${cont.formacao}"></p>
                 </div>
-            </div>
-            <div class="d-flex3">
-               
-                <p>Experiencia: </p>
-                <p th:text="${cont.experiencia}"></p>
-                
-            </div>
-            <div class="d-flex2">
+            
                 <div class="informacoes">
+                    <p>Experiencia: </p>
+                    <p th:text="${cont.experiencia}"></p>
+                </div>
+                
+                
+           
+           
+                <div class="informacoes espaco">
                     <p>Habilidade comportamentais: </p>
                     <p th:text="${cont.habilidade_comportamentais}"></p>
                 </div>
@@ -110,9 +113,12 @@
                     <p>Habilidades tecnicas: </p>
                     <p th:text="${cont.habilidades_tecnicas}"></p>
                 </div>
+                <div class="w-100">
+                    <button th:if="${session.aluno != null}" type="button" id="Enviar">Inscreve-se</button>
+                </div>
                 
             </div>
-            <button th:if="${session.aluno != null}" type="button" id="Enviar">Inscreve-se</button>
+         
         </div>
         
         <p th:if="${session.aluno != null}" th:text="${session.aluno.aluno}" style="display: none;" id="aluno"></p>

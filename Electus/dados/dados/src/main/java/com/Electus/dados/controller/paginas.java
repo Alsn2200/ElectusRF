@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
 import com.Electus.dados.banco.bancoVagas;
+import com.Electus.dados.banco.UsuarioBanco;
 import com.Electus.dados.banco.bancoVagaAluno;
 import com.Electus.dados.entides.vaga;
 
@@ -24,6 +25,9 @@ public class paginas {
 
     @Autowired
     private bancoVagaAluno bancoVagaAluno;
+
+    @Autowired
+    private UsuarioBanco acessoBanco;
    
     @GetMapping("/Login-empresa")
     public String LoginEmpresa(){
@@ -36,6 +40,11 @@ public class paginas {
     @GetMapping("/Cadastro-vaga")
     public String CadastroVaga(){
         return "cadastro-vaga";
+    }
+    @GetMapping("/Turma")
+    public String Turma(Model model){
+        model.addAttribute("Turmas",  acessoBanco.findAll());
+        return "turma";
     }
     @GetMapping("/Login-estudante")
     public String LoginEstudante(){
@@ -51,6 +60,15 @@ public class paginas {
         model.addAttribute("inscricoes", bancoVagaAluno.findAll());
         model.addAttribute("lista",   salvamentoVaga.findAll());
         return "perfil-empresa";
+    }
+    @GetMapping("/login-docente")
+    public String loginDocente(){
+        return "login-docente";
+    }
+    @GetMapping("/Docente")
+    public String Docente(Model model){
+        model.addAttribute("Turmas",  acessoBanco.findAll());
+        return "perfil-docente";
     }
     @GetMapping("/index")
     public String index(){
