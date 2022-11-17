@@ -31,7 +31,11 @@
                 <div class="container-box">
                    
                     <div class="box">
-                        <div class="imagemPerfil"></div>
+                        <img  th:src="|/empresaImagem/${session.empresa.id}|" id="imagem">
+                        <form th:action="|/empresaImagem/${session.empresa.id}|" method="POST" enctype="multipart/form-data" th:object="${teste}">
+                            <input type="file" name="fileProduto" id="imgamem" placeholder="none">
+                            <button type="submit" id="enviando">Enviar</button>
+                        </form>
                         <h1 th:text="${session.empresa.nome}" class="Nome-aluno" id="Nome-aluno"></h1>
                         <div class="dados-usuario">
                             <div class="d-flex">

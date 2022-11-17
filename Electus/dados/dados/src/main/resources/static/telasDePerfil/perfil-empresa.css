@@ -358,3 +358,7 @@ a{
     text-decoration: none;
     color: black;
 }
+#imagem{
+    width: 100%;
+    height: 24rem;
+}

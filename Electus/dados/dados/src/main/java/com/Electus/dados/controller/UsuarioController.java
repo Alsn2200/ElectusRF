@@ -24,12 +24,14 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.Electus.dados.banco.UsuarioBanco;
 import com.Electus.dados.banco.bancoEmpresa;
+import com.Electus.dados.banco.bancoImagem;
 import com.Electus.dados.banco.bancoVagaAluno;
 import com.Electus.dados.banco.bancoVagas;
 import com.Electus.dados.banco.testeBanco;
 import com.Electus.dados.entides.Aluno;
 import com.Electus.dados.entides.docente;
 import com.Electus.dados.entides.empresa;
+import com.Electus.dados.entides.imagemEmpresa;
 import com.Electus.dados.entides.teste;
 import com.Electus.dados.entides.vaga;
 import com.Electus.dados.entides.vagaaluno;
@@ -54,6 +56,8 @@ public class UsuarioController {
     @Autowired
     private bancoVagaAluno bancoVagaAluno;
 
+    @Autowired
+    private bancoImagem imagemEmpresa;
      
     @GetMapping("/Vagas/{id}")
     public String ListaEmpresa(Model model,Aluno usuario, HttpSession session, @PathVariable int id){
@@ -158,6 +162,27 @@ public class UsuarioController {
           
            return "redirect:/index";
                 
+    }
+    @PostMapping("/empresaImagem/{Id}")
+    public String ImagemEmpresa(imagemEmpresa empresa, @RequestParam ("fileProduto") MultipartFile file, @PathVariable("Id") Integer id){
+    
+       try {
+        empresa.setId(id);
+        empresa.setImagem(file.getBytes());
+            imagemEmpresa.save(empresa);
+         } catch (IOException e) {
+                           
+                e.printStackTrace();
+           }
+          
+           return "redirect:/index";
+                
+    }
+    @GetMapping("/empresaImagem/{id}")
+    @ResponseBody
+    public byte[] exibirImagemEmpresa(@PathVariable("id") Integer id){
+        imagemEmpresa T = imagemEmpresa.getOne(id);
+      return T.getImagem();
     }
    
 

@@ -1,11 +1,11 @@
 package com.Electus.dados.entides;
 
 import javax.persistence.Entity;
-import javax.persistence.Lob;
 import javax.persistence.Id;
+import javax.persistence.Lob;
 
 @Entity
-public class teste {
+public class imagemEmpresa {
     @Id
     private int Id;
     public int getId() {
@@ -22,5 +22,4 @@ public class teste {
     public void setImagem(byte[] imagem) {
         this.imagem = imagem;
     }
-
 }
