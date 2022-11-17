@@ -58,28 +58,46 @@ header li a:hover{
     height: 9rem;
 }
 /* main1 */
-main{
-    padding:  25px 0;
-}
-.container-main1{
-    height: 96vh;
-    width: 100%;
-}
-.imagem-main1{
-    position: relative;
-    background-image: url(imagens/imagem-main1.jpg);
-    background-size: contain;
-    width: 100%;
-    height: 96vh;
+
+.container-imagem{
+    height: 51rem;
+    background-size: cover;
     background-repeat: no-repeat;
-    background-position: right;
+    width: 100%;
+    background-position: top;
+    background-image: url('Imagens/principal-vaga\(2\).jpg');
+}
+.container-vagas{
+    width: 100%;
+    padding: 80px;
+   
+}
+.bg-color{
+    padding: 9px;
+    background-color: #5a5855;
 }
 
-.teste{
+.d-flex{
+    display: flex;
+    justify-content: space-between;
+}
+.caixa-vagas{
+    padding: 9px 9px 9px 17px;
+    margin-bottom: 161px;
+}
+
+#departamento{
+    text-align: center;
+}
+.titulo-vaga{
+    margin-bottom: 40px;
+    text-align: center;
+}
+.container-flex{
     width: 100%;
     display: flex;
-    justify-content: space-around;
     flex-wrap: wrap;
+    gap: 37px;
 }
 .informacoes{
     margin-top: 7px;
@@ -114,13 +132,10 @@ main{
 }
 
 .vagas{
-    width: 33rem;
+    width: 29rem;
     font-size: 18px;
-    border-radius: 14px;
-    box-shadow: 0 0 12px 3px black;
-    padding: 9px 9px 9px 17px;
-    color: #f78e0c;
-    background-color: #ffffff;
+    
+    background-color: rgb(241, 241, 241);
 }
 /* FOOTER */
 footer{

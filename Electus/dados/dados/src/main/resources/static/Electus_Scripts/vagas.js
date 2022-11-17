@@ -34,3 +34,7 @@ document.getElementById('Enviar').addEventListener('click', function Enviar(){
         alert("Cadastro feito com sucesso!!! confira o seu perfil")
     )
 })
+document.getElementById('vagas').addEventListener('click' , function Entrou(){
+    document.getElementById('vagas').style.backgroundColor
+
+})
