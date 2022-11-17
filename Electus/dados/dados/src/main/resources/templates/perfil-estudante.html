@@ -32,8 +32,52 @@
             </ul>
         </nav>
     </header>
-    <!-- Main -->
     <main>
+        <div class="containerMain">
+            <div class="backgroundImagem">
+                <div class="itenBox1">
+                </div>
+                <div class="itenBox2">
+                    <div class="caixaBox2">
+                        <div class="caixaConteudo">
+                            <div class="roda"></div>
+                            <h1 th:text="${session.usuarioLogado.aluno}" class="Nome-aluno" id="Nome-aluno">
+                            </h1>
+                            <div class="descricao">
+                                <h5 class="titleDescricao">Descrição do perfil: </h5>
+                                <p th:text="${session.usuarioLogado.descricao}" id="respDesc"></p>
+                            </div>
+                            <h2 class="tituloDados">Dados</h2>
+                            <div class="flex-informacoes">
+                                <div class="itens-informacoes">
+                                    <p>Periodo: </p>
+                                    <p th:text="${session.usuarioLogado.periodo}" id="periodo"></p>
+                                </div>
+                                <div class="itens-informacoes">
+                                    <p>Sexo: </p>
+                                    <p th:text="${session.usuarioLogado.sexo}" id="sexo"></p>
+                                </div>
+                                </div>
+
+
+                        </div>
+                        <div class="caixaImagem">
+                            <img th:src="|/imagem/${session.usuarioLogado.id}|" id="imagemPerfil">
+                            <form th:action="|/Alea/${session.usuarioLogado.id}|" method="POST"
+                                enctype="multipart/form-data" th:object="${teste}">
+                                <h3 class="tituloFoto">Atualize a foto de perfil</h3>
+                                <input type="file" name="fileProduto" id="arquivoImg" placeholder="none">
+                                <button type="submit" id="enviando">Enviar</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </main>
+    <!-- Main -->
+    <!-- <main>
         <div class="containerMain">
             <div class="box1">
                 <h1 th:text="${session.usuarioLogado.aluno}" class="Nome-aluno" id="Nome-aluno">
@@ -231,10 +275,9 @@
         </div>
 
 
-        <!-- teste ^ -->
 
-        <!-- <input type="file" name="upload" value="arquivo" id="btn-upload"> -->
-    </main>
+       <input type="file" name="upload" value="arquivo" id="btn-upload"> 
+    </main> -->
     <!-- footer -->
     <footer class="rodape">
         <div class="caixaRodape">
@@ -280,7 +323,7 @@
     </footer>
 
 
-    
+
     <script th:src="@{/Electus_Scripts/alunoperfil.js}"></script>
 </body>
 
