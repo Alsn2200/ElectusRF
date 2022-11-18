@@ -59,23 +59,90 @@ header li a:hover{
 }
 /* main1 */
 
-.container-imagem{
+/* #click{
     height: 51rem;
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
-    background-position: top;
-    background-image: url('Imagens/principal-vaga\(2\).jpg');
-}
-.container-vagas{
+    background-color: beige;
+    height: 51rem;
     width: 100%;
-    padding: 80px;
+    transition: 1s;
+    background-position: top;
+}
+.splite{
+    background-image: url('Imagens/principal-vaga\(1\).jpg');
+}
+.splite2{
+    background-image: url('Imagens/principal-vagas.jpg');
+}
+.splite3{
+    background-image: url('Imagens/principal-vaga\(2\).jpg');
+} */
+
+/* .splite{
+    width: 100%;
+    height: 51rem;
+    display: flex;
+} */
+#slider{
+    width: 100%;
+    height: 51rem;
+    position: relative;
+}
+#slider img.selected { 
+    opacity: 1;
+    transition: 1s;
+}
+#slider img{
+    position: absolute;
+    opacity: 0;
+    width: 100%;
+    height: 51rem;
+}
+.block{
+    display: block!important;
+}
+/* .slide{
+    width: 100%;
+    display: none;
+    height: 51rem;
+} */
+/* .splite4{
+    background-image: url('Imagens/principal-vaga\(1\).jpg');
+} */
+
+.container-vagas{
+   padding: 80px;
    
 }
-.bg-color{
-    padding: 9px;
+.bg{ 
     background-color: #5a5855;
+    width: 100%;
+    position: absolute;
+    height: 100%;
 }
+.bg-color{
+    position: relative;
+    /* background-color: #5a5855; */
+}
+.vagas:hover{
+    transform: scale(1.03);
+}
+.infor{
+    position: relative;
+    padding: 7px;
+}
+.vagas:hover .bg{
+    animation-name: caixa;
+    background-color: #f78e0c;
+    animation-duration: 0.8s;
+}
+@keyframes caixa {
+    0% {background-color: #5a5855; width: 0%;}
+    100% {background-color: #f78e0c;width: 100%;}
+}
+
 
 .d-flex{
     display: flex;

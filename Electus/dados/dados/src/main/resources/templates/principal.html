@@ -30,8 +30,14 @@
         
     </header>
     <main>
-     <div class="container-imagem">
-        
+     <!-- <div class=" splite" id="click">
+      
+     </div> -->
+
+     <div id="slider">
+        <img th:src="@{../Imagens/principal-vagas.jpg}" class="selected" alt="">
+        <img th:src="@{../Imagens/principal-vaga1.jpg}" alt="">
+        <img th:src="@{../Imagens/principal-vaga2.jpg}" alt="">
      </div>
     
      <div class="container-vagas">
@@ -45,40 +51,38 @@
                 </div>
                
                     <div class="bg-color">
-                        <div class="informacoes espaco">
-                   
-                            <div class="contato">
-                                <div class="informacoes">
-                                    <p>Empresa:</p>
-                                    <p th:text="${cont.nome}"></p>
-                                </div>
-                                <div class="informacoes"></div>
-                               <div class="d-flex">
-                                <div class="informacoes">
-                                    <p>Tarefas: </p>
-                                    <p th:text="${cont.tarefas}"></p>
-                                </div>  
-        
-                                <div class="informacoes">
-                                    <p>Telefone: </p>
-                                    <p th:text="${cont.tell}"></p>
-                                </div>
-                               </div>
-                               
-                        
-                               </div>
-                           </div>
-                    
+                        <div class="bg"></div>
+                        <div class="infor">
                             <div class="informacoes espaco">
-                               
-        
-                                <p>Cidade: </p>
-                                <p th:text="${cont.cidade}"></p>
-                            </div>
-                            
-                            
-                            
-                       
+                   
+                                <div class="contato">
+                                    <div class="informacoes">
+                                        <p>Empresa:</p>
+                                        <p th:text="${cont.nome}"></p>
+                                    </div>
+                                    <div class="informacoes"></div>
+                                   <div class="d-flex">
+                                    <div class="informacoes">
+                                        <p>Tarefas: </p>
+                                        <p th:text="${cont.tarefas}"></p>
+                                    </div>  
+            
+                                    <div class="informacoes">
+                                        <p>Telefone: </p>
+                                        <p th:text="${cont.tell}"></p>
+                                    </div>
+                                   </div>
+                                   
+                                   </div>
+                               </div>
+                        
+                                <div class="informacoes espaco">
+                                   
+            
+                                    <p>Cidade: </p>
+                                    <p th:text="${cont.cidade}"></p>
+                                </div>    
+                        </div>      
                        
                             <div class="w-100">
                                 <button th:if="${session.aluno != null}" type="button" id="Enviar">Inscreve-se</button>
