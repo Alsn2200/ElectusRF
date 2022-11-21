@@ -11,5 +11,6 @@ import com.Electus.dados.entides.vaga;
 public interface bancoVagas extends CrudRepository<vaga, Integer>{
 
    public List<vaga> findById(int id);
+   public  vaga getOne(Integer id);
     
 }

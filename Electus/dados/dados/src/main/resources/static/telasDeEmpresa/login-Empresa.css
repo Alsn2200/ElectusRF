@@ -67,78 +67,48 @@ header li a:hover {
     font-weight: 800;
 }
 
-.backgraund-img {
-    height: 90vh;
+/* Main */ 
+.container-box{
     width: 100%;
-    background-image: url('../Imagens/background2.jpg');
-    background-size: cover;
-    background-position: left;
-}
-
-.opacity {
-    height: 90vh;
-    position: absolute;
-    padding: 2rem;
     display: flex;
+    justify-content: center;
+    padding: 5rem;
+    flex-direction: column;
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.349);
-    width: 100%;
 }
-
-main {
-    background-color: rgb(216, 216, 216);
-
+.box{
+    background-color: #ff8d00;
+    padding: 1rem;
+    border-radius: 9px;
+    border-bottom: 2px solid black;
 }
-
-
-
-.container-box {
-    width: 100%;
-
-    padding: 0 20px;
-    display: flex;
-    justify-content: space-around;
+.caixa{
+    box-shadow: 4px 6px 9px 1px black;
+    border-radius: 9px;
+    width: 45vw;
+    background: #e7e7e7;
 }
-
-.box {
-    height: 50vh;
-    width: 35vw;
-    padding: 5px;
+.cadastro{
+    padding: 2rem;
+    background: #e7e7e7;
+    font-size: 15pt;
+    border-radius: 7px 0;
+}
+.cadastrese:hover{
+    text-shadow:  1px 2px 8px #f78e0c;
+    font-size: 15pt;
+    color: #f78e0c;
+}
+.title-box{
     text-align: center;
-    background-color: #f78e0c;
-    border-radius: 0px 0px 20px 20px;
+    font-size: 38pt;
+    margin-bottom: 15px;
+    color: #f78e0c;
 
 }
-
-.title-box {
-    font-weight: bold;
- 
-    padding: 15px 0 20px 0;
-}
-hr{
-    border: 1px solid black;
-}
-.box h2 {
-    margin-top: -25px;
-}
-
-.box-icone {
-    height: 16vh;
-    margin: 0 auto;
-    background-image: url('../Imagens/aperto-de-mao(1).png');
-    background-size: contain;
-    position: relative;
-    background-repeat: no-repeat;
-    top: -50px;
-    border-radius: 50px;
-    box-shadow: 0.2rem 0.2rem 5px 2px #fff;
-    width: 8vw;
-    background-color: #e99a39;
-}
-
 .itens-box {
     text-align: left;
-    padding: 20px 40px;
+    padding: 20px;
 }
 
 .label-input {
@@ -151,7 +121,7 @@ hr{
 }
 
 .inputUser {
-    width: 100%;
+    /* width: 100%;
     padding: 0 5px;
     height: 25px;
     font-size: 15px;
@@ -160,6 +130,18 @@ hr{
     outline: none;
     position: relative;
     border-bottom: 1px solid black;
+    margin: 15px 0;
+    font-weight: 500; */
+
+    width: 100%;
+    padding: 0 5px;
+    height: 42px;
+    font-size: 15px;
+    border: 1px solid;
+    border-radius: 16px;
+    background: #e7e7e7;
+    outline: none;
+    position: relative;
     margin: 15px 0;
     font-weight: 500;
 }
@@ -182,10 +164,6 @@ hr{
 
 }
 
-.Teste4 {
-    display: none;
-}
-
 .btn-logar:hover {
     transform: scale(1.1);
     transition: .1s;
@@ -200,10 +178,8 @@ hr{
 }
 
 #nova-senha {
-
     width: 100%;
 }
-
 
 
 .margin {
@@ -247,17 +223,19 @@ a{
 /* RESPONSIVE */
 @media (max-width: 2000px) {
     .box {
-        width: 40vw;
-        height: 24rem;
+        width: 100%;
 
     }
 }
 
 
 @media (max-width: 1400px) {
+    .container-box{
+        padding: 8rem  4rem;
+    }
     .box {
-        width: 35vw;
-        height: 23rem;
+        width: 100%;
+        /* height: 23rem; */
     }
 
 
@@ -269,17 +247,29 @@ a{
 }
 
 @media (max-width: 1100px) {
+    .container-box{
+        padding: 8rem 4rem;
+    }
     .box {
-        width: 48vw;
-        height: 23rem;
+        width: 100%;
+        /* height: 23rem; */
+    }
+    .caixa {
+
+        width: 80%;
     }
 
 }
 
 @media (max-width: 800px) {
+    
+.caixa {
+
+    width: 100%;
+}
     .box {
-        width: 55vw;
-        height: 23rem;
+        width: 100%;
+        /* height: 23rem; */
 
     }
 
@@ -302,6 +292,9 @@ a{
     }
 }
 @media (max-width: 850px){
+    .container-box{
+        padding: 10rem 4rem;
+    }
     .caixaRodape {
      width: 100%;
      display: block;
@@ -335,27 +328,29 @@ a{
  }
 @media (max-width: 730px) {
     .box {
-        width: 60vw;
-        height: 23rem;
+        width: 100%;
+        /* height: 23rem; */
     }
 }
 
 @media (max-width: 640px) {
     .box {
-        width: 70vw;
-        height: 22rem;
+        width: 100%;
+        /* height: 22rem; */
+    }
+    .container-box{
+        padding: 7rem 4rem;
     }
 }
 
 @media(max-width: 572px) {
     .box {
-        width: 90vh;
-        height: 25rem;
+        width: 100%;
+        height: 22rem;
     }
 
     .title-box{
-        width: 200px;
-        margin: 0 auto;
+        margin: 45px auto;
     }
 
     #cpf {

@@ -35,40 +35,49 @@
    
     <main>
         
-        <div class="backgraund-img">
-            <div class="vazia">
+      
+            <!-- <div class="vazia">
                 <div th:text="${mensagem}" th:if="${mensagem != null}" class="mensagem"></div>
-            </div>
+            </div> -->
+           
             
-            <div class="opacity">
                 <div class="container-box">
-                    <div class="box">
-                        <h1 class="title-box">Login da Empresa</h1>
-                        <hr>
-                        <div class="itens-box">
-                            <form action="/empresalogin" method="POST" >
-                            <label for="cnpj" class="label-input">CNPJ:</label>
-                            <input type='number' id='cnpj' name='cnpj' class="inputUser">
-
-                            <div class="margin">
-                                <label for="senha" class="label-input">Senha  de acesso:</label>
-                                <input type='password' id='nova-senha' name='senha' required class="inputUser">
-
-                                <br>
+                    <h1 class="title-box">Login da Empresa</h1>
+                    <div class="caixa">
+                       
+                        <div class="box">
                             
+                          
+                            <div class="itens-box">
+                                <form action="/empresalogin" method="POST" >
+                                <label for="cnpj" class="label-input">CNPJ:</label>
+                                <input type='number' id='cnpj' name='cnpj' class="inputUser" placeholder="Digite com o CNPJ..">
+    
+                                <div class="margin">
+                                    <label for="senha" class="label-input">Senha  de acesso:</label>
+                                    <input type='password' id='nova-senha' name='senha' required class="inputUser" placeholder="Digite a sua senha...">
+    
+                                    <br>
+                                
+                                </div>
+                                <button class="btn-logar" >Entrar</button>
+                            </form>
+    
+                               
                             </div>
-                            <button class="btn-logar" >Entrar</button>
-                        </form>
-                            <a href="/Cadastro-empresa" class="cadastrese">Cadastre-se</a>
+                            
+                        </div>
+                        <div class="cadastro">
+                            <a href="/Cadastro-empresa" class="cadastrese">Não tem uma conta? Cadastre-se aqui!</a>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
+           
+       
 
 
     </main>
-    <footer class="rodape">
+    <!-- <footer class="rodape">
         <div class="caixaRodape">
             <div class="logo"></div>
             <div class="footer-inform">
@@ -109,7 +118,7 @@
                 </ul>
             </div>
         </div>
-    </footer>
+    </footer> -->
     <script th:src="@{/btnMenu-scripts/Script-hamburg.js}"></script>
     <script th:src="@{/Electus_Scripts/empresaLogin.js}"></script>
 

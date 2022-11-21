@@ -60,64 +60,75 @@ header li a:hover{
 .hover{
     background-color: #1b1b1bcb;
 }
-.vazio{
-    width: 100%;
-    height: 9rem;
+/* Teste */
+container{
+    display: block;
+    position: absolute;
+    left: 469px;
+    top: -291px;
+    right: 0;
 }
-/* main1 */
-
-/* #click{
-    height: 51rem;
-    background-size: cover;
-    background-repeat: no-repeat;
-    width: 100%;
-    background-color: beige;
-    height: 51rem;
-    width: 100%;
-    transition: 1s;
-    background-position: top;
-}
-.splite{
-    background-image: url('Imagens/principal-vaga\(1\).jpg');
-}
-.splite2{
-    background-image: url('Imagens/principal-vagas.jpg');
-}
-.splite3{
-    background-image: url('Imagens/principal-vaga\(2\).jpg');
-} */
-
-/* .splite{
-    width: 100%;
-    height: 51rem;
+texto{
+    position: absolute;
+    display: block;
+    height: 100%;
     display: flex;
-} */
+    border-top: 705px solid transparent;
+    border-right: 935px solid #f7f7f7;
+    align-items: center;
+   
+}
+texto h1{
+    width: 393px;
+    font-size: 42pt;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    color: black;
+}
+#slider{
+    width: 100%;
+    height: 44rem;
+    display: flex;
+    position: relative;
+    flex-direction: row-reverse;
+}
+.sombra{
+    width: 100%;
+}
+
+#slider img{
+    width: 100%;
+    filter: brightness(50%);
+    height: 44rem;
+}
+
+/* FIM TESTE */
+.img-main{
+    width: 100%;
+    height:31.5rem;
+    background-repeat: no-repeat;
+    background-image: url('Imagens/jovem.jpeg');
+}
 
 .block{
     display: block!important;
 }
-/* .slide{
-    width: 100%;
-    display: none;
-    height: 51rem;
-} */
-/* .splite4{
-    background-image: url('Imagens/principal-vaga\(1\).jpg');
-} */
-
 .container-vagas{
-    padding: 188px 80px 80px 80px;
+    padding: 49px 80px 80px 80px;
    
 }
 .bg{ 
-    background-color: #a5a29f;
+    background-color: #cdc9c4;
     width: 100%;
     position: absolute;
     height: 100%;
 }
 .bg-color{
     position: relative;
-    /* background-color: #5a5855; */
+}
+
+.borda{
+    border-bottom: 4px solid black;
 }
 .vagas:hover{
     transform: scale(1.03);
@@ -153,13 +164,23 @@ header li a:hover{
 }
 .titulo-vaga{
     margin-bottom: 40px;
+    width: 100%;
     text-align: center;
+    background-color: #f78e0c;
+    padding: 15px 0;
 }
 .container-flex{
     width: 100%;
     display: flex;
     flex-wrap: wrap;
     gap: 37px;
+}
+.container-flex-primeiro{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 37px;
+    align-items: center;
 }
 .informacoes{
     margin-top: 7px;
@@ -194,7 +215,7 @@ header li a:hover{
 }
 
 .vagas{
-    width: 26.5rem;
+    width: 25.5rem;
     font-size: 18px;
     
     background-color: rgb(241, 241, 241);
@@ -280,3 +301,31 @@ footer{
         width: 44vw;
     }
 }
+.divisao{
+    background-color: black;
+    margin: 45px 0;
+    width: 100%;
+}
+
+/* .container-flex-primeiro .vagas:first-child .semVaga{
+    display: block!important;
+    text-align: center;
+    width: 100%;
+    font-size: 18px;
+    background-color: rgb(241, 241, 241);
+}
+.container-flex-primeiro .vagas .semVaga{
+    display: none;
+} */
+.container-flex-primeiro #Ta:last-child{
+    display: block!important;
+    font-size: 15pt;
+    height: 3rem;
+    padding: 5px;
+    text-align: center;
+    background-color: #e1e0df;;
+}
+
+.container-flex-primeiro #Ta{
+    display: none;
+} 

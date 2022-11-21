@@ -35,6 +35,13 @@ public class vaga{
     private String experiencia;
     private String habilidade_comportamentais;
     private String habilidades_tecnicas; 
+    private String salario;
+    public String getSalario() {
+        return salario;
+    }
+    public void setSalario(String salario) {
+        this.salario = salario;
+    }
     public String getCargo() {
         return cargo;
     }

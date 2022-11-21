@@ -53,29 +53,6 @@ header li a:hover {
     font-weight: 800;
 }
 
-.backgraund-img {
-    height: 140vh;
-    width: 100%;
-    background-image: url('../Imagens/background2.jpg');
-    background-size: cover;
-    background-position: left;
-}
-
-.opacity {
-    height: 140vh;
-    position: absolute;
-    display: flex;
-    align-items: center;
-    padding: 2rem;
-    background-color: rgba(0, 0, 0, 0.288);
-    width: 100%;
-}
-
-main {
-    background-color: rgb(216, 216, 216);
-
-}
-
 .informacoes h1 {
     width: 450px;
     color: white;
@@ -101,26 +78,25 @@ main {
 .container-box {
     width: 100%;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    padding: 4rem;
+    flex-direction: column;
+    align-items: center;
 }
 
 .box {
-    height: 105vh;
     width: 69vw;
-    padding: 5px;
     text-align: center;
-    background-color: #f78e0c;
-    border-radius: 0px 0px 20px 20px;
-
+    box-shadow: 6px 8px 13px -1px;
+    background: #f7f7f7;
+    border-radius: 16px;
 }
-
+.text{
+    background-color: #f78e0c;
+}
 .title-box {
     font-weight: bold;
-    border: solid 1px black;
-    border-top: none;
-    border-left: none;
-    border-right: none;
-    padding: 15px 0 20px 0;
+    padding: 27px 0 29px 0;
 }
 
 .box h2 {
@@ -143,7 +119,8 @@ main {
 
 .itens-box {
     text-align: left;
-    padding: 20px 40px;
+    padding: 20px;
+    background: #f1f1f1;
 }
 
 .label-input {
@@ -212,20 +189,22 @@ main {
 
 .btn-cadastrar {
     display: block;
-    width: 100%;
+    width: 87%;
     height: 50px;
     border: 1px solid black;
     border-radius: 50px;
-    margin-top: 3%;
+    /* margin-top: 3%; */
     font-size: 20px;
     font-weight: 700;
     cursor: pointer;
     background-color: rgba(255, 255, 255, 0.548);
-    margin-bottom: 25px;
-
-
+    margin: 25px auto;
 }
-
+.bg-color{
+    padding: 1em;
+    background: #f78e0c;
+    width: 100%;
+}
 a {
     text-decoration: none;
 }
@@ -313,7 +292,7 @@ a{
 @media (max-width: 2000px) {
     .box {
         width: 51rem;
-        height: 61rem;
+       
     }
    
         #cidade{
@@ -353,11 +332,11 @@ a{
     }
 }
 
-@media (max-width: 1100px) {
+/* @media (max-width: 1100px) {
   
   
 
-}
+} */
 
 @media (max-width: 800px) {
    
@@ -413,10 +392,16 @@ a{
      }
  }
 @media (max-width: 730px) {
-    /* .box {
-        width: 60vw;
-        height: 58rem;
-    } */
+    .container-box {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding: 4rem 2rem;
+    }
+    .itens-box {
+        text-align: left;
+        padding: 10px;
+    }
 }
 
 @media (max-width: 640px) {
@@ -427,11 +412,8 @@ a{
 }
 
 @media(max-width: 572px) {
-    /* .box {
-        width: 90vh;
-        height: 61rem;
+    
 
-    } */
     #nova-senha{
         width: 100%;
     }

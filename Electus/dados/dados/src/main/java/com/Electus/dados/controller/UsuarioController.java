@@ -211,5 +211,13 @@ public class UsuarioController {
       
         return "redirect:/index";
     }
+    @GetMapping("/Vagaselecionada/{id}/{idAluno}")
+    public String vagaSelecionada(HttpSession session, @PathVariable int id,vaga Vaga, Model model, Aluno aluno, @PathVariable int idAluno){
+        aluno = acessoBanco.getOne(idAluno);
+        Vaga = salvamentoVaga.getOne(id);
+        session.setAttribute("aluno", aluno);
+        session.setAttribute("vaga", Vaga);
+        return "vagaSelecionada";
+    }
    
 }

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" th:href="@{/Styles/vagaSelecionada.css}">
+    <link rel="stylesheet" th:href="@{/Styles/Menu.css}">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <title th:text="${session.vaga.nome}">Document</title>
+</head>
+<body>
+    <header id="header">
+        <div class="logo"></div>
+        <div id="hamburg-mobile"></div>
+            <nav id="navegacao">
+                <ul id="mobile">
+                    <li><a href="/perfil-estudante" id="link-1">Meu perfil</a></li>
+                    <hr class="linha-mobile">
+                    <li><a href="login-Empresa.html" id="link-2" >Empresa</a></li>
+                    <hr class="linha-mobile">
+                    <li><a href="" id="link-3">Vagas</a></li>
+                    <hr class="linha-mobile">
+                    <li><a href="/index"id="link-4"> | Inicio</a></li>
+                </ul>
+            </nav>     
+        
+    </header>
+    <main>
+        
+   <div class="container-vaga">
+        <div class="box-vaga">  
+            <p th:text="${session.aluno.aluno}" style="display: none;"></p>
+
+        <h1 th:text="${session.vaga.area}" id="nome" class="titulo-vaga"></h1>
+        <div class="informacoes">
+            <div class="d-flex">
+                <div class="inform-vaga">
+                    <p>Empresa: </p>
+                    <p th:text="${session.vaga.nome}"></p>
+                </div>
+    
+                <div class="inform-vaga">
+                    <p>Cidade: </p>
+                    <p th:text="${session.vaga.cidade}"></p>
+                    <p th:text="${session.vaga.uf}"></p>
+                </div>
+    
+                <div class="inform-vaga">
+                    <p>Endereço: </p>
+                    <p th:text="${session.vaga.endereco}"></p>
+                </div>
+            </div>
+            <div class="inform-vaga">
+                <p>Telefone: </p>
+                <p th:text="${session.vaga.tell}"></p>  
+            </div>  
+            <div class="inform-vaga">
+                <p>Tarefas: </p>
+                <p th:text="${session.vaga.tarefas}"></p>    
+            </div>   
+            
+            <div class="inform-vaga">
+                <p>Atribuição: </p>
+                <p th:text="${session.vaga.atribuicao}"></p>    
+            </div>   
+            <div class="inform-vaga">
+                <p>Formação: </p>
+                <p th:text="${session.vaga.formacao}"></p>    
+            </div>   
+            <div class="inform-vaga">
+                <p>Experiencia: </p>
+                <p th:text="${session.vaga.experiencia}"></p>    
+            </div>   
+            <div class="inform-vaga">
+                <p>Habilidade comportamentais: </p>
+                <p th:text="${session.vaga.habilidade_comportamentais}"></p>    
+            </div>   
+            <div class="inform-vaga">
+                <p>Habilidades tecnicas: </p>
+                <p th:text="${session.vaga.habilidades_tecnicas}"></p>    
+            </div>   
+            <!-- <div class="inform-vaga">
+                <p>Tarefas: </p>
+                <p th:text="${session.vaga.salario}"></p>    
+            </div>    -->
+           
+     
+            <div class="w-100">
+                  <button th:if="${session.aluno != null}" type="button" id="Enviar">Inscreve-se</button>
+                  <a th:if="${session.aluno != null}" th:href="|/Vagas/${session.aluno.id}|" type="button" id="Enviar">Voltar</a>
+            </div>
+       
+        </div>
+        </div>
+    </div>
+
+   
+        
+  
+    
+    <p th:text="${session.vaga.cbo}" id="cbo" style="display: none;"></p>
+    <p th:if="${session.aluno != null}" th:text="${session.aluno.aluno}" style="display: none;" id="aluno"></p>
+    <p th:if="${session.aluno != null}" th:text="${session.aluno.curso}" style="display: none;" id="curso"></p>
+    <p th:if="${session.aluno != null}" th:text="${session.aluno.modulo}" style="display: none;" id="modulo"></p>
+    </main>
+
+    <script th:src="@{/Electus_Scripts/vagaSelecionada.js}"></script>
+</body>
+</html>

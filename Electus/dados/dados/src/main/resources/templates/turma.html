@@ -36,19 +36,112 @@
         <p th:if="|${alunos.curso } == Desenvimento de Sistemas|" th:text="${alunos.aluno}"></p>
     </div>
 
+    <h3>Avalie o aluno</h3>
+    <div class="d-flex">
     <div th:each="alunos : ${Turmas}" class="container-avaliacao">
-        <h3>Avalie o aluno</h3>
-        <p th:if="|${alunos.curso } == Desenvimento de Sistemas|" th:text="${alunos.aluno}"></p>
-        <p th:text="${alunos.id}" id="id" style="display: none;"></p>
-        <ul class="avaliacao">
-            <li class="star-icon ativo" data-avaliacao="1"></li>
-            <li class="star-icon" data-avaliacao="2"></li>
-            <li class="star-icon" data-avaliacao="3"></li>
-            <li class="star-icon" data-avaliacao="4"></li>
-            <li class="star-icon " data-avaliacao="5"></li>
-          </ul>
-    </div>
+       <div class="box-alunos">
        
+        <p th:if="|${alunos.curso } == Desenvimento de Sistemas|" th:text="${alunos.aluno}" class="aluno"></p>
+        <p th:id="${alunos.id}" style="display: none;"></p>
+        <div class="flex">
+          <p>Codificação de programas</p>
+          <ul class="avaliacao">
+              <li class="codificacao ativo" data-avaliacao="1"></li>
+              <li class="codificacao" data-avaliacao="2"></li>
+              <li class="codificacao" data-avaliacao="3"></li>
+              <li class="codificacao" data-avaliacao="4"></li>
+              <li class="codificacao" data-avaliacao="5"></li>
+            </ul>
+        </div>
+        
+          <div class="flex">
+            <p>Desenvolvimento de protótipos</p>
+            <ul class="avaliacao">
+              <li class="desenvolvimento ativo2" data-avaliacao="1"></li>
+              <li class="desenvolvimento" data-avaliacao="2"></li>
+              <li class="desenvolvimento" data-avaliacao="3"></li>
+              <li class="desenvolvimento" data-avaliacao="4"></li>
+              <li class="desenvolvimento" data-avaliacao="5"></li>
+            </ul>
+          </div>
+        
+          <div class="flex">
+            <p>Realização de testes</p>
+            <ul class="avaliacao">
+              <li class="realizacao ativo3" data-avaliacao="1"></li>
+              <li class="realizacao" data-avaliacao="2"></li>
+              <li class="realizacao" data-avaliacao="3"></li>
+              <li class="realizacao" data-avaliacao="4"></li>
+              <li class="realizacao" data-avaliacao="5"></li>
+             
+            </ul>
+          </div>
+         
+          <div class="flex">
+            <p>Implementação de Banco de Dados</p>
+            <ul class="avaliacao">
+              <li class="implementacao ativo4" data-avaliacao="1"></li>
+              <li class="implementacao" data-avaliacao="2"></li>
+              <li class="implementacao" data-avaliacao="3"></li>
+              <li class="implementacao" data-avaliacao="4"></li>
+              <li class="implementacao" data-avaliacao="5"></li>
+             
+            </ul>
+          </div>
+          
+          <div class="flex">
+            <p>Documentação de Programa</p>
+            <ul class="avaliacao">
+              <li class="documentacao ativo5" data-avaliacao="1"></li>
+              <li class="documentacao" data-avaliacao="2"></li>
+              <li class="documentacao" data-avaliacao="3"></li>
+              <li class="documentacao" data-avaliacao="4"></li>
+              <li class="documentacao" data-avaliacao="5"></li>
+             
+            </ul>
+          </div>
+         
+          <div class="flex">
+            <p>Alteração e Correção de Programa</p>
+            <ul class="avaliacao">
+              <li class="Correcao_Programa ativo6" data-avaliacao="1"></li>
+              <li class="Correcao_Programa" data-avaliacao="2"></li>
+              <li class="Correcao_Programa" data-avaliacao="3"></li>
+              <li class="Correcao_Programa" data-avaliacao="4"></li>
+              <li class="Correcao_Programa" data-avaliacao="5"></li>
+             
+            </ul>
+          </div>
+          
+          <div  class="flex">
+          <p>Alteração da estrutura de armazenamento de Dados</p>
+          <ul class="avaliacao">
+            <li class="alteracao_armazenamento ativo7" data-avaliacao="1"></li>
+            <li class="alteracao_armazenamento" data-avaliacao="2"></li>
+            <li class="alteracao_armazenamento" data-avaliacao="3"></li>
+            <li class="alteracao_armazenamento" data-avaliacao="4"></li>
+            <li class="alteracao_armazenamento" data-avaliacao="5"></li>
+          </ul>
+          </div>
+          <div  class="flex">
+            <p>Atualização de Documentação do Programa</p>
+            <ul  class="avaliacao">
+              <li class="atualizacao_Documentacao ativo8" data-avaliacao="1"></li>
+              <li class="atualizacao_Documentacao" data-avaliacao="2"></li>
+              <li class="atualizacao_Documentacao" data-avaliacao="3"></li>
+              <li class="atualizacao_Documentacao" data-avaliacao="4"></li>
+              <li class="atualizacao_Documentacao" data-avaliacao="5"></li>
+            </ul>
+            
+          </div>
+
+        
+
+          </div>
+        </div>
+        <button id="Envio">Enviar</button>
+    </div>
+    
     </main>
     <script th:src="@{/btnMenu-scripts/Script-hamburg.js}"></script>
     <script th:src="@{/Electus_Scripts/Turma.js}"></script>

@@ -52,9 +52,9 @@ header li a{
 header li a:hover{
     font-weight: 800;
 }
-/* .turmas{
+ /* .turmas{ 
     margin-top: 125px;
-} */
+}  */
 main{
     padding:  25px;
     width: 100%;
@@ -62,27 +62,164 @@ main{
 .turma-titulo{
     text-align: center;
 }
+.box-alunos{
+
+}
+.d-flex{
+  overflow-x:scroll;
+  overflow-y:hidden;
+  padding: 1rem;   
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 60px;
+}
+.aluno{
+  text-align: center;
+  font-size: 32pt;
+}
 .container-avaliacao{
     margin-top: 15px;
+    padding: 1rem;
+    border-radius: 10px;
+    background-color: #f78e0c;
+}
+.box-alunos{
+  width: 37rem;
 }
 .avaliacao{
     display: flex;
+    align-items: center;
    }
-  .star-icon{
+   .flex{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+    align-items: center;
+   }
+   .flex p{
+    font-size: 13.5pt;
+   }
+   #Envio{
+    text-align: center;
+    padding: 12px;
+    width: 7rem;
+    display: block;
+    outline: 0;
+    border-radius: 8px;
+    border: none;
+    margin: 12px auto;
+   }
+   #Envio:hover{
+    background-color: #ccc;
+   }
+  
+  .codificacao,.desenvolvimento,.realizacao,.implementacao,.documentacao,.Correcao_Programa,.alteracao_armazenamento,.atualizacao_Documentacao{
     list-style-type: none;
     cursor: pointer;
     color: #ffe500;
-    font-size: 40px;
+    font-size: 31px;
   }
-  .star-icon::before{
+  .codificacao::before{
     content: "\2605";
   }
-  .star-icon.ativo ~ .star-icon::before{
+  .codificacao.ativo ~ .codificacao::before{
     content: "\2606";
   }
-  .avaliacao:hover .star-icon::before{
+  .avaliacao:hover .codificacao::before{
     content: "\2605";
   }
-  .star-icon:hover ~ .star-icon::before{
+  .codificacao:hover ~ .codificacao::before{
+    content: "\2606";
+  }
+
+
+  .desenvolvimento::before{
+    content: "\2605";
+  }
+  .desenvolvimento.ativo ~ .desenvolvimento::before{
+    content: "\2606";
+  }
+  .avaliacao:hover .desenvolvimento::before{
+    content: "\2605";
+  }
+  .desenvolvimento:hover ~ .desenvolvimento::before{
+    content: "\2606";
+  }
+
+  .realizacao::before{
+    content: "\2605";
+  }
+  .realizacao.ativo ~ .realizacao::before{
+    content: "\2606";
+  }
+  .avaliacao:hover .realizacao::before{
+    content: "\2605";
+  }
+  .realizacao:hover ~ .realizacao::before{
+    content: "\2606";
+  }
+
+  .implementacao::before{
+    content: "\2605";
+  }
+  .implementacao.ativo ~ .implementacao::before{
+    content: "\2606";
+  }
+  .avaliacao:hover .implementacao::before{
+    content: "\2605";
+  }
+  .implementacao:hover ~ .implementacao::before{
+    content: "\2606";
+  }
+
+  .documentacao::before{
+    content: "\2605";
+  }
+  .documentacao.ativo ~ .documentacao::before{
+    content: "\2606";
+  }
+  .avaliacao:hover .documentacao::before{
+    content: "\2605";
+  }
+  .documentacao:hover ~ .documentacao::before{
+    content: "\2606";
+  }
+
+  .Correcao_Programa::before{
+    content: "\2605";
+  }
+  .Correcao_Programa.ativo ~ .Correcao_Programa::before{
+    content: "\2606";
+  }
+  .avaliacao:hover .Correcao_Programa::before{
+    content: "\2605";
+  }
+  .Correcao_Programa:hover ~ .Correcao_Programa::before{
+    content: "\2606";
+  }
+
+  .alteracao_armazenamento::before{
+    content: "\2605";
+  }
+  .alteracao_armazenamento.ativo ~ .alteracao_armazenamento::before{
+    content: "\2606";
+  }
+  .avaliacao:hover .alteracao_armazenamento:before{
+    content: "\2605";
+  }
+  .alteracao_armazenamento:hover ~ .salteracao_armazenamento::before{
+    content: "\2606";
+  }
+
+  .atualizacao_Documentacao::before{
+    content: "\2605";
+  }
+  .atualizacao_Documentacao.ativo ~ .atualizacao_Documentacao::before{
+    content: "\2606";
+  }
+  .avaliacao:hover .aatualizacao_Documentacao:before{
+    content: "\2605";
+  }
+  .aatualizacao_Documentacao:hover ~ .atualizacao_Documentacao::before{
     content: "\2606";
   }

@@ -38,23 +38,78 @@ public class Aluno{
     private String descricao;
     private String formacao;
     private String teste;
-    private String estrela;
-    public void setEstrela(String estrela) {
-        this.estrela = estrela;
-    }
     @Lob
     private byte[] imagem;
 
+    private String codificacaoprogramas;
+    
+    private String desenvolvimento_prototipos; 
+    private String realizacao_testes;
+    private String implementacao_dados; 
+    private String documentacao_programa; 
+    private String alteracao_correcao_programa; 
+    private String alteracao_armazenamento_dados;
+    private String atualizacao_documentacao_programa;
+
+    public String getCodificacaoprogramas() {
+        return codificacaoprogramas;
+    }
+    public void setCodificacaoprogramas(String codificacaoprogramas) {
+        this.codificacaoprogramas = codificacaoprogramas;
+    }
+   
+    public String getDesenvolvimento_prototipos() {
+        return desenvolvimento_prototipos;
+    }
+    public void setDesenvolvimento_prototipos(String desenvolvimento_prototipos) {
+        this.desenvolvimento_prototipos = desenvolvimento_prototipos;
+    }
+    public String getRealizacao_testes() {
+        return realizacao_testes;
+    }
+    public void setRealizacao_testes(String realizacao_testes) {
+        this.realizacao_testes = realizacao_testes;
+    }
+    public String getImplementacao_dados() {
+        return implementacao_dados;
+    }
+    public void setImplementacao_dados(String implementacao_dados) {
+        this.implementacao_dados = implementacao_dados;
+    }
+    public String getDocumentacao_programa() {
+        return documentacao_programa;
+    }
+    public void setDocumentacao_programa(String documentacao_programa) {
+        this.documentacao_programa = documentacao_programa;
+    }
+    public String getAlteracao_correcao_programa() {
+        return alteracao_correcao_programa;
+    }
+    public void setAlteracao_correcao_programa(String alteracao_correcao_programa) {
+        this.alteracao_correcao_programa = alteracao_correcao_programa;
+    }
+    public String getAlteracao_armazenamento_dados() {
+        return alteracao_armazenamento_dados;
+    }
+    public void setAlteracao_armazenamento_dados(String alteracao_armazenamento_dados) {
+        this.alteracao_armazenamento_dados = alteracao_armazenamento_dados;
+    }
+    public String getAtualizacao_documentacao_programa() {
+        return atualizacao_documentacao_programa;
+    }
+    public void setAtualizacao_documentacao_programa(String atualizacao_documentacao_programa) {
+        this.atualizacao_documentacao_programa = atualizacao_documentacao_programa;
+    }
     public byte[] getImagem() {
         return imagem;
     }
     public void setImagem(byte[] imagem) {
         this.imagem = imagem;
     }
-
-    public String getEstrela() {
-        return estrela;
-    }
+   
+    
+    
+    
     public int getId(){
         return this.Id;
     }
