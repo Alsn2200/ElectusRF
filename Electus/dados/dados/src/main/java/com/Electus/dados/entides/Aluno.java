@@ -42,7 +42,6 @@ public class Aluno{
     private byte[] imagem;
 
     private String codificacaoprogramas;
-    
     private String desenvolvimento_prototipos; 
     private String realizacao_testes;
     private String implementacao_dados; 

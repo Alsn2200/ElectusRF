@@ -24,21 +24,21 @@ document.addEventListener('click', function(avl_1){
     });
     classStar.add('ativo');
    
-    
+    avaliacao1.push(avl_1.target.getAttribute('data-avaliacao'));
   }
-  fetch("http://localhost:8082/a",
-  {
-      headers: {
-        'Accept': 'application/json',
-        'Content-Type': 'application/json'
-      },
-      method: "POST",
-      body: JSON.stringify({
-         id:1,
-         codificacaoprogramas: 1
-      })
+  // fetch("http://localhost:8082/a",
+  // {
+  //     headers: {
+  //       'Accept': 'application/json',
+  //       'Content-Type': 'application/json'
+  //     },
+  //     method: "POST",
+  //     body: JSON.stringify({
+  //        id:1,
+  //        codificacaoprogramas: 1
+  //     })
   
-  })
+  // })
 });
 
 /* 2 */
@@ -120,34 +120,36 @@ document.addEventListener('click', function(avl_8){
   }
 });
 
-console.log(avaliacao1[0])
-console.log(avaliacao2[0])
-console.log(avaliacao3[0])
-console.log(avaliacao4[0])
-console.log(avaliacao5[0])
-console.log(avaliacao6[0])
-console.log(avaliacao7[0])
-console.log(avaliacao8[0])
 
-document.getElementById('Envio').addEventListener('click', function enviarDados(){
-  fetch("http://localhost:8082/estrela",
-  {
-      headers: {
-        'Accept': 'application/json',
-        'Content-Type': 'application/json'
-      },
-      method: "POST",
-      body: JSON.stringify({
-         id: document.getElementById('id').textContent,
-         codificacao_programas: avaliacao1[0],
-         desenvolvimento_prototipos: avaliacao2[0],
-         realizacao_testes: avaliacao3[0],
-         implementacao_dados: avaliacao4[0],
-         documentacao_programa: avaliacao5[0],
-         alteracao_correcao_programa: avaliacao6[0],
-         alteracao_armazenamento_dados: avaliacao7[0],
-         atualizacao_documentacao_programa: avaliacao8[0],
-      })
+
+// document.getElementById('Envio').addEventListener('click', function enviarDados(){
+//   fetch("http://localhost:8082/estrela",
+//   {
+//       headers: {
+//         'Accept': 'application/json',
+//         'Content-Type': 'application/json'
+//       },
+//       method: "POST",
+//       body: JSON.stringify({
+//          id: document.getElementById('id').textContent,
+//          codificacaoprogramas: avaliacao1[0],
+//          desenvolvimento_prototipos: avaliacao2[0],
+//          realizacao_testes: avaliacao3[0],
+//          implementacao_dados: avaliacao4[0],
+//          documentacao_programa: avaliacao5[0],
+//          alteracao_correcao_programa: avaliacao6[0],
+//          alteracao_armazenamento_dados: avaliacao7[0],
+//          atualizacao_documentacao_programa: avaliacao8[0],
+//       })
   
-  })
-})
+//   })
+
+//   console.log(avaliacao1[0])
+// console.log(avaliacao2[0])
+// console.log(avaliacao3[0])
+// console.log(avaliacao4[0])
+// console.log(avaliacao5[0])
+// console.log(avaliacao6[0])
+// console.log(avaliacao7[0])
+// console.log(avaliacao8[0])
+// })

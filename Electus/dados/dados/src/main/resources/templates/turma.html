@@ -42,7 +42,7 @@
        <div class="box-alunos">
        
         <p th:if="|${alunos.curso } == Desenvimento de Sistemas|" th:text="${alunos.aluno}" class="aluno"></p>
-        <p th:id="${alunos.id}" style="display: none;"></p>
+        <p id="id" style="display: none;"></p>
         <div class="flex">
           <p>Codificação de programas</p>
           <ul class="avaliacao">
@@ -135,13 +135,14 @@
             
           </div>
 
-        
+          
 
           </div>
+        
         </div>
-        <button id="Envio">Enviar</button>
+        
     </div>
-    
+    <button id="Envio" type="submit">Enviar</button>
     </main>
     <script th:src="@{/btnMenu-scripts/Script-hamburg.js}"></script>
     <script th:src="@{/Electus_Scripts/Turma.js}"></script>

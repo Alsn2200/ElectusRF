@@ -64,11 +64,12 @@ public class Requisicoes {
     public void Vaga1(@RequestBody vaga Vaga) {
              salvamentoVaga.save(Vaga);
     }
-    @PostMapping("/a")
+    @PostMapping("/estrela")
     public void Estrela(@RequestBody Aluno aluno){
-        int id = 1;
+        int id = aluno.getId();
         acessoBanco.findById(id).map(alteracao ->{
             alteracao.setCodificacaoprogramas(aluno.getCodificacaoprogramas());
+            alteracao.setDesenvolvimento_prototipos(aluno.getDesenvolvimento_prototipos());
             return acessoBanco.save(alteracao);
         });
 
