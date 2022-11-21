@@ -109,6 +109,7 @@ public class UsuarioController {
         acessoBanco.findById(id).map( novo -> {
             novo.setDescricao(usuario.getDescricao());
             novo.setFormacao(usuario.getFormacao());
+               
             return acessoBanco.save(novo);
         });
     }
