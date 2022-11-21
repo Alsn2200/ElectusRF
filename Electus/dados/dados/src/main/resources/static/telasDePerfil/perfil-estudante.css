@@ -186,15 +186,11 @@ main {
     width: 30vw;
     border-radius: 0px 30px 30px 30px;
 }
-
-
-
 .d-flex{
    display: block;
    text-align: left;
    height: 100%;
    margin-bottom: 5vh;
-
 }
 #imgAtualizar{
     text-align: center;
@@ -211,7 +207,6 @@ main {
     border: none;
     margin-left: 50%;
     }
-
 .descricao{
    text-align: center;
    margin-bottom: 5vh;
@@ -226,7 +221,6 @@ main {
     border-radius: 50%;
     margin-left: 25vw;    
 }
-
 .colunaDados{
     display: flex;
     padding: 2vh 7vw 2vh 5vw;
@@ -246,21 +240,12 @@ main {
 .botoesPerfil{
   
 }
-
-
-
-
-
-
-
-
 #btn-upload{
     width: 40%;
     text-align: center;
     margin-top: 20px;
     display: block;
 }
-
  */
 
 /* FOOTER */

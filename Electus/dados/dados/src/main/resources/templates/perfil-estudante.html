@@ -32,7 +32,7 @@
             </ul>
         </nav>
     </header>
-    <!-- <main>
+    <main>
         <div class="containerMain">
             <div class="backgroundImagem">
                 <div class="itenBox1">
@@ -118,10 +118,9 @@
                 </div>
             </div>
         </div>
-        </div>
     </main>
     <!-- Main -->
-    <main>
+    <!-- <main>
         <div class="containerMain">
             <div class="box1">
                 <h1 th:text="${session.usuarioLogado.aluno}" class="Nome-aluno" id="Nome-aluno">
@@ -130,8 +129,6 @@
                     <h5 class="titleDescricao">Descrição do perfil: </h5>
                     <p th:text="${session.usuarioLogado.descricao}" id="respDesc"></p>
                     <div class="barra"></div>
-
-
         <div class="backgraund-img">
             <p th:text="${session.usuarioLogado.id}" id="teste"  style="display: none;"></p>
             <div class="opacity">
@@ -144,7 +141,6 @@
                                 
                                     <img  th:src="|/imagem/${session.usuarioLogado.id}|" id="imagem">
                              
-
                                 <form th:action="|/Alea/${session.usuarioLogado.id}|" method="POST" enctype="multipart/form-data" th:object="${teste}">
                                     <input type="file" name="fileProduto" id="imgamem" placeholder="none">
                                     <button type="submit" id="enviando">Enviar</button>
@@ -217,9 +213,7 @@
                                     <div class="div">
                                         <p>Adcionar PDF</p>
                                     </div>
-
                                 </div>
-
                               
                                    <div class="marias">
                                     <button id="btn1">Alterar dados</button>
@@ -233,15 +227,12 @@
                            
                         </div>
                        
-
                        
-
                         
                             
                        
                     </div>
                     
-
                 </div>
              
                 <div class="colunaDados">
@@ -279,11 +270,9 @@
                         <div class="itenColuna">
                             <p>Endereço:</p>
                             <p th:text="${session.usuarioLogado.endereco}" id="endereco"></p>
-
                         </div>
                         <div class="itenColuna">
                             <p>Número da Casa:</p>
-
                         </div>
                     </div>
                 </div>
@@ -312,16 +301,12 @@
             </div>
         </div>
         <div class="botoesPerfil">
-
             <button id="btnAlterar">Alterar dados</button>
             <button id="btnVerVagas">Vagas Cadastradas</button>
             <a th:href="|/deletar/${session.usuarioLogado.id}|" id="btnExcluir">Excluir conta</a>
         </div>
-
-
-
        <input type="file" name="upload" value="arquivo" id="btn-upload"> 
-    </main>
+    </main> -->
     <!-- footer -->
     <footer class="rodape">
         <div class="caixaRodape">
