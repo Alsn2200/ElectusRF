@@ -95,28 +95,49 @@
                                     </div>
                                     <div class="itenColuna">
                                         <p>Número da Casa:</p>
-                                    <p th:text="${session.usuarioLogado.numero_casa}" id="numero_casa"></p>
-
-                                    <a id="btn3" th:href="|/Vagas/${session.usuarioLogado.id}|">Vagas de estagio</a>
+                                        <p th:text="${session.usuarioLogado.numero_casa}" id="numero_casa"></p>
                                     </div>
                                 </div>
-
-
-
                             </div>
-                            <!-- <div class="caixaImagem">
-                                <img th:src="|/imagem/${session.usuarioLogado.id}|" id="imagemPerfil">
-                                <form th:action="|/Alea/${session.usuarioLogado.id}|" method="POST"
-                                    enctype="multipart/form-data" th:object="${teste}">
-                                    <h3 class="tituloFoto">Atualize a foto de perfil</h3>
-                                    <input type="file" name="fileProduto" id="arquivoImg" placeholder="none">
-                                    <button type="submit" id="enviando">Enviar</button>
-                                </form>
-                            </div> -->
+                            <div class="containerBotoes">
+                                <div class="caixaBotoes">
+                                    <div class="boxVerVagas">
+                                        <h3 class="titleVerVagas">Confira Vagas</h3>
+                                        <a class="btnBotoes" th:href="|/Vagas/${session.usuarioLogado.id}|"><div class="fundoBtn"><img
+                                                th:src="@{/Imagens/seta-direita.png}" alt="seta" id="imgSeta"></div></a>
+                                    </div>
+                                </div>
+                                <div class="caixaBotoes">
+                                    <div class="boxVerVagas">
+                                        <h3 class="titleVerVagas">Editar perfil</h3>
+                                        <a class="btnBotoes" th:href="|/Vagas/${session.usuarioLogado.id}|"><div class="fundoBtn"><img
+                                            th:src="@{/Imagens/seta-direita.png}" alt="seta" id="imgSeta"></div></a>
+                                    </div>
+                                </div>
+                                <div class="caixaBotoes">
+                                    <div class="boxVerVagas">
+                                        <h3 class="titleVerVagas">Excluir perfil</h3>
+                                        <a th:href="|/deletar/${session.usuarioLogado.id}|" class="btnBotoes"><div class="fundoBtn"><img
+                                            th:src="@{/Imagens/seta-direita.png}" alt="seta" id="imgSeta"></div></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="caixaImagem">
+                            <img th:src="|/imagem/${session.usuarioLogado.id}|" id="imagemPerfil">
+                            <form th:action="|/Alea/${session.usuarioLogado.id}|" method="POST"
+                                enctype="multipart/form-data" th:object="${teste}">
+                                <h3 class="tituloFoto">Atualize a foto de perfil</h3>
+                                <input type="file" name="fileProduto" id="arquivoImg" placeholder="none">
+                                <button type="submit" id="enviando">Enviar</button>
+                            </form>
                         </div>
                     </div>
+
                 </div>
             </div>
+        </div>
         </div>
     </main>
     <!-- Main -->
@@ -308,48 +329,7 @@
        <input type="file" name="upload" value="arquivo" id="btn-upload"> 
     </main> -->
     <!-- footer -->
-    <footer class="rodape">
-        <div class="caixaRodape">
-            <div class="logo"></div>
-            <div class="footer-inform">
-                <ul>
-                    <h4>Geral</h4>
-                    <li>Cadastre-se</li>
-                    <li>Centrar de Ajuda</li>
-                    <li>Sobre</li>
-                </ul>
-                <ul>
-                    <h4>Navegar pelo Electrus</h4>
-                    <li>Leading</li>
-                    <li>Vagas</li>
-                    <li>Salario</li>
-                </ul>
-                <ul>
-                    <h4>Soluções Business</h4>
-                    <li>Talentos</li>
-                    <li>Marketing</li>
-                    <li>Vendas</li>
-                </ul>
-                <ul>
-                    <h4>Diretórios</h4>
-                    <li>Usuarios</li>
-                    <li>Vagas</li>
-                    <li>Empresas</li>
-                    <li>Soluções</li>
-                    <li>Publicações</li>
-                    <li>Artigos</li>
-                </ul>
 
-                <ul>
-                    <h4>Programadores</h4>
-                    <li><a href="https://github.com/Alsn2200">Alisson Brito</a></li>
-                    <li><a href="">Beatriz Rodrigues</a></li>
-                    <li><a href="https://github.com/FellipeS13">Felipe do Santos</a></li>
-                    <li><a href="https://github.com/Thiag0nery">Thiago Nery</a></li>
-                </ul>
-            </div>
-        </div>
-    </footer>
 
 
 

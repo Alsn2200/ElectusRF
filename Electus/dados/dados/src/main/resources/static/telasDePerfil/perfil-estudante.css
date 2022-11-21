@@ -60,7 +60,7 @@ header li a:hover {
 
 /* MAIn */
 main {
-    height: 150vh;
+  
     background-color: white;
 }
 
@@ -68,7 +68,7 @@ main {
 
 .itenBox1 {
     width: 100%;
-    height: 60vh;
+    height: 40vh;
     background-color: rgb(241, 241, 241);
 }
 
@@ -109,7 +109,6 @@ main {
 }
 .caixaImagem{
     display: block;
-    width: 20vw;
    
 }
 #imagemPerfil{
@@ -119,16 +118,14 @@ main {
     background-size: contain;
     border: none;
     height: 60vh;
-    position: relative;
-    top: -20vh;
-    right: -20vh;
     border-radius: 100%;
 }
 .descricao{
     margin-bottom: 10vh;
 }
 .tituloFoto{
-    margin-left: 100px;
+    text-align: center;
+    margin-top: 40px;
 }
 #arquivoImg{
     margin-left: 60px;
@@ -139,8 +136,15 @@ main {
     width: 5vw;
     height: 5vh;
     border: none;
-    border-radius: 20%;
+    border-radius: 10%;
     cursor: pointer;
+    margin-left: 1vw;
+    margin-top: 2vh;
+    
+}
+#enviando:hover{
+    transition: .2s;
+    background-color: #f78d0c49;
 }
 .colunaDados{
     display: flex;
@@ -154,14 +158,49 @@ main {
 }
 .itenColuna{
     display: flex;
+    margin-top: 5px;
     
 }
-#modulo, #curso , #endereco, #periodo, #sexo, #telefone , #cpf, #datanasc{
+#modulo, #curso , #endereco, #periodo, #sexo, #numero_telefone , #cpf, #data_nascimento,  #numero_casa{
     font-weight: 500;
-    margin-left: 15px;
+    margin-left: 5px;
 }
+.editarperfil{
+    margin-top: 90px;
+}
+.caixaBotoes{
+    display: flex;
+}
+.boxVerVagas{
+    display: block;
+    
+}
+.btnBotoes{
 
-
+}
+#imgSeta{
+    width: 25px;
+    margin-top: 7px;
+    margin-left: 13px;
+}
+.containerBotoes{
+    display: flex;
+    margin-top: 90px;
+    justify-content: space-between;
+}
+.fundoBtn{
+    width: 3vw;
+    height: 6vh;
+    background-color: #f78e0c;
+    border-radius: 100%;
+    margin: 0 auto;
+    margin-top: 2vh;
+    cursor: pointer;
+}
+.fundoBtn:hover{
+    transition: .2s;
+    background-color: #f78d0c49;
+}
 /* .containerMain{
     width: 100%;
     height: 100%;
