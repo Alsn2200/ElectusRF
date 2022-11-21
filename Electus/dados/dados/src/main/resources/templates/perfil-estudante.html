@@ -48,34 +48,78 @@
                                 <p th:text="${session.usuarioLogado.descricao}" id="respDesc"></p>
                             </div>
                             <h2 class="tituloDados">Dados</h2>
-                            <div class="flex-informacoes">
-                                <div class="itens-informacoes">
-                                    <p>Periodo: </p>
-                                    <p th:text="${session.usuarioLogado.periodo}" id="periodo"></p>
+
+                            <div class="colunaDados">
+                                <div class="coluna1">
+                                    <div class="itenColuna">
+                                        <p>Data de nascimento:</p>
+                                        <p th:text="${session.usuarioLogado.data_nascimento}" id="data_nascimento"></p>
+
+                                    </div>
+                                    <div class="itenColuna">
+                                        <p>CPF:</p>
+                                        <p th:text="${session.usuarioLogado.cpf}" id="cpf"></p>
+
+                                    </div>
+                                    <div class="itenColuna">
+                                        <p>Nº telefone:</p>
+                                        <p th:text="${session.usuarioLogado.numero_telefone}" id="numero_telefone"></p>
+
+                                    </div>
+                                    <div class="itenColuna">
+                                        <p>Sexo:</p>
+                                        <p th:text="${session.usuarioLogado.sexo}" id="sexo"></p>
+                                    </div>
+                                    <div class="itenColuna">
+                                        <p>E-mail:</p>
+                                        <p th:text="${session.usuarioLogado.email}" id="email"></p>
+                                    </div>
                                 </div>
-                                <div class="itens-informacoes">
-                                    <p>Sexo: </p>
-                                    <p th:text="${session.usuarioLogado.sexo}" id="sexo"></p>
-                                </div>
+                                <div class="coluna2">
+                                    <div class="itenColuna">
+                                        <p>Curso:</p>
+                                        <p th:text="${session.usuarioLogado.curso}" id="curso"></p>
+                                    </div>
+                                    <div class="itenColuna">
+                                        <p>Módulo:</p>
+                                        <p th:text="${session.usuarioLogado.modulo}" id="modulo"></p>
+                                    </div>
+                                    <div class="itenColuna">
+                                        <p>Período:</p>
+                                        <p th:text="${session.usuarioLogado.periodo}" id="periodo"></p>
+                                    </div>
+                                    <div class="itenColuna">
+                                        <p>Endereço:</p>
+                                        <p th:text="${session.usuarioLogado.endereco}" id="endereco"></p>
+
+                                    </div>
+                                    <div class="itenColuna">
+                                        <p>Número da Casa:</p>
+                                    <p th:text="${session.usuarioLogado.numero_casa}" id="numero_casa"></p>
+
+
+                                    </div>
                                 </div>
 
 
-                        </div>
-                        <div class="caixaImagem">
-                            <img th:src="|/imagem/${session.usuarioLogado.id}|" id="imagemPerfil">
-                            <form th:action="|/Alea/${session.usuarioLogado.id}|" method="POST"
-                                enctype="multipart/form-data" th:object="${teste}">
-                                <h3 class="tituloFoto">Atualize a foto de perfil</h3>
-                                <input type="file" name="fileProduto" id="arquivoImg" placeholder="none">
-                                <button type="submit" id="enviando">Enviar</button>
-                            </form>
+
+                            </div>
+                            <!-- <div class="caixaImagem">
+                                <img th:src="|/imagem/${session.usuarioLogado.id}|" id="imagemPerfil">
+                                <form th:action="|/Alea/${session.usuarioLogado.id}|" method="POST"
+                                    enctype="multipart/form-data" th:object="${teste}">
+                                    <h3 class="tituloFoto">Atualize a foto de perfil</h3>
+                                    <input type="file" name="fileProduto" id="arquivoImg" placeholder="none">
+                                    <button type="submit" id="enviando">Enviar</button>
+                                </form>
+                            </div> -->
                         </div>
                     </div>
                 </div>
             </div>
         </div>
         </div>
-    </main> -->
+    </main>
     <!-- Main -->
     <main>
         <div class="containerMain">

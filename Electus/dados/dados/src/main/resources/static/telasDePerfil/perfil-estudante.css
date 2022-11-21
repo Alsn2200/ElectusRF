@@ -60,7 +60,7 @@ header li a:hover {
 
 /* MAIn */
 main {
-    height: 140vh;
+    height: 150vh;
     background-color: white;
 }
 
@@ -84,8 +84,8 @@ main {
     margin-left: 5rem;
     padding: 45px;
     background-color: white;
-    width: 60vw;
-    height: 85vh;
+    width: 75vw;
+    height: 95vh;
     display: flex;
 
 }
@@ -101,7 +101,7 @@ main {
 
 #Nome-aluno{
     margin-top: 2vh;
-    font-size: 70px;
+    font-size: 80px;
 }
 .caixaConteudo{
     width: 40vw;
@@ -109,6 +109,7 @@ main {
 }
 .caixaImagem{
     display: block;
+    width: 20vw;
    
 }
 #imagemPerfil{
@@ -117,7 +118,7 @@ main {
     background-position: center;
     background-size: contain;
     border: none;
-    height: 70vh;
+    height: 60vh;
     position: relative;
     top: -20vh;
     right: -20vh;
@@ -140,6 +141,24 @@ main {
     border: none;
     border-radius: 20%;
     cursor: pointer;
+}
+.colunaDados{
+    display: flex;
+}
+.coluna1{
+    display: block;
+    margin-right: 50px;
+}
+.coluna2{
+    display: block;
+}
+.itenColuna{
+    display: flex;
+    
+}
+#modulo, #curso , #endereco, #periodo, #sexo, #telefone , #cpf, #datanasc{
+    font-weight: 500;
+    margin-left: 15px;
 }
 
 
