@@ -433,15 +433,14 @@ a {
         text-align: center;
     }
     #imagemPerfil {
-        width: 64vw;
+        width: 300px;
         background-image: url(../Imagens/icone-utilisateur-gris.png);
         background-position: center;
         background-size: contain;
         border: none;
         background-repeat: no-repeat;
-        height: 60vh;
+        height: 300px;
         display: block;
-   
         margin: 0 auto;
         border-radius: 100%;
     }

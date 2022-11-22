@@ -113,9 +113,7 @@ public class Aluno{
         this.imagem = imagem;
     }
    
-    
-    
-    
+ 
     public int getId(){
         return this.Id;
     }
@@ -185,7 +183,7 @@ public class Aluno{
     public void setPeriodo(String Periodo){
         this.periodo = Periodo;
     }
-    public String getEmai(){
+    public String getEmail(){
         return this.email;
     }
     public void setEmail(String email){

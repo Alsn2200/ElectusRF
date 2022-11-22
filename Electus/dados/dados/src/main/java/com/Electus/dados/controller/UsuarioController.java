@@ -126,7 +126,6 @@ public class UsuarioController {
         usuario = this.acessoBanco.findByCpfAndSenha(usuario.getCpf(), usuario.getSenha());
        
         if(usuario != null){
-           
             session.setAttribute("usuarioLogado", usuario);
             return "redirect:/perfil-estudante";
         }
