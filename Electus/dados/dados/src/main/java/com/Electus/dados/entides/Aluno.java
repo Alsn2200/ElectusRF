@@ -49,7 +49,14 @@ public class Aluno{
     private String alteracao_correcao_programa; 
     private String alteracao_armazenamento_dados;
     private String atualizacao_documentacao_programa;
+    private String validacao;
 
+    public String getValidacao() {
+        return validacao;
+    }
+    public void setValidacao(String validacao) {
+        this.validacao = validacao;
+    }
     public String getCodificacaoprogramas() {
         return codificacaoprogramas;
     }

@@ -1,0 +1,2 @@
+INSERT INTO electus.docente (codico, senha, docente, materia ) VALUES ("789456","123456","Gilvan","Eletrotécnica")
+INSERT INTO electus.docente (codico, senha, docente, materia ) VALUES ("159753", "123456","Desenvolvimento de Sistemas","Joabe")

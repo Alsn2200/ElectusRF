@@ -59,11 +59,13 @@ main{
     padding:  25px;
     width: 100%;
 }
+.text-avaliacao{
+  text-align: center;
+  background-color: #918d89;
+  padding: 11px;
+}
 .turma-titulo{
     text-align: center;
-}
-.box-alunos{
-
 }
 .d-flex{
   overflow-x:scroll;
@@ -76,15 +78,22 @@ main{
 .aluno{
   text-align: center;
   font-size: 32pt;
+  background-color: #f78e0c;
+  border-radius: 10px;
 }
 .container-avaliacao{
     margin-top: 15px;
-    padding: 1rem;
+    background-color: #dfdfdf;
+    box-shadow: 0 0 3px 1px;
     border-radius: 10px;
-    background-color: #f78e0c;
+   
+}
+.bg-fundo{
+  padding: 1rem;
+ 
 }
 .box-alunos{
-  width: 37rem;
+  width: 31rem;
 }
 .avaliacao{
     display: flex;
@@ -99,7 +108,7 @@ main{
    .flex p{
     font-size: 13.5pt;
    }
-   #Envio{
+   #a{
     text-align: center;
     padding: 12px;
     width: 7rem;
@@ -109,16 +118,18 @@ main{
     border: none;
     margin: 12px auto;
    }
-   #Envio:hover{
-    background-color: #ccc;
+   #a:hover{
+    background-color: #6a6a6a;
    }
   
   .codificacao,.desenvolvimento,.realizacao,.implementacao,.documentacao,.Correcao_Programa,.alteracao_armazenamento,.atualizacao_Documentacao{
     list-style-type: none;
     cursor: pointer;
-    color: #ffe500;
+    color: #ffa500;
     font-size: 31px;
   }
+  /* codificacao */
+
   .codificacao::before{
     content: "\2605";
   }
@@ -132,11 +143,11 @@ main{
     content: "\2606";
   }
 
-
+/* desenvolvimento */
   .desenvolvimento::before{
     content: "\2605";
   }
-  .desenvolvimento.ativo ~ .desenvolvimento::before{
+  .desenvolvimento.ativo2 ~ .desenvolvimento::before{
     content: "\2606";
   }
   .avaliacao:hover .desenvolvimento::before{
@@ -145,11 +156,11 @@ main{
   .desenvolvimento:hover ~ .desenvolvimento::before{
     content: "\2606";
   }
-
+  /* realizacao */
   .realizacao::before{
     content: "\2605";
   }
-  .realizacao.ativo ~ .realizacao::before{
+  .realizacao.ativo3 ~ .realizacao::before{
     content: "\2606";
   }
   .avaliacao:hover .realizacao::before{
@@ -158,11 +169,11 @@ main{
   .realizacao:hover ~ .realizacao::before{
     content: "\2606";
   }
-
+  /* implementacao */
   .implementacao::before{
     content: "\2605";
   }
-  .implementacao.ativo ~ .implementacao::before{
+  .implementacao.ativo4 ~ .implementacao::before{
     content: "\2606";
   }
   .avaliacao:hover .implementacao::before{
@@ -171,11 +182,11 @@ main{
   .implementacao:hover ~ .implementacao::before{
     content: "\2606";
   }
-
+/* documentacao */
   .documentacao::before{
     content: "\2605";
   }
-  .documentacao.ativo ~ .documentacao::before{
+  .documentacao.ativo5 ~ .documentacao::before{
     content: "\2606";
   }
   .avaliacao:hover .documentacao::before{
@@ -184,11 +195,11 @@ main{
   .documentacao:hover ~ .documentacao::before{
     content: "\2606";
   }
-
+/*Correcao_Programa*/
   .Correcao_Programa::before{
     content: "\2605";
   }
-  .Correcao_Programa.ativo ~ .Correcao_Programa::before{
+  .Correcao_Programa.ativo6 ~ .Correcao_Programa::before{
     content: "\2606";
   }
   .avaliacao:hover .Correcao_Programa::before{
@@ -197,29 +208,29 @@ main{
   .Correcao_Programa:hover ~ .Correcao_Programa::before{
     content: "\2606";
   }
-
+/*alteracao_armazenamento*/
   .alteracao_armazenamento::before{
     content: "\2605";
   }
-  .alteracao_armazenamento.ativo ~ .alteracao_armazenamento::before{
+  .alteracao_armazenamento.ativo7 ~ .alteracao_armazenamento::before{
     content: "\2606";
   }
   .avaliacao:hover .alteracao_armazenamento:before{
     content: "\2605";
   }
-  .alteracao_armazenamento:hover ~ .salteracao_armazenamento::before{
+  .alteracao_armazenamento:hover ~ .alteracao_armazenamento::before{
     content: "\2606";
   }
-
+/*atualizacao_Documentacao*/
   .atualizacao_Documentacao::before{
     content: "\2605";
   }
-  .atualizacao_Documentacao.ativo ~ .atualizacao_Documentacao::before{
+  .atualizacao_Documentacao.ativo8 ~ .atualizacao_Documentacao::before{
     content: "\2606";
   }
-  .avaliacao:hover .aatualizacao_Documentacao:before{
+  .avaliacao:hover .atualizacao_Documentacao:before{
     content: "\2605";
   }
-  .aatualizacao_Documentacao:hover ~ .atualizacao_Documentacao::before{
+  .atualizacao_Documentacao:hover ~ .atualizacao_Documentacao::before{
     content: "\2606";
   }

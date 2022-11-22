@@ -23,7 +23,6 @@ function testeScroll(){
             document.getElementById('link-1').style.transition = '1s';
             document.getElementById('link-2').style.transition = '1s';
             document.getElementById('link-3').style.transition = '1s';
-            
             document.getElementById('header').style.boxShadow = '0 1px 15px 2px black'
         }
         function saiu(){

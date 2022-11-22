@@ -23,6 +23,7 @@ import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.Electus.dados.banco.UsuarioBanco;
+import com.Electus.dados.banco.bancoDocente;
 import com.Electus.dados.banco.bancoEmpresa;
 import com.Electus.dados.banco.bancoImagem;
 import com.Electus.dados.banco.bancoVagaAluno;
@@ -58,6 +59,9 @@ public class UsuarioController {
 
     @Autowired
     private bancoImagem imagemEmpresa;
+
+    @Autowired
+    private bancoDocente acessoDocente;
      
     @GetMapping("/Vagas/{id}")
     public String ListaEmpresa(Model model,Aluno usuario, HttpSession session, @PathVariable int id){
@@ -73,8 +77,11 @@ public class UsuarioController {
     }
 
     @PostMapping("/login-docente")
-    public String loginDocente(docente Docente){
-        if(Docente.getCodico().equals("789456") && Docente.getSenha().equals("123456")){
+    public String loginDocente(docente Docente, HttpSession session){
+        Docente = this.acessoDocente.findByCodicoAndSenha(Docente.getCodico(), Docente.getSenha());
+
+        if(Docente != null){
+            session.setAttribute("docente", Docente);
             return "redirect:/Docente";
         }
         else{
@@ -150,8 +157,8 @@ public class UsuarioController {
      
   
     @PostMapping("/Alea/{Id}")
-    public String Imagem(teste T, @RequestParam ("fileProduto") MultipartFile file, @PathVariable("Id") Integer id){
-    
+    public String Imagem(teste T, @RequestParam ("fileProduto") MultipartFile file, @PathVariable("Id") Integer id, Aluno usuario,  HttpSession session){
+        usuario = this.acessoBanco.getOne(usuario.getId());
        try {
             T.setId(id);
              T.setImagem(file.getBytes());
@@ -161,7 +168,7 @@ public class UsuarioController {
                 e.printStackTrace();
            }
           
-           return "redirect:/index";
+           return "redirect:/perfil-estudante";
                 
     }
     @PostMapping("/empresaImagem/{Id}")
@@ -190,6 +197,7 @@ public class UsuarioController {
     @GetMapping("/deletar/{id}")
     public String deletarUsuario(@PathVariable int id){
         acessoBanco.deleteById(id);
+        bancoT.deleteById(id);
         return "redirect:/index";
     }
 
@@ -218,7 +226,17 @@ public class UsuarioController {
         Vaga = salvamentoVaga.getOne(id);
         session.setAttribute("aluno", aluno);
         session.setAttribute("vaga", Vaga);
+
         return "vagaSelecionada";
     }
+     @GetMapping("/Turma/{id}")
+    public String Turma(Model model, @PathVariable int id, HttpSession session, docente Docente){
+        Docente = this.acessoDocente.getOne(id);
+        session.setAttribute("docente", Docente);
+        model.addAttribute("Turmas",  acessoBanco.findAll());
+
+        return "turma";
+    }
+    
    
 }

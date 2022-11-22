@@ -70,6 +70,13 @@ public class Requisicoes {
         acessoBanco.findById(id).map(alteracao ->{
             alteracao.setCodificacaoprogramas(aluno.getCodificacaoprogramas());
             alteracao.setDesenvolvimento_prototipos(aluno.getDesenvolvimento_prototipos());
+            alteracao.setRealizacao_testes(aluno.getRealizacao_testes());
+            alteracao.setImplementacao_dados(aluno.getImplementacao_dados());
+            alteracao.setDocumentacao_programa(aluno.getDocumentacao_programa());
+            alteracao.setAlteracao_correcao_programa(aluno.getAlteracao_correcao_programa());
+            alteracao.setAlteracao_armazenamento_dados(aluno.getAlteracao_armazenamento_dados());
+            alteracao.setAtualizacao_documentacao_programa(aluno.getAtualizacao_documentacao_programa());
+            alteracao.setValidacao("validado");
             return acessoBanco.save(alteracao);
         });
 

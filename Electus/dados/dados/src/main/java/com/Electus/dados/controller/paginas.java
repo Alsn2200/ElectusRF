@@ -44,11 +44,7 @@ public class paginas {
     public String CadastroVaga(){
         return "cadastro-vaga";
     }
-    @GetMapping("/Turma")
-    public String Turma(Model model){
-        model.addAttribute("Turmas",  acessoBanco.findAll());
-        return "turma";
-    }
+   
     @GetMapping("/Login-estudante")
     public String LoginEstudante(){
         return "loginEstudante";

@@ -37,7 +37,7 @@ document.getElementById('Cadastrar').addEventListener('click', function Cadastra
         })
     
     })
+    alert('Cadatro feito com sucesso!!!')
+    window.location.href = "/Login-empresa"
     
 })
-// alert('Cadatro feito com sucesso!!!')
-// window.location.href = "/Login-empresa"
