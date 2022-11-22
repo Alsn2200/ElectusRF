@@ -62,6 +62,7 @@ header li a:hover {
 main {
   
     background-color: white;
+
 }
 
 .containerMain {}
@@ -73,7 +74,6 @@ main {
 }
 
 .itenBox2 {
-    height: 80vh;
     width: 100%;
     background-color: #f78e0c;
 }
@@ -85,8 +85,6 @@ main {
     padding: 45px;
     background-color: white;
     width: 75vw;
-    height: 95vh;
-    display: flex;
 
 }
 
@@ -109,6 +107,7 @@ main {
 }
 .caixaImagem{
     display: block;
+  
    
 }
 #imagemPerfil{
@@ -117,6 +116,7 @@ main {
     background-position: center;
     background-size: contain;
     border: none;
+    background-repeat: no-repeat;
     height: 60vh;
     border-radius: 100%;
 }
@@ -125,7 +125,7 @@ main {
 }
 .tituloFoto{
     text-align: center;
-    margin-top: 40px;
+    margin-top: 135px;
 }
 #arquivoImg{
     margin-left: 60px;
@@ -133,12 +133,12 @@ main {
 #enviando{
     background-color: #f78e0c;
     color: black;
-    width: 5vw;
+    width: 5rem;
     height: 5vh;
     border: none;
     border-radius: 10%;
     cursor: pointer;
-    margin-left: 1vw;
+  
     margin-top: 2vh;
     
 }
@@ -180,8 +180,7 @@ main {
 }
 #imgSeta{
     width: 25px;
-    margin-top: 7px;
-    margin-left: 13px;
+  
 }
 .containerBotoes{
     display: flex;
@@ -196,11 +195,37 @@ main {
     margin: 0 auto;
     margin-top: 2vh;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .fundoBtn:hover{
     transition: .2s;
     background-color: #f78d0c49;
 }
+.barra{
+    
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    width: 100%;
+    border-radius: 20%;
+    height: 1px;
+    background-color: black;
+}
+.d-flex{
+    display: flex;
+}
+.containerArquivo{
+    display: flex;
+}
+.boxArquivos{
+    width: 40vw;
+}
+.tituloAvaliacao{
+    text-align: center;
+    margin-left: 100px;
+}
+
 /* .containerMain{
     width: 100%;
     height: 100%;
@@ -391,4 +416,51 @@ a {
 
 .star-icon.ativo~.star-icon::before {
     content: "\2606";
+}
+#formImg{
+    text-align: center;
+}
+@media (max-width: 1210px) {
+    .d-flex {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+    }
+    #arquivoImg {
+         margin:0 auto; 
+    }
+    #formImg{
+        text-align: center;
+    }
+    #imagemPerfil {
+        width: 64vw;
+        background-image: url(../Imagens/icone-utilisateur-gris.png);
+        background-position: center;
+        background-size: contain;
+        border: none;
+        background-repeat: no-repeat;
+        height: 60vh;
+        display: block;
+   
+        margin: 0 auto;
+        border-radius: 100%;
+    }
+    .caixaBox2 {
+        position: relative;
+        top: -20vh;
+        /* margin-left: 5rem; */
+        margin: 0 2rem;
+        padding: 45px;
+        background-color: white;
+        width: 90%;
+    }
+}
+@media (max-width: 1100px){
+    .roda {
+        display: none;
+    }
+    .tituloFoto {
+        text-align: center;
+        margin-top: 79px;
+    }
 }
