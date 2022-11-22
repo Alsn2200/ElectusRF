@@ -188,7 +188,7 @@ main {
     justify-content: space-between;
 }
 .fundoBtn{
-    width: 3vw;
+    width: 3rem;
     height: 6vh;
     background-color: #f78e0c;
     border-radius: 100%;
@@ -459,8 +459,18 @@ a {
     .roda {
         display: none;
     }
+    .caixaConteudo {
+        width: 100%;
+    }
     .tituloFoto {
         text-align: center;
         margin-top: 79px;
+    }
+    .itenColuna {
+        display: flex;
+        margin-top: 11px;
+    }
+    .colunaDados {
+        display: block;
     }
 }
