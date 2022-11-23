@@ -137,8 +137,9 @@
                             </div>
 
                             <div class="caixaImagem">
-                             
+                                
                                 <img th:src="|/imagem/${session.usuarioLogado.id}|" id="imagemPerfil">
+                                
                                 <form th:action="|/Alea/${session.usuarioLogado.id}|" method="POST"
                                     enctype="multipart/form-data" th:object="${teste}" id="formImg">
                                     <h3 class="tituloFoto">Atualize a foto de perfil</h3>
@@ -151,7 +152,26 @@
                         <div class="barra"></div>
                         <div class="containerArquivo">
                             <div class="boxArquivos">
+                                
                                 <h2 class="tituloArquivos">Adicione Arquivos</h2>
+
+                                <p th:text="|/exibirPdf1/${session.usuarioLogado.id}|" id="pdf" style="display: none;"></p>
+                               
+                                <div>
+                                    <button id="prev">Proxima página</button>
+                                    <button id="next">Página anterior</button>
+                                    &nbsp; &nbsp;
+                                    <span>Page: <span id="page_num"></span> / <span id="page_count"></span></span>
+                                </div>
+                                <canvas id="pdf-exemplo"></canvas>
+                                <a th:href="|/exibirPdf1/${session.usuarioLogado.id}|" th:download="|/exibirPdf1/${session.usuarioLogado.aluno}.pdf|" >Baixar pdf</a>
+
+                                <form th:action="|/pdf1/${session.usuarioLogado.id}|" method="POST"
+                                enctype="multipart/form-data" th:object="${teste}" id="formImg">
+                                <h3 class="tituloFoto">Atualize a foto de perfil</h3>
+                                <input type="file" name="filePdf1"  placeholder="none">
+                                <button type="submit" id="enviando">Enviar</button>
+                            </form>
                             </div>
                             <div class="boxAvaliacao">
                                 <h2 class="tituloAvaliacao">Avaliação do docente </h2>
@@ -165,6 +185,7 @@
         </div>
         </div>
     </main>
+    <script src="//mozilla.github.io/pdf.js/build/pdf.js"></script>
     <!-- Main -->
     <!-- <main>
         <div class="containerMain">

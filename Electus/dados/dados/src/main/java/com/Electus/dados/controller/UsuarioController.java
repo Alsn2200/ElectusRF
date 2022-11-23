@@ -8,17 +8,12 @@ import javax.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
-//import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
@@ -26,6 +21,9 @@ import com.Electus.dados.banco.UsuarioBanco;
 import com.Electus.dados.banco.bancoDocente;
 import com.Electus.dados.banco.bancoEmpresa;
 import com.Electus.dados.banco.bancoImagem;
+import com.Electus.dados.banco.bancoPdf1;
+import com.Electus.dados.banco.bancoPdf2;
+import com.Electus.dados.banco.bancoPdf3;
 import com.Electus.dados.banco.bancoVagaAluno;
 import com.Electus.dados.banco.bancoVagas;
 import com.Electus.dados.banco.testeBanco;
@@ -33,6 +31,7 @@ import com.Electus.dados.entides.Aluno;
 import com.Electus.dados.entides.docente;
 import com.Electus.dados.entides.empresa;
 import com.Electus.dados.entides.imagemEmpresa;
+import com.Electus.dados.entides.pdf1;
 import com.Electus.dados.entides.teste;
 import com.Electus.dados.entides.vaga;
 import com.Electus.dados.entides.vagaaluno;
@@ -62,6 +61,15 @@ public class UsuarioController {
 
     @Autowired
     private bancoDocente acessoDocente;
+
+    @Autowired
+    private bancoPdf1 acessoPdf1;
+
+    @Autowired
+    private bancoPdf2 acessoPdf2;
+
+    @Autowired
+    private bancoPdf3 acessoPdf3;
      
     @GetMapping("/Vagas/{id}")
     public String ListaEmpresa(Model model,Aluno usuario, HttpSession session, @PathVariable int id){
@@ -109,6 +117,35 @@ public class UsuarioController {
       return T.getImagem();
     }
 
+    /* Area Pdf aluno */
+    
+    @PostMapping("/pdf1/{Id}")
+    public String Pdf1(pdf1 Pdf, @RequestParam ("filePdf1") MultipartFile file, @PathVariable("Id") Integer id, Aluno usuario,  HttpSession session){
+        usuario = this.acessoBanco.getOne(usuario.getId());
+       try {
+            Pdf.setId(id);
+            Pdf.setImagem(file.getBytes());
+             acessoPdf1.save(Pdf);
+         } catch (IOException e) {
+                           
+                e.printStackTrace();
+           }
+          
+           return "redirect:/perfil-estudante";
+                
+    }
+    @GetMapping("/exibirPdf1/{id}")
+    @ResponseBody
+    public byte[] exibirPdf1(@PathVariable("id") Integer id){
+        pdf1 Pdf = acessoPdf1.getOne(id);
+        return Pdf.getImagem();
+    }
+
+
+
+    /* ------------- */
+
+
     @PostMapping("/alterar")
     public void Alterar(@RequestBody Aluno usuario) {
         
@@ -120,12 +157,16 @@ public class UsuarioController {
             return acessoBanco.save(novo);
         });
     }
+
     
+
     @PostMapping("/efetuarLogin")
-    public String efetuarLogin(Aluno usuario, HttpSession session, RedirectAttributes ra){
+    public String efetuarLogin(Aluno usuario, HttpSession session, RedirectAttributes ra, pdf1 Pdf){
         usuario = this.acessoBanco.findByCpfAndSenha(usuario.getCpf(), usuario.getSenha());
-       
+        
         if(usuario != null){
+            
+            
             session.setAttribute("usuarioLogado", usuario);
             return "redirect:/perfil-estudante";
         }
@@ -189,7 +230,7 @@ public class UsuarioController {
     @ResponseBody
     public byte[] exibirImagemEmpresa(@PathVariable("id") Integer id){
         imagemEmpresa T = imagemEmpresa.getOne(id);
-      return T.getImagem();
+        return T.getImagem();
     }
    
 
@@ -203,16 +244,7 @@ public class UsuarioController {
     @GetMapping("/deletarVaga/{t}/{nome}")
     public String deletarVaga(@PathVariable int t, @PathVariable String nome, vagaaluno Aluno){
         salvamentoVaga.deleteById(t);
-        // Aluno =  this.bancoVagaAluno.findByNome(nome);
-        // List<vagaaluno> aaa;
-       
-        // Aluno = bancoVagaAluno.findByDepartamento(nome);
-        // while(Aluno.getNome().equals(nome)){
-            
-            // bancoVagaAluno.deleteById(Aluno.getId());
-            
-          
-        //  }
+   
          
         System.out.println(Aluno.getId());
             
