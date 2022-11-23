@@ -79,15 +79,21 @@ texto{
     justify-content: flex-start;
 }
 texto h1{
-    width: 450px;
-    font-family: 'Roboto', sans-serif;
+    width: 60%;
     color: white;
+    font-size: 56px;
+}
+body{
+   
+        background-color: rgb(243, 243, 243);
+    
 }
 texto p{
     color: #fff;
     margin-top: 10px;
     width: 450px;
     font-size: 16pt;
+    font-weight: 500;
    
 }
 .button-inform{
@@ -148,7 +154,11 @@ texto p{
 .boxx p{
     margin-top: 15px;
 }
+main{
+     
+    background-color: rgb(243, 243, 243);
 
+}
 .Conteiner-portfolio{
     width: 100%;
     padding: 0 40px;
@@ -167,7 +177,6 @@ texto p{
 .box-portifolio{
     display: flex;
     width: 25rem;
-    border: 1px solid #fff;
     height: 31vh;
     padding: 10px 10px 5px 10px;
     background-color: rgb(243, 243, 243);
@@ -181,14 +190,20 @@ texto p{
 }
 .caixa-box{
     display: block;
-    background-color: #f78e0c;
-    height: 59vh;
-    width: 25vw;
+    background-color: white;
+    width: 30vw;
+    height: 50vh;
     padding: 0.3rem;   
-    border-radius: 20px 20px 20px 20px;
     text-align: center;
     margin: 0 auto;
 
+}
+.roda{
+    width: 50px;
+    height: 50px;
+    background-color: #f78e0c;
+    border-radius: 100%;
+    margin: 10px;
 }
 .caixa-box:hover{
     transform: scale(1.1);
@@ -235,6 +250,7 @@ a{
 .sub-titulo{
     padding: 4%;
     font-weight: 400;
+    margin-top: 30px;
 }
 .box-flex{
     margin-top: 50px;
@@ -272,6 +288,22 @@ a{
     width: 100%;
     height: 100vh;
 }
+.quadrado{
+    margin-top: 64px;
+
+}
+.caixa-box:hover .quadrado{
+    background-color: #f78e0c;
+    height: 50px;
+    animation-duration: 0.8s;
+    animation-name: animacao1;
+}
+@keyframes animacao1{
+    0%{ background-color: white; width: 0%;}
+    100%{ background-color: #f78e0c; width: 100%;}
+}
+
+
 /* FOOTER */
 .caixaRodape {
     margin-top: 100px;
@@ -325,7 +357,7 @@ a{
         top: 0rem;
     }
     .caixa-box{
-        height: 78vh;
+        height:auto;     
         width: 33vw;
     }
     .estudante, .empresa {
@@ -354,6 +386,7 @@ a{
     
 }
 @media (max-width: 940px){
+    
     .caixaRodape{
     margin-top: 100px;
     width: 100%;
@@ -395,6 +428,24 @@ a{
     .caixa-box{
         height: 78vh;
         width: 44vw;
+    }
+    #slider {
+        height: 37rem;
+    }
+    texto{
+   
+        height: 138%;
+    
+    }
+}
+@media (max-width:936px){
+    texto h1 {
+        width: 104%;
+        color: white;
+        font-size: 46px;
+    }
+    texto p {
+      width: auto;
     }
 }
 @media (max-width: 851px){
@@ -524,6 +575,14 @@ a{
         height: 77vh;
         width: 69vw;
         margin: 34px auto;
+    }
+    texto h1 {
+        width:auto;
+        color: white;
+        font-size: 46px;
+    }
+    texto p {
+      width: auto;
     }
 }
 

@@ -174,7 +174,15 @@
                             </form>
                             </div>
                             <div class="boxAvaliacao">
+                                <p th:text="${session.usuarioLogado.estrela}" id="Avaliacao"></p>
                                 <h2 class="tituloAvaliacao">Avaliação do docente </h2>
+                                <ul class="avaliacao">
+                                    <li class="codificacao " data-avaliacao="1" value="1"></li>
+                                    <li class="star-icon " data-avaliacao="2"  value="2"></li>
+                                    <li class="star-icon" data-avaliacao="3"  value="3"></li>
+                                    <li class="star-icon" data-avaliacao="4"  value="4"></li>
+                                    <li class="star-icon " data-avaliacao="5"  value="5"></li>
+                                </ul>
                             </div>
                         </div>
                     </div>

@@ -22,18 +22,18 @@
 //     })
     
 // })
-// var stars = document.querySelectorAll('.star-icon')
-// var avaliacao = document.getElementById('Avaliacao').textContent
+var stars = document.querySelectorAll('.star-icon')
+var avaliacao = document.getElementById('Avaliacao').textContent
 
 
     
-//     stars.forEach(function(star){
-//         if(star.value == avaliacao){
-//             star.classList += " ativo"
-//         }
+    stars.forEach(function(star){
+        if(star.value == avaliacao){
+            star.classList += " ativo"
+        }
        
         
-//     });
+    });
    
    
   
