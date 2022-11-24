@@ -157,21 +157,25 @@
 
                                 <p th:text="|/exibirPdf1/${session.usuarioLogado.id}|" id="pdf" style="display: none;"></p>
                                
-                                <div>
-                                    <button id="prev">Proxima página</button>
-                                    <button id="next">Página anterior</button>
-                                    &nbsp; &nbsp;
-                                    <span>Page: <span id="page_num"></span> / <span id="page_count"></span></span>
+                                <div class="pdf-flex">
+                                    <div class="pdf1">
+                                        <div>
+                                            <button id="prev">Proxima página</button>
+                                            <button id="next">Página anterior</button>
+                                            &nbsp; &nbsp;
+                                            <span>Page: <span id="page_num"></span> / <span id="page_count"></span></span>
+                                        </div>
+                                        <canvas id="pdf-exemplo" class="pdf-exemplo"></canvas>
+                                        <a th:href="|/exibirPdf1/${session.usuarioLogado.id}|" th:download="|/exibirPdf1/${session.usuarioLogado.aluno}.pdf|" >Baixar pdf</a>
+        
+                                        <form th:action="|/pdf1/${session.usuarioLogado.id}|" method="POST"
+                                        enctype="multipart/form-data" th:object="${teste}" id="formImg">
+                                        <h3 class="tituloPdf">Adcione um pdf</h3>
+                                        <input type="file" name="filePdf1"  placeholder="none">
+                                        <button type="submit" id="enviando">Enviar</button>
+                                    </form>
+                                    </div>
                                 </div>
-                                <canvas id="pdf-exemplo"></canvas>
-                                <a th:href="|/exibirPdf1/${session.usuarioLogado.id}|" th:download="|/exibirPdf1/${session.usuarioLogado.aluno}.pdf|" >Baixar pdf</a>
-
-                                <form th:action="|/pdf1/${session.usuarioLogado.id}|" method="POST"
-                                enctype="multipart/form-data" th:object="${teste}" id="formImg">
-                                <h3 class="tituloFoto">Atualize a foto de perfil</h3>
-                                <input type="file" name="filePdf1"  placeholder="none">
-                                <button type="submit" id="enviando">Enviar</button>
-                            </form>
                             </div>
                             <div class="boxAvaliacao">
 

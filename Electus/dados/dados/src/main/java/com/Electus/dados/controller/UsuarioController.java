@@ -71,13 +71,13 @@ public class UsuarioController {
     @Autowired
     private bancoPdf3 acessoPdf3;
      
-    @GetMapping("/Vagas/{id}")
-    public String ListaEmpresa(Model model,Aluno usuario, HttpSession session, @PathVariable int id){
-        usuario = this.acessoBanco.getOne(id);
-        model.addAttribute("lista", (List<vaga>) salvamentoVaga.findAll());
-        session.setAttribute("aluno", usuario);
-        return "principal";
-    }
+    // @GetMapping("/Vagas/{id}")
+    // public String ListaEmpresa(Model model,Aluno usuario, HttpSession session, @PathVariable int id){
+    //     usuario = this.acessoBanco.getOne(id);
+    //     model.addAttribute("lista", (List<vaga>) salvamentoVaga.findAll());
+    //     session.setAttribute("aluno", usuario);
+    //     return "principal";
+    // }
     @GetMapping("/EmpresaVagas")
     public String VagasEmpresa(Model model){
         model.addAttribute("lista", (List<vaga>) salvamentoVaga.findAll());
@@ -131,7 +131,7 @@ public class UsuarioController {
                 e.printStackTrace();
            }
           
-           return "redirect:/perfil-estudante";
+           return "/Principal";
                 
     }
     @GetMapping("/exibirPdf1/{id}")
@@ -160,15 +160,15 @@ public class UsuarioController {
 
     
 
-    @PostMapping("/efetuarLogin")
-    public String efetuarLogin(Aluno usuario, HttpSession session, RedirectAttributes ra, pdf1 Pdf){
+    @PostMapping("/Principal")
+    public String efetuarLogin(Aluno usuario, HttpSession session, RedirectAttributes ra, pdf1 Pdf,Model model){
         usuario = this.acessoBanco.findByCpfAndSenha(usuario.getCpf(), usuario.getSenha());
         
         if(usuario != null){
             
-            
-            session.setAttribute("usuarioLogado", usuario);
-            return "redirect:/perfil-estudante";
+            model.addAttribute("lista", (List<vaga>) salvamentoVaga.findAll());
+            session.setAttribute("aluno", usuario);
+            return "principal";
         }
         else{
             ra.addFlashAttribute("mensagem", "Login/usuario incoretos");
@@ -190,8 +190,10 @@ public class UsuarioController {
         }
     }
     
-    @GetMapping("/perfil-estudante")
-    public String aVant(){
+    @GetMapping("/perfil-estudante/{id}")
+    public String aVant(Aluno usuario, HttpSession session, RedirectAttributes ra, pdf1 Pdf, @PathVariable int id){
+        usuario = this.acessoBanco.getOne(id);
+        session.setAttribute("usuarioLogado", usuario);
         return "perfil-estudante";
     }
      

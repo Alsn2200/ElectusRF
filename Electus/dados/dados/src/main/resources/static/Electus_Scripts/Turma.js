@@ -156,5 +156,5 @@ console.log(avaliacao7[0])
 console.log(avaliacao8[0])
 
   
-  window.location.href = "/Turma"
+  
 })

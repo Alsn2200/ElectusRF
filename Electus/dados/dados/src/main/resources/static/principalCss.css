@@ -173,6 +173,7 @@ texto h1{
     display: flex;
     flex-wrap: wrap;
     gap: 37px;
+    padding: 2rem;
 }
 .container-flex-primeiro{
     width: 100%;
@@ -198,7 +199,7 @@ texto h1{
 }
 
 .vagas{
-    width: 25.5rem;
+    width: 24.5rem;
     font-size: 18px;
     
     background-color: rgb(241, 241, 241);
@@ -240,6 +241,8 @@ footer{
 .caixaRodape ul li{
     font-size: 9pt;
 }
+
+
 @media (max-width: 940px){
     .caixaRodape{
     margin-top: 100px;

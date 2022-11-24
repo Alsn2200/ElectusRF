@@ -44,7 +44,14 @@ public class Aluno{
     private String alteracao_armazenamento_dados;
     private String atualizacao_documentacao_programa;
     private String validacao;
+    private String docente;
 
+    public String getDocente() {
+        return docente;
+    }
+    public void setDocente(String docente) {
+        this.docente = docente;
+    }
     public String getValidacao() {
         return validacao;
     }
