@@ -174,15 +174,123 @@
                             </form>
                             </div>
                             <div class="boxAvaliacao">
-                                <p th:text="${session.usuarioLogado.estrela}" id="Avaliacao"></p>
+
+                                <p th:text="${session.usuarioLogado.codificacaoprogramas}" id="Avaliacao" style="display: none;"></p>
+                                <p th:text="${session.usuarioLogado.desenvolvimento_prototipos}" id="Avaliacao2" style="display: none;"></p>
+                                <p th:text="${session.usuarioLogado.realizacao_testes}" id="Avaliacao3" style="display: none;"></p>
+                                <p th:text="${session.usuarioLogado.implementacao_dados}" id="Avaliacao4" style="display: none;"></p>
+                                <p th:text="${session.usuarioLogado.documentacao_programa}" id="Avaliacao5" style="display: none;"></p>
+                                <p th:text="${session.usuarioLogado.alteracao_correcao_programa}" id="Avaliacao6" style="display: none;"></p>
+                                <p th:text="${session.usuarioLogado.alteracao_armazenamento_dados}" id="Avaliacao7" style="display: none;"></p>
+                                <p th:text="${session.usuarioLogado.atualizacao_documentacao_programa}" id="Avaliacao8" style="display: none;"></p>
                                 <h2 class="tituloAvaliacao">Avaliação do docente </h2>
-                                <ul class="avaliacao">
-                                    <li class="codificacao " data-avaliacao="1" value="1"></li>
-                                    <li class="star-icon " data-avaliacao="2"  value="2"></li>
-                                    <li class="star-icon" data-avaliacao="3"  value="3"></li>
-                                    <li class="star-icon" data-avaliacao="4"  value="4"></li>
-                                    <li class="star-icon " data-avaliacao="5"  value="5"></li>
-                                </ul>
+                                
+                                <p th:if="${session.usuarioLogado.validacao == null}" class="semValidacao">Sua conta ainda não foi avaliada</p>
+
+                                <div th:if="${session.usuarioLogado.validacao} eq 'validado'">
+                                    <div class="align-flex">
+                                        <p th:if="${session.usuarioLogado.curso} == 'Eletrotécnica'">Planejamento de serviços elétricos</p>
+                                        <p th:if="${session.usuarioLogado.curso} == 'Desenvolvimento de Sistemas' ">Codificação de programas</p>
+                                    <ul class="avaliacao">
+                                        <li class="codificacao " data-avaliacao="1" value="1"></li>
+                                        <li class="codificacao " data-avaliacao="2"  value="2"></li>
+                                        <li class="codificacao" data-avaliacao="3"  value="3"></li>
+                                        <li class="codificacao" data-avaliacao="4"  value="4"></li>
+                                        <li class="codificacao " data-avaliacao="5"  value="5"></li>
+                                    </ul>
+                                    </div>
+    
+                                    <div class="align-flex">
+                                        <p th:if="${session.usuarioLogado.curso} == 'Eletrotécnica'">Instalação de sistemas elétricos prediais</p>
+                                        <p th:if="${session.usuarioLogado.curso} == 'Desenvolvimento de Sistemas' ">Desenvolvimento de protótipos</p>
+                                        <ul class="avaliacao2">
+                                            <li class="desenvolvimento" data-avaliacao="1" value="1"></li>
+                                            <li class="desenvolvimento" data-avaliacao="2" value="2"></li>
+                                            <li class="desenvolvimento" data-avaliacao="3" value="3"></li>
+                                            <li class="desenvolvimento" data-avaliacao="4" value="4"></li>
+                                            <li class="desenvolvimento" data-avaliacao="5" value="5"></li>
+                                          </ul>
+                                    </div>
+                                    
+                                    <div class="align-flex">
+                                        <p th:if="${session.usuarioLogado.curso} == 'Eletrotécnica'">Instalação de sistemas elétricos industriais</p>
+                                        <p th:if="${session.usuarioLogado.curso} == 'Desenvolvimento de Sistemas' ">Realização de testes</p>
+                                      <ul class="avaliacao2">
+                                        <li class="realizacao " data-avaliacao="1" value="1"></li>
+                                        <li class="realizacao" data-avaliacao="2" value="2"></li>
+                                        <li class="realizacao" data-avaliacao="3" value="3"></li>
+                                        <li class="realizacao" data-avaliacao="4" value="4"></li>
+                                        <li class="realizacao" data-avaliacao="5" value="5"></li>
+                                       
+                                      </ul>
+                                    </div>
+
+                                    <div class="align-flex">
+                                        <p th:if="${session.usuarioLogado.curso} == 'Eletrotécnica'">Inspeção de funcionamento de Sistemas elétricos</p>
+                                        <p th:if="${session.usuarioLogado.curso} == 'Desenvolvimento de Sistemas' ">Implementação de Banco de Dados</p>
+                                      <ul class="avaliacao" >
+                                        <li class="implementacao" data-avaliacao="1" value="1"></li>
+                                        <li class="implementacao" data-avaliacao="2" value="2"></li>
+                                        <li class="implementacao" data-avaliacao="3" value="3"></li>
+                                        <li class="implementacao" data-avaliacao="4" value="4"></li>
+                                        <li class="implementacao" data-avaliacao="5" value="5"></li>
+                                       
+                                      </ul>
+                                    </div>
+
+                                    <div class="align-flex">
+                                        <p th:if="${session.usuarioLogado.curso} == 'Eletrotécnica'">Realização de manutenção corretiva, preventiva e preditiva dos sistemas elétricos prediais e industriais</p>
+                                        <p th:if="${session.usuarioLogado.curso} == 'Desenvolvimento de Sistemas' ">Documentação de Programa</p>
+                                      <ul class="avaliacao">
+                                        <li class="documentacao" data-avaliacao="1" value="1"></li>
+                                        <li class="documentacao" data-avaliacao="2" value="2"></li>
+                                        <li class="documentacao" data-avaliacao="3" value="3"></li>
+                                        <li class="documentacao" data-avaliacao="4" value="4"></li>
+                                        <li class="documentacao" data-avaliacao="5" value="5"></li>
+                                       
+                                      </ul>
+                                    </div>
+    
+                                    <div class="align-flex" th:if="${session.usuarioLogado.curso} == 'Desenvolvimento de Sistemas'">
+                                       
+                                        <p th:if="${session.usuarioLogado.curso} == 'Desenvolvimento de Sistemas' ">Codificação de programas</p>
+                                      <ul class="avaliacao" id="estrela6">
+                                        <li class="Correcao_Programa" data-avaliacao="1" value="1"></li>
+                                        <li class="Correcao_Programa" data-avaliacao="2" value="2"></li>
+                                        <li class="Correcao_Programa" data-avaliacao="3" value="3"></li>
+                                        <li class="Correcao_Programa" data-avaliacao="4" value="4"></li>
+                                        <li class="Correcao_Programa" data-avaliacao="5" value="5"></li>
+                                       
+                                      </ul>
+                                    </div>
+
+                                    <div class="align-flex"  th:if="${session.usuarioLogado.curso} == 'Desenvolvimento de Sistemas'">
+                                        
+                                        <p th:if="${session.usuarioLogado.curso} == 'Desenvolvimento de Sistemas' ">Codificação de programas</p>
+                                      <ul class="avaliacao">
+                                        <li class="alteracao_armazenamento" data-avaliacao="1" value="1"></li>
+                                        <li class="alteracao_armazenamento" data-avaliacao="2" value="2"></li>
+                                        <li class="alteracao_armazenamento" data-avaliacao="3" value="3"></li>
+                                        <li class="alteracao_armazenamento" data-avaliacao="4" value="4"></li>
+                                        <li class="alteracao_armazenamento" data-avaliacao="5" value="5"></li>
+                                      </ul>
+                                    </div>
+
+                                    <div class="align-flex"  th:if="${session.usuarioLogado.curso} == 'Desenvolvimento de Sistemas'">
+                                       
+                                        <p th:if="${session.usuarioLogado.curso} == 'Desenvolvimento de Sistemas' ">Codificação de programas</p>
+                                      <ul  class="avaliacao">
+                                        <li class="atualizacao_Documentacao" data-avaliacao="1" value="1"></li>
+                                        <li class="atualizacao_Documentacao" data-avaliacao="2" value="2"></li>
+                                        <li class="atualizacao_Documentacao" data-avaliacao="3" value="3"></li>
+                                        <li class="atualizacao_Documentacao" data-avaliacao="4" value="4"></li>
+                                        <li class="atualizacao_Documentacao" data-avaliacao="5" value="5"></li>
+                                      </ul>
+                                    </div>
+                                </div>
+                                
+                                   
+                              
                             </div>
                         </div>
                     </div>
@@ -386,7 +494,8 @@
 
 
 
-
+    <!-- <script th:src="@{/btn-Menu-scripta/Script-PDf.js}"></script> -->
+        <script th:src="@{/AvaliacaoJs/Desenvolvimento.js}"></script>
     <script th:src="@{/Electus_Scripts/alunoperfil.js}"></script>
 </body>
 

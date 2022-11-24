@@ -141,6 +141,7 @@ document.getElementById('a').addEventListener('click', function enviarDados(){
          alteracao_correcao_programa: avaliacao6[0],
          alteracao_armazenamento_dados: avaliacao7[0],
          atualizacao_documentacao_programa: avaliacao8[0],
+         
       })
   
   })

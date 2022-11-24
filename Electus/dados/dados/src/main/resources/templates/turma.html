@@ -32,114 +32,126 @@
     <main>
      <h2 th:text="${session.docente.materia}"  class="turma-titulo"></h2>
      <h2>Alunos</h2>
-    <div th:each="alunos : ${Turmas}">
-        <p th:if="${alunos.curso } == ${session.docente.materia}" th:text="${alunos.aluno}"></p>
+    <div th:each="alunos : ${Turmas}" th:if="${alunos.curso } == ${session.docente.materia}">
+        <p  th:text="${alunos.aluno}"></p>
     </div>
 
     <h1 class="text-avaliacao">Alunos a serem avaliados</h1>
     <div class="d-flex">
-    <div th:each="alunos : ${Turmas}" class="container-avaliacao" th:if="${alunos.validacao == null}">
-       <div class="box-alunos">
+    <div th:each="alunos : ${Turmas}"  th:if="(${alunos.curso} == ${session.docente.materia}) and (${alunos.validacao == null})" >
+      <div  class="container-avaliacao">
+
+        <div class="box-alunos" >
+
        
-        <p th:if="${alunos.curso } == ${session.docente.materia}" th:text="${alunos.aluno}" class="aluno"></p>
-        <p id="id" style="display: none;" th:text="${alunos.id}"></p>
-        <div class="bg-fundo">
-          <div class="flex">
-            <p>Codificação de programas</p>
-            <ul class="avaliacao"  id="estrela1">
-                <li class="codificacao ativo" data-avaliacao="1"></li>
-                <li class="codificacao" data-avaliacao="2"></li>
-                <li class="codificacao" data-avaliacao="3"></li>
-                <li class="codificacao" data-avaliacao="4"></li>
-                <li class="codificacao" data-avaliacao="5"></li>
-              </ul>
-          </div>
-          
+          <p   th:text="${alunos.aluno}" class="aluno"></p>
+          <p id="id" style="display: none;" th:text="${alunos.id}"></p>
+          <div class="bg-fundo">
             <div class="flex">
-              <p>Desenvolvimento de protótipos</p>
-              <ul class="avaliacao" id="estrela2">
-                <li class="desenvolvimento ativo2" data-avaliacao="1"></li>
-                <li class="desenvolvimento" data-avaliacao="2"></li>
-                <li class="desenvolvimento" data-avaliacao="3"></li>
-                <li class="desenvolvimento" data-avaliacao="4"></li>
-                <li class="desenvolvimento" data-avaliacao="5"></li>
-              </ul>
+              <p th:if="${session.docente.materia} == 'Eletrotécnica'">Planejamento de serviços elétricos</p>
+              <p th:if="${session.docente.materia} == 'Desenvolvimento de Sistemas' ">Codificação de programas</p>
+              <ul class="avaliacao"  id="estrela1">
+                  <li class="codificacao ativo" data-avaliacao="1"></li>
+                  <li class="codificacao" data-avaliacao="2"></li>
+                  <li class="codificacao" data-avaliacao="3"></li>
+                  <li class="codificacao" data-avaliacao="4"></li>
+                  <li class="codificacao" data-avaliacao="5"></li>
+                </ul>
             </div>
-          
-            <div class="flex">
-              <p>Realização de testes</p>
-              <ul class="avaliacao" id="estrela3">
-                <li class="realizacao ativo3" data-avaliacao="1"></li>
-                <li class="realizacao" data-avaliacao="2"></li>
-                <li class="realizacao" data-avaliacao="3"></li>
-                <li class="realizacao" data-avaliacao="4"></li>
-                <li class="realizacao" data-avaliacao="5"></li>
-               
-              </ul>
-            </div>
-           
-            <div class="flex">
-              <p>Implementação de Banco de Dados</p>
-              <ul class="avaliacao" id="estrela4">
-                <li class="implementacao ativo4" data-avaliacao="1"></li>
-                <li class="implementacao" data-avaliacao="2"></li>
-                <li class="implementacao" data-avaliacao="3"></li>
-                <li class="implementacao" data-avaliacao="4"></li>
-                <li class="implementacao" data-avaliacao="5"></li>
-               
-              </ul>
-            </div>
+            <p if:th="${alunos.curso} eq Desenvolvimento de Sistemas" th:text="${alunos.curso}"></p>
+              <div class="flex"> 
+                <p th:if="${alunos.curso} == 'Eletrotécnica'">Instalação de sistemas elétricos prediais</p>
+                <p th:if="${alunos.curso} == 'Desenvolvimento de Sistemas'">Desenvolvimento de protótipos</p>
+                <ul class="avaliacao" id="estrela2">
+                  <li class="desenvolvimento ativo2" data-avaliacao="1"></li>
+                  <li class="desenvolvimento" data-avaliacao="2"></li>
+                  <li class="desenvolvimento" data-avaliacao="3"></li>
+                  <li class="desenvolvimento" data-avaliacao="4"></li>
+                  <li class="desenvolvimento" data-avaliacao="5"></li>
+                </ul>
+              </div>
             
-            <div class="flex">
-              <p>Documentação de Programa</p>
-              <ul class="avaliacao" id="estrela5">
-                <li class="documentacao ativo5" data-avaliacao="1"></li>
-                <li class="documentacao" data-avaliacao="2"></li>
-                <li class="documentacao" data-avaliacao="3"></li>
-                <li class="documentacao" data-avaliacao="4"></li>
-                <li class="documentacao" data-avaliacao="5"></li>
-               
-              </ul>
-            </div>
-           
-            <div class="flex">
-              <p>Alteração e Correção de Programa</p>
-              <ul class="avaliacao" id="estrela6">
-                <li class="Correcao_Programa ativo6" data-avaliacao="1"></li>
-                <li class="Correcao_Programa" data-avaliacao="2"></li>
-                <li class="Correcao_Programa" data-avaliacao="3"></li>
-                <li class="Correcao_Programa" data-avaliacao="4"></li>
-                <li class="Correcao_Programa" data-avaliacao="5"></li>
-               
-              </ul>
-            </div>
-            
-            <div  class="flex">
-            <p>Alteração da estrutura de armazenamento de Dados</p>
-            <ul class="avaliacao" id="estrela7">
-              <li class="alteracao_armazenamento ativo7" data-avaliacao="1"></li>
-              <li class="alteracao_armazenamento" data-avaliacao="2"></li>
-              <li class="alteracao_armazenamento" data-avaliacao="3"></li>
-              <li class="alteracao_armazenamento" data-avaliacao="4"></li>
-              <li class="alteracao_armazenamento" data-avaliacao="5"></li>
-            </ul>
-            </div>
-            <div  class="flex">
-              <p>Atualização de Documentação do Programa</p>
-              <ul  class="avaliacao" id="estrela8">
-                <li class="atualizacao_Documentacao ativo8" data-avaliacao="1"></li>
-                <li class="atualizacao_Documentacao" data-avaliacao="2"></li>
-                <li class="atualizacao_Documentacao" data-avaliacao="3"></li>
-                <li class="atualizacao_Documentacao" data-avaliacao="4"></li>
-                <li class="atualizacao_Documentacao" data-avaliacao="5"></li>
-              </ul>
+              <div class="flex">
               
-            </div>
-        </div>
-
-          <a th:href="|/Turma/${session.docente.id}" th:id="a" type="button">Enviar</a>
-
+                <p th:if="${session.docente.materia} == 'Eletrotécnica'">  Instalação de sistemas elétricos industriais</p>
+                <p th:if="${session.docente.materia} == 'Desenvolvimento de Sistemas'">Realização de testes</p>
+                <ul class="avaliacao" id="estrela3">
+                  <li class="realizacao ativo3" data-avaliacao="1"></li>
+                  <li class="realizacao" data-avaliacao="2"></li>
+                  <li class="realizacao" data-avaliacao="3"></li>
+                  <li class="realizacao" data-avaliacao="4"></li>
+                  <li class="realizacao" data-avaliacao="5"></li>
+                 
+                </ul>
+              </div>
+             
+              <div class="flex">
+                <p th:if="${session.docente.materia} == 'Eletrotécnica'">Inspeção de funcionamento de Sistemas elétricos</p>
+                <p th:if="${session.docente.materia} == 'Desenvolvimento de Sistemas'">Implementação de Banco de Dados</p>
+                <ul class="avaliacao" id="estrela4">
+                  <li class="implementacao ativo4" data-avaliacao="1"></li>
+                  <li class="implementacao" data-avaliacao="2"></li>
+                  <li class="implementacao" data-avaliacao="3"></li>
+                  <li class="implementacao" data-avaliacao="4"></li>
+                  <li class="implementacao" data-avaliacao="5"></li>
+                 
+                </ul>
+              </div>
+              
+              <div class="flex">
+                <p th:if="${session.docente.materia} == 'Eletrotécnica'">Realização de manutenção corretiva, preventiva e preditiva dos sistemas elétricos prediais e industriais</p>
+                <p th:if="${session.docente.materia} == 'Desenvolvimento de Sistemas'">Documentação de Programa</p>
+                <ul class="avaliacao" id="estrela5">
+                  <li class="documentacao ativo5" data-avaliacao="1"></li>
+                  <li class="documentacao" data-avaliacao="2"></li>
+                  <li class="documentacao" data-avaliacao="3"></li>
+                  <li class="documentacao" data-avaliacao="4"></li>
+                  <li class="documentacao" data-avaliacao="5"></li>
+                 
+                </ul>
+              </div>
+             
+              <div class="flex" th:if="${session.docente.materia} == 'Desenvolvimento de Sistemas'">
+                <p if:th="${session.docente.materia} == 'Desenvolvimento de Sistemas'">Alteração e Correção de Programa</p>
+                <ul class="avaliacao" id="estrela6">
+                  <li class="Correcao_Programa ativo6" data-avaliacao="1"></li>
+                  <li class="Correcao_Programa" data-avaliacao="2"></li>
+                  <li class="Correcao_Programa" data-avaliacao="3"></li>
+                  <li class="Correcao_Programa" data-avaliacao="4"></li>
+                  <li class="Correcao_Programa" data-avaliacao="5"></li>
+                 
+                </ul>
+              </div>
+              
+              <div  class="flex" th:if="${session.docente.materia} == 'Desenvolvimento de Sistemas'">
+              <p th:if="${session.docente.materia} == 'Desenvolvimento de Sistemas'">Alteração da estrutura de armazenamento de Dados</p>
+              <ul class="avaliacao" id="estrela7">
+                <li class="alteracao_armazenamento ativo7" data-avaliacao="1"></li>
+                <li class="alteracao_armazenamento" data-avaliacao="2"></li>
+                <li class="alteracao_armazenamento" data-avaliacao="3"></li>
+                <li class="alteracao_armazenamento" data-avaliacao="4"></li>
+                <li class="alteracao_armazenamento" data-avaliacao="5"></li>
+              </ul>
+              </div>
+              <div  class="flex" th:if="${session.docente.materia} == 'Desenvolvimento de Sistemas'">
+                <p th:if="${session.docente.materia} == 'Desenvolvimento de Sistemas'">Atualização de Documentação do Programa</p>
+                <ul  class="avaliacao" id="estrela8">
+                  <li class="atualizacao_Documentacao ativo8" data-avaliacao="1"></li>
+                  <li class="atualizacao_Documentacao" data-avaliacao="2"></li>
+                  <li class="atualizacao_Documentacao" data-avaliacao="3"></li>
+                  <li class="atualizacao_Documentacao" data-avaliacao="4"></li>
+                  <li class="atualizacao_Documentacao" data-avaliacao="5"></li>
+                </ul>
+                
+              </div>
           </div>
+  
+            <a th:href="|/Turma/${session.docente.id}" th:id="a" type="button">Enviar</a>
+  
+            </div>
+
+      </div>
+       
         
         </div>
         

@@ -33,8 +33,7 @@ public class Aluno{
     private String descricao;
     private String formacao;
     private String teste;
-    @Lob
-    private byte[] imagem;
+   
 
     private String codificacaoprogramas;
     private String desenvolvimento_prototipos; 
@@ -101,13 +100,6 @@ public class Aluno{
     public void setAtualizacao_documentacao_programa(String atualizacao_documentacao_programa) {
         this.atualizacao_documentacao_programa = atualizacao_documentacao_programa;
     }
-    public byte[] getImagem() {
-        return imagem;
-    }
-    public void setImagem(byte[] imagem) {
-        this.imagem = imagem;
-    }
-   
  
     public int getId(){
         return this.Id;

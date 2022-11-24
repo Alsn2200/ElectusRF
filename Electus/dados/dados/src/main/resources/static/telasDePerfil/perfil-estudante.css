@@ -223,7 +223,6 @@ main {
 }
 .tituloAvaliacao{
     text-align: center;
-    margin-left: 100px;
 }
 
 /* .containerMain{
@@ -399,24 +398,136 @@ a {
     text-align: center;
 }
 
-.avaliacao {
+.avaliacao,.avaliacao2,.avaliacao3,.avaliacao4,.avaliacao5,.avaliacao6,.avaliacao7,.avaliacao8 {
     display: flex;
 }
 
-.star-icon {
+.codificacao {
     list-style-type: none;
     cursor: pointer;
     color: #ffe500;
     font-size: 40px;
 }
 
-.star-icon::before {
+.codificacao::before {
     content: "\2605";
 }
 
-.star-icon.ativo~.star-icon::before {
+.codificacao.ativo~.codificacao::before {
     content: "\2606";
 }
+
+.desenvolvimento {
+    list-style-type: none;
+    cursor: pointer;
+    color: #ffe500;
+    font-size: 40px;
+}
+
+.desenvolvimento::before {
+    content: "\2605";
+}
+
+.desenvolvimento.ativo~.desenvolvimento::before {
+    content: "\2606";
+}
+
+.realizacao {
+    list-style-type: none;
+    cursor: pointer;
+    color: #ffe500;
+    font-size: 40px;
+}
+
+.realizacao::before {
+    content: "\2605";
+}
+
+.realizacao.ativo~.realizacao::before {
+    content: "\2606";
+}
+
+.implementacao {
+    list-style-type: none;
+    cursor: pointer;
+    color: #ffe500;
+    font-size: 40px;
+}
+
+.implementacao::before {
+    content: "\2605";
+}
+
+.implementacao.ativo~.implementacao::before {
+    content: "\2606";
+}
+
+.documentacao{
+    list-style-type: none;
+    cursor: pointer;
+    color: #ffe500;
+    font-size: 40px;
+}
+
+.documentacao::before {
+    content: "\2605";
+}
+
+.documentacao.ativo~.documentacao::before {
+    content: "\2606";
+}
+
+.Correcao_Programa{
+    list-style-type: none;
+    cursor: pointer;
+    color: #ffe500;
+    font-size: 40px;
+}
+
+.Correcao_Programa::before {
+    content: "\2605";
+}
+
+.Correcao_Programa.ativo~.Correcao_Programa::before {
+    content: "\2606";
+}
+
+
+
+.alteracao_armazenamento::before {
+    content: "\2605";
+}
+
+.alteracao_armazenamento.ativo~.alteracao_armazenamento::before {
+    content: "\2606";
+}
+
+.align-flex{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.semValidacao{
+    text-align: center;
+    font-size: 25px;
+}
+
+.atualizacao_Documentacao::before {
+    content: "\2605";
+}
+
+.atualizacao_Documentacao.ativo~.atualizacao_Documentacao::before {
+    content: "\2606";
+}
+
+
+
+.codificacao,.desenvolvimento,.realizacao,.implementacao,.documentacao,.Correcao_Programa,.alteracao_armazenamento,.atualizacao_Documentacao{
+    list-style-type: none;
+    cursor: pointer;
+    color: #ffa500;
+    font-size: 31px;
+  }
 #formImg{
     text-align: center;
 }
