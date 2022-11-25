@@ -59,44 +59,14 @@
                             <div class="roda"></div>
 
                             <h3 th:text="${cont.area}" id="nome"></h3>
-                        <h4 th:text="${cont.departamento}" id="departamento" ></h4>
+                        <h4 th:text="${cont.tarefas}" id="tarefas" ></h4>
+                        <h4 th:text="${cont.departamento}" id="departamento" style="display: none;"></h4>
                         <p th:text="${cont.cbo}" id="cbo" style="display: none;"></p>
                         </div>
                        
                             <div class="bg-color">
                                 <div class="bg"></div>
-                                <div class="infor">
-                                    <div class="informacoes espaco">
-                           
-                                        <div class="contato">
-                                            <div class="informacoes">
-                                                <p>Empresa:</p>
-                                                <p th:text="${cont.nome}"></p>
-                                            </div>
-                                            <div class="informacoes"></div>
-                                           <div class="d-flex">
-                                            <div class="informacoes">
-                                                <p>Tarefas: </p>
-                                                <p th:text="${cont.tarefas}"></p>
-                                            </div>  
-                    
-                                            <div class="informacoes">
-                                                <p>Telefone: </p>
-                                                <p th:text="${cont.tell}"></p>
-                                            </div>
-                                           </div>
-                                           
-                                           </div>
-                                       </div>
-                                
-                                        <div class="informacoes espaco">
-                                           
-                    
-                                            <p>Cidade: </p>
-                                            <p th:text="${cont.cidade}"></p>
-                                        </div>    
-                                </div>      
-                               
+                              
                                     
                             </div>
                            
@@ -133,13 +103,14 @@
                 <div class="roda"></div>
 
                 <h3 th:text="${cont.area}" id="nome"></h3>
-            <h4 th:text="${cont.departamento}" id="departamento" ></h4>
+            <h4 th:text="${cont.tarefas}" id="tarefas"></h4>
             <p th:text="${cont.cbo}" id="cbo" style="display: none;"></p>
             </div>
            
                 <div class="bg-color">
+                    
                     <div class="bg"></div>
-                    <div class="infor">
+                    <!-- <div class="infor">
                         <div class="informacoes espaco">
                
                             <div class="contato">
@@ -169,7 +140,7 @@
                                 <p>Cidade: </p>
                                 <p th:text="${cont.cidade}"></p>
                             </div>    
-                    </div>      
+                    </div>       -->
                    
                      
                 </div>
