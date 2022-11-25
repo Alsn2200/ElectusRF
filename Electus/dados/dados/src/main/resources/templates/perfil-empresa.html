@@ -12,7 +12,198 @@
         rel="stylesheet">
 </head>
 <body>
-    <header id="header">
+
+    <header>
+        <div class="logo"></div>
+
+        <div id="hamburg-mobile"></div>
+        <nav id="navegacao">
+
+            <ul id="mobile">
+                <h1 class="header-titulo">Perfil do Estudante</h1>
+
+                <li><a href="/index" id="link-4"> | Inicio</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="containerMain">
+            <div class="backgroundImagem">
+                <div class="itenBox1">
+                </div>
+                <div class="itenBox2">
+                    <div class="caixaBox2">
+                        <img  th:src="|/empresaImagem/${session.empresa.id}|" id="imagem">
+                        <form th:action="|/empresaImagem/${session.empresa.id}|" method="POST" enctype="multipart/form-data" th:object="${teste}" id="formImg">
+                        <input type="file" name="fileProduto" id="imgamem" placeholder="none">
+                        <button type="submit" id="enviando">Enviar</button>
+                        </form>
+                        <div class="d-flex">
+                            <div class="caixaConteudo">
+                              
+                                <h1 th:text="${session.empresa.nome}" class="Nome-aluno" id="Nome-aluno">
+                                </h1>
+                                <!-- <div class="descricao">
+                                    <h5 class="titleDescricao">Descrição do perfil: </h5>
+                                    <p th:text="${session.empresa.descricao}" id="respDesc"></p>
+                                </div> -->
+                                <h2 class="tituloDados">Dados da empresa</h2>
+
+                                <div class="colunaDados">
+                                    <div class="coluna1">
+                                        <div class="itenColuna">
+                                            <p>Area de atuação</p>
+                                            <p th:text="${session.empresa.area}" id="data_nascimento">
+                                            </p>
+
+                                        </div>
+                                        <div class="itenColuna">
+                                            <p>Cidade: </p>
+                                            <p th:text="${session.empresa.cidade}"></p>
+                                            <p th:text="${session.empresa.uf}"></p>
+                                        </div>
+                                        <div class="itenColuna">
+                                            <p>Data de criação</p>
+                                            <p th:text="${session.empresa.data}"></p>
+
+                                        </div>
+                                        <div class="itenColuna">
+                                            <p>Responsavel:</p>
+                                            <p th:text="${session.empresa.responsavel}"></p>    
+                                        </div>
+                                        
+                                    </div>
+                                    
+                                </div>
+                                <div class="containerBotoes">
+                                    <div class="caixaBotoes">
+                                        <div class="boxVerVagas">
+                                            <h3 class="titleVerVagas">Confira Vagas</h3>
+                                            <a class="btnBotoes" th:href="|/EmpresaVagas|">
+                                                <div class="fundoBtn"><img th:src="@{/Imagens/seta-direita.png}"
+                                                        alt="seta" id="imgSeta"></div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    
+
+                                </div>
+
+                                <hr class="divisao">
+
+
+ <div class="flex-coluna">
+                                        <h2 class="titulo-vaga">Vagas lançadas</h2>
+                                        <div th:each="cont : ${lista}" class="vagaDisponiveis" th:if="${cont.nome == session.empresa.nome}">
+                                            <div class="vagas-flex">
+                                               <div class="vaga-header">
+                                                <div class="item-header">
+                                                    <p th:if="${cont.nome == session.empresa.nome}" text="Cargo">Cargo</p>
+                                                    <p th:if="${cont.nome == session.empresa.nome}" th:text="${cont.cargo}"></p>
+                                                    
+                                                    
+                                                </div>
+                                                <div class="item-header">
+                                                    <p th:if="${cont.nome == session.empresa.nome}" text="Departamneto">Departamento</p>
+                                                    <p th:if="${cont.nome == session.empresa.nome}" th:text="${cont.departamento}"></p>
+                                                </div>
+                                                <div class="item-header">
+                                                   
+                                                    <p th:if="${cont.nome == session.empresa.nome}" text="Cbo">Cbo</p>
+                                                    <p th:if="${cont.nome == session.empresa.nome}" th:text="${cont.cbo}"></p>
+                                                </div>
+                                               </div>
+                                               <div class="exclusao">
+                                                
+                                                <a th:if="${cont.nome == session.empresa.nome}" th:href="|/deletarVaga/${cont.id}/${cont.departamento}|">Excluir vaga</a>
+                                               </div>
+                                            </div>
+                                            <table>
+                                                <div class="candidatos-titulo" th:if="${lista != null}">
+                                                    
+                                                    <tr>
+                                                        <th>Candidatos(as)</th>
+                                                        <th class="borda">Curso</th>
+                                                        <th>Modulo</th>
+                                                    </tr>
+                                                   
+                                                   
+                                                   
+                                                   
+                                                </div>
+                                            <div th:each="ins : ${inscricoes}" class="candidatos">
+                                                <tr>
+                                                    <td th:if="${session.empresa.nome == ins.nome_empresa}" th:text="${ins.nome}"></td>
+                                                    <td th:if="${session.empresa.nome == ins.nome_empresa}" th:text="${ins.curso}" class="borda"></td>
+                                                    <td h:if="${session.empresa.nome == ins.nome_empresa}" th:text="${ins.modulo}"></td>
+                                                </tr>
+                                                
+                                            </div>
+                                            </table>
+                                            </div>
+                                    </div>
+
+                            </div>
+
+                            <div class="lancarVaga">
+                                <div class="formulario-vaga">
+                                    <h2>Deseja lançar uma vaga? Preença o formulario!</h2>
+                                <div class="vaga" id="select1">
+                                   
+                                    <form>
+                                        <div class="titulo">
+                                            <div class="d-block">
+                                                <h3>Cargo</h3>
+                                                <input type="text" id="cargo">
+                                            </div>
+                                            <div class="d-block">
+                                                <h3>Departamento</h3>
+                                                <input type="text" id="Departamento">
+                                            </div>
+                                            
+                                            <div class="d-block">
+                                                <h3>Cbo</h3>
+                                                <input type="text" id="cbo">
+                                            </div>
+                                            
+                                        </div>
+                                        <h3>ATRIBUIÇÃO PRINCIPAIS</h3>
+                                     
+                                        <textarea type="text" id="atribuicoes"cols="30" rows="10"></textarea>
+
+                                        <h3>Tarefas e Descrição detalhada:</h3>
+                                        <textarea type="text" id="tarefas" cols="30" rows="10"></textarea>
+                                    
+                                        <h3>Formação academica:</h3>
+                                        <textarea type="text" id="formacao" cols="30" rows="10"></textarea>                
+
+                                        <h3>Experiencia profiossional</h3>
+                                        <textarea type="text" id="profissional" cols="30" rows="10"></textarea>
+                                     
+                                        <h3>Habilidades comportamentais</h3>
+                                        <textarea type="text" id="comportamentais" cols="30" rows="10"></textarea>
+                                    
+                                        <h3>Habilidades tecnicas, cursos e idiomas</h3>
+                                        <textarea type="text" id="tecnicas" cols="30" rows="10"></textarea>
+                                      
+                                        <button id="vaga-1" type="button">Lançar vaga</button>
+                                    </form>
+                                </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="barra"></div>
+                        
+                    </div>
+                  
+
+                </div>
+            </div>
+        </div>
+        </div>
+    </main>
+    <!-- <header id="header">
         <div class="logo"></div>
         <div id="hamburg-mobile"></div>
             <nav id="navegacao">
@@ -199,7 +390,7 @@
               
             </div>
         </div>
-    </main>
+    </main> -->
     <script th:src="@{/Electus_Scripts/perfilEmpresa.js}"></script>
 </body>
 </html>
