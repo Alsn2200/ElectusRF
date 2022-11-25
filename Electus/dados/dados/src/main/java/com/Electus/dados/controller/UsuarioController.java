@@ -176,6 +176,7 @@ public class UsuarioController {
         }
 
     } 
+
     @PostMapping("/empresalogin")
     public String EmpresaLogin(empresa Empresa, HttpSession session, RedirectAttributes ra){
         Empresa = this.salvamentoEmpresa.findByCnpjAndSenha(Empresa.getCnpj(), Empresa.getSenha());

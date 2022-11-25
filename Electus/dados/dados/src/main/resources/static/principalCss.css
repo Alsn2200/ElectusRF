@@ -191,17 +191,26 @@ texto h1{
 .espaco{
     margin-top: 20px;
 }
+.link{
+    text-decoration: none;
+    color: black;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+}
 
 .vagas h3{
     text-align: center;
     margin-bottom: 12px;
-    font-size: 42px;
+    font-size: 33px;
 }
 
 .vagas{
     width: 24.5rem;
     font-size: 18px;
-    
+    display: flex;
     background-color: rgb(241, 241, 241);
 }
 /* FOOTER */

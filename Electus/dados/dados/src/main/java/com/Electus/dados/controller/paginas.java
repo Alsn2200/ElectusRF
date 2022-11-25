@@ -74,7 +74,7 @@ public class paginas {
         return "index";
     }    
   
-
+   
     // @GetMapping("/Perfil")
     // public String PerfilEstudane(){
     //     return ("redirect:/a");
