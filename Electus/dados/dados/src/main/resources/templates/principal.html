@@ -56,6 +56,8 @@
                     <div class="vagas" >
                     <a th:href="|/Vagaselecionada/${cont.id}/${session.aluno.id}|">
                         <div class="caixa-vagas">
+                            <div class="roda"></div>
+
                             <h3 th:text="${cont.area}" id="nome"></h3>
                         <h4 th:text="${cont.departamento}" id="departamento" ></h4>
                         <p th:text="${cont.cbo}" id="cbo" style="display: none;"></p>
@@ -128,6 +130,8 @@
         <div th:each=" cont : ${lista}" class="vagas" id="vagas">
             <a th:href="|/Vagaselecionada/${cont.id}/${session.aluno.id}|" class="link">
             <div class="caixa-vagas">
+                <div class="roda"></div>
+
                 <h3 th:text="${cont.area}" id="nome"></h3>
             <h4 th:text="${cont.departamento}" id="departamento" ></h4>
             <p th:text="${cont.cbo}" id="cbo" style="display: none;"></p>

@@ -159,13 +159,13 @@
                                
                                 <div class="pdf-flex">
                                     <div class="pdf1">
-                                        <!-- <div>
+                                        <div>
                                             <button id="prev">Proxima página</button>
                                             <button id="next">Página anterior</button>
                                             &nbsp; &nbsp;
                                             <span>Page: <span id="page_num"></span> / <span id="page_count"></span></span>
                                         </div>
-                                        <canvas id="pdf-exemplo" class="pdf-exemplo"></canvas> -->
+                                        <canvas id="pdf-exemplo" class="pdf-exemplo"></canvas>
                                         <a th:if="|/pdf1/${session.usuarioLogado.id}| != null" th:href="|/exibirPdf1/${session.usuarioLogado.id}|" th:download="|/exibirPdf1/${session.usuarioLogado.aluno}.pdf|" class="btn-baixar" >Baixar pdf</a>
         
                                         <form th:action="|/pdf1/${session.usuarioLogado.id}|" method="POST"
@@ -175,26 +175,9 @@
                                         <button type="submit" id="enviando">Enviar</button>
                                     </form>
                                     </div>
-                                    <iframe th:src="|/exibirPdf1/${session.usuarioLogado.id}|" style="width: 100%;height: 100%;border: none;"></iframe>
+                                  
                                     
-                                    <div class="pdf1" id="pdf2">
-                                        <p th:text="|/exibirPdf1/${session.usuarioLogado.id}|" id="pdf2" style="display: none;"></p>
-                                        <div>
-                                            <button id="prev2">Proxima página</button>
-                                            <button id="next2">Página anterior</button>
-                                            &nbsp; &nbsp;
-                                            <span>Page: <span id="page_num2"></span> / <span id="page_count2"></span></span>
-                                        </div>
-                                        <canvas id="pdf-exemplo2" class="pdf-exemplo"></canvas>
-                                        <a th:if="|/pdf1/${session.usuarioLogado.id}| != null" th:href="|/exibirPdf1/${session.usuarioLogado.id}|" th:download="|/exibirPdf1/${session.usuarioLogado.aluno}.pdf|" class="btn-baixar" >Baixar pdf</a>
-        
-                                        <form th:action="|/pdf1/${session.usuarioLogado.id}|" method="POST"
-                                        enctype="multipart/form-data" th:object="${teste}" id="formImg">
-                                        <h3 class="tituloPdf">Adcione um pdf</h3>
-                                        <input type="file" name="filePdf1"  placeholder="none">
-                                        <button type="submit" id="enviando">Enviar</button>
-                                    </form>
-                                    </div>
+                                
                                 </div>
                             </div>
                             <div class="boxAvaliacao">

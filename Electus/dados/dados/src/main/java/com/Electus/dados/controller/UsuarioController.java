@@ -211,7 +211,7 @@ public class UsuarioController {
                 e.printStackTrace();
            }
           
-           return "redirect:/perfil-estudante";
+           return "redirect:/perfil-estudante/"+ usuario.getId();
                 
     }
     @PostMapping("/empresaImagem/{Id}")
