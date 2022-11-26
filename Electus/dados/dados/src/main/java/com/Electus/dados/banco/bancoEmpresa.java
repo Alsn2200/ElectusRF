@@ -7,4 +7,7 @@ import com.Electus.dados.entides.empresa;
 @Repository
 public interface bancoEmpresa extends CrudRepository<empresa, Integer>{
     public empresa findByCnpjAndSenha(String cnpj, String senha);
+
+    public empresa getOne(Integer id);
+
 }

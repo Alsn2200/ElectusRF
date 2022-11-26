@@ -158,17 +158,21 @@ public class UsuarioController {
         });
     }
 
-    
+    @GetMapping("/Principal-Estudante/{id}")
+    public String principalEstudante(Aluno usuario,HttpSession session, Model model, @PathVariable int id){
+        usuario = this.acessoBanco.getOne(id);
+        model.addAttribute("lista", (List<vaga>) salvamentoVaga.findAll());
+        session.setAttribute("aluno", usuario);
+        session.removeAttribute("empresa");
+        return "principal";
+    }
 
     @PostMapping("/Principal")
     public String efetuarLogin(Aluno usuario, HttpSession session, RedirectAttributes ra, pdf1 Pdf,Model model){
         usuario = this.acessoBanco.findByCpfAndSenha(usuario.getCpf(), usuario.getSenha());
         
         if(usuario != null){
-            
-            model.addAttribute("lista", (List<vaga>) salvamentoVaga.findAll());
-            session.setAttribute("aluno", usuario);
-            return "principal";
+            return "redirect:/Principal-Estudante/" + usuario.getId();
         }
         else{
             ra.addFlashAttribute("mensagem", "Login/usuario incoretos");
@@ -176,14 +180,21 @@ public class UsuarioController {
         }
 
     } 
-
-    @PostMapping("/empresalogin")
-    public String EmpresaLogin(empresa Empresa, HttpSession session, RedirectAttributes ra){
+    @GetMapping("Principal-empresa/{id}")
+    public String principalEmpresa(empresa Empresa, HttpSession session, Model model, @PathVariable int id){
+        Empresa = this.salvamentoEmpresa.getOne(id);
+        model.addAttribute("lista", (List<vaga>) salvamentoVaga.findAll());
+        session.setAttribute("empresa", Empresa);
+        session.removeAttribute("aluno");
+        return "principal";
+    }
+    @PostMapping("/Principal-Empresa")
+    public String EmpresaLogin(empresa Empresa, HttpSession session, RedirectAttributes ra, Model model){
         Empresa = this.salvamentoEmpresa.findByCnpjAndSenha(Empresa.getCnpj(), Empresa.getSenha());
 
         if(Empresa != null){
-            session.setAttribute("empresa", Empresa);
-            return "redirect:/perfil-empresa";
+           
+            return "redirect:/Principal-empresa/" + Empresa.getId();
         }
         else{
             ra.addFlashAttribute("mensagem", "Login/usuario incoretos");

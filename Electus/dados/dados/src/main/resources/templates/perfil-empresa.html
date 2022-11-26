@@ -22,7 +22,7 @@
             <ul id="mobile">
                 <h1 class="header-titulo">Perfil do Estudante</h1>
 
-                <li><a href="/index" id="link-4"> | Inicio</a></li>
+                <li><a th:href="|/Principal-empresa/${session.empresa.id}" id="link-4">Inicio</a></li>
             </ul>
         </nav>
     </header>
@@ -79,7 +79,7 @@
                                     <div class="caixaBotoes">
                                         <div class="boxVerVagas">
                                             <h3 class="titleVerVagas">Confira Vagas</h3>
-                                            <a class="btnBotoes" th:href="|/EmpresaVagas|">
+                                            <a class="btnBotoes" th:href="|/Principal-empresa/${session.empresa.id}|">
                                                 <div class="fundoBtn"><img th:src="@{/Imagens/seta-direita.png}"
                                                         alt="seta" id="imgSeta"></div>
                                             </a>

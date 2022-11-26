@@ -17,7 +17,9 @@ import org.springframework.web.bind.annotation.PostMapping;
 
 import com.Electus.dados.banco.bancoVagas;
 import com.Electus.dados.banco.UsuarioBanco;
+import com.Electus.dados.banco.bancoEmpresa;
 import com.Electus.dados.banco.bancoVagaAluno;
+import com.Electus.dados.entides.empresa;
 import com.Electus.dados.entides.vaga;
 
 @Controller
@@ -31,6 +33,9 @@ public class paginas {
 
     @Autowired
     private UsuarioBanco acessoBanco;
+
+    @Autowired
+    private bancoEmpresa salvamentoEmpresa;
    
     @GetMapping("/Login-empresa")
     public String LoginEmpresa(){
@@ -54,8 +59,10 @@ public class paginas {
         return "cad-estudante2";
     }
     List<vaga> Vaga = new ArrayList<>();
-    @GetMapping("/perfil-empresa")
-    public String Empresa(Model model){
+    @GetMapping("/perfil-empresa/{id}")
+    public String Empresa(Model model,  @PathVariable int id,HttpSession session, empresa Empresa){
+        Empresa = this.salvamentoEmpresa.getOne(id);
+        session.setAttribute("empresa", Empresa);
         model.addAttribute("inscricoes", bancoVagaAluno.findAll());
         model.addAttribute("lista",   salvamentoVaga.findAll());
         return "perfil-empresa";
