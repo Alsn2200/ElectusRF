@@ -86,7 +86,44 @@
         </div>
 
      </div>
-    </div>  
+</div> 
+ 
+<div th:if="${session.empresa != null}">
+<div class="container-vagas">
+    <h1 class="titulo-vaga">Vagas lançadas <span th:text="${session.empresa.nome}"></span></h1>
+    <div class="container-flex-primeiro">
+        
+        <div th:each=" cont : ${lista}"  id="vagas"  th:if="${cont.nome} == ${session.empresa.nome}">
+            
+            <div th:if= "${session.empresa.nome} == ${cont.nome}">
+                <div class="vagas" >
+                <a th:href="|/Vagaselecionada/${cont.id}/${session.empresa.id}|">
+                    <div class="caixa-vagas">
+                        <div class="roda"></div>
+
+                        <h3 th:text="${cont.area}" id="nome"></h3>
+                    <h4 th:text="${cont.tarefas}" id="tarefas" ></h4>
+                    <h4 th:text="${cont.departamento}" id="departamento" style="display: none;"></h4>
+                    <p th:text="${cont.cbo}" id="cbo" style="display: none;"></p>
+                    </div>
+                    
+                        <div class="bg-color">
+                            <div class="bg"></div>
+                            
+                                
+                        </div>
+                        
+                    </a>
+                </div>
+        </div>
+    </div>
+
+    <div class="semVaga" >
+        <h2 >Nenhuma vaga a mais</h2>
+    </div>
+
+</div>
+</div>  
 
 
     
@@ -95,8 +132,8 @@
     <h1 class="titulo-vaga">Todas as vagas</span></h1>
     <div class="container-flex">
        
-        <div th:each=" cont : ${lista}" class="vagas" id="vagas">
-            <!-- <a th:href="|/Vagaselecionada/${cont.id}/${session.aluno.id}|" class="link"> -->
+        <div th:each=" cont : ${lista}" class="vagas" id="vagas" th:if="${session.aluno != null}">
+            <a th:href="|/Vagaselecionada/${cont.id}/${session.aluno.id}|" class="link">
             <div class="caixa-vagas">
                 <div class="roda"></div>
 
@@ -144,7 +181,58 @@
                 </div>
                
             </a>
+        </div>
+
+        <div th:each=" cont : ${lista}" class="vagas" id="vagas" th:if="${session.empresa != null}">
+            <a th:href="|/Vagaselecionada/${cont.id}/${session.empresa.id}|" class="link">
+            <div class="caixa-vagas">
+                <div class="roda"></div>
+
+                <h3 th:text="${cont.area}" id="nome"></h3>
+            <h4 th:text="${cont.tarefas}" id="tarefas"></h4>
+            <p th:text="${cont.cbo}" id="cbo" style="display: none;"></p>
             </div>
+           
+                <div class="bg-color">
+                    
+                    <div class="bg"></div>
+                    <!-- <div class="infor">
+                        <div class="informacoes espaco">
+               
+                            <div class="contato">
+                                <div class="informacoes">
+                                    <p>Empresa:</p>
+                                    <p th:text="${cont.nome}"></p>
+                                </div>
+                                <div class="informacoes"></div>
+                               <div class="d-flex">
+                                <div class="informacoes">
+                                    <p>Tarefas: </p>
+                                    <p th:text="${cont.tarefas}"></p>
+                                </div>  
+        
+                                <div class="informacoes">
+                                    <p>Telefone: </p>
+                                    <p th:text="${cont.tell}"></p>
+                                </div>
+                               </div>
+                               
+                               </div>
+                           </div>
+                    
+                            <div class="informacoes espaco">
+                               
+        
+                                <p>Cidade: </p>
+                                <p th:text="${cont.cidade}"></p>
+                            </div>    
+                    </div>       -->
+                   
+                     
+                </div>
+               
+            </a>
+        </div>
     </div>
        
        
