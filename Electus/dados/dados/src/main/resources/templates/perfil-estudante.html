@@ -27,8 +27,8 @@
 
             <ul id="mobile">
                 <h1 class="header-titulo">Perfil do Estudante</h1>
-
-                <li><a href="/index" id="link-4"> | Inicio</a></li>
+                <li th:if="${session.volta != null}"><a th:href="|/perfil-empresa/${session.volta.id}|" id="link-2" >Volta para perfil</a></li>
+                <li th:if="${session.volta != null}"><a th:href="|/Principal-empresa/${session.volta.id}" id="link-4">Inicio</a></li>
             </ul>
         </nav>
     </header>
@@ -46,7 +46,7 @@
                                 </h1>
                                 <div class="descricao">
                                     <h5 class="titleDescricao">Descrição do perfil: </h5>
-                                    <p th:text="${session.usuarioLogado.descricao}" id="respDesc"></p>
+                                  
                                 </div>
                                 <h2 class="tituloDados">Dados</h2>
 
@@ -102,7 +102,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="containerBotoes">
+                                <div class="containerBotoes" th:if="${session.empresa}">
                                     <div class="caixaBotoes">
                                         <div class="boxVerVagas">
                                             <h3 class="titleVerVagas">Confira Vagas</h3>
@@ -140,12 +140,14 @@
                                 
                                 <img th:src="|/imagem/${session.usuarioLogado.id}|" id="imagemPerfil">
                                 
+
                                 <form th:action="|/Alea/${session.usuarioLogado.id}|" method="POST"
-                                    enctype="multipart/form-data" th:object="${teste}" id="formImg">
+                                    enctype="multipart/form-data" th:object="${teste}" id="formImg" th:if="${session.empresa}">
                                     <h3 class="tituloFoto">Atualize a foto de perfil</h3>
                                     <input type="file" name="fileProduto" id="arquivoImg" placeholder="none">
                                     <button type="submit" id="enviando">Enviar</button>
                                 </form>
+
 
                             </div>
                         </div>
@@ -169,7 +171,7 @@
                                         <a th:if="|/pdf1/${session.usuarioLogado.id}| != null" th:href="|/exibirPdf1/${session.usuarioLogado.id}|" th:download="|/exibirPdf1/${session.usuarioLogado.aluno}.pdf|" class="btn-baixar" >Baixar pdf</a>
         
                                         <form th:action="|/pdf1/${session.usuarioLogado.id}|" method="POST"
-                                        enctype="multipart/form-data" th:object="${teste}" id="formImg">
+                                        enctype="multipart/form-data" th:object="${teste}" id="formImg" th:if="${session.empresa}">
                                         <h3 class="tituloPdf">Adcione um pdf</h3>
                                         <input type="file" name="filePdf1"  placeholder="none">
                                         <button type="submit" id="enviando">Enviar</button>

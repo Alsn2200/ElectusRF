@@ -217,7 +217,6 @@ texto h1{
     display: flex;
     background-color: white;
     flex-wrap: wrap;
-    flex-direction: column;
     justify-content: space-between; 
 }
 .roda{

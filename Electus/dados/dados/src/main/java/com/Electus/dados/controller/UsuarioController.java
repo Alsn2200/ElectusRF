@@ -203,11 +203,24 @@ public class UsuarioController {
     }
     
     @GetMapping("/perfil-estudante/{id}")
-    public String aVant(Aluno usuario, HttpSession session, RedirectAttributes ra, pdf1 Pdf, @PathVariable int id){
+    public String aVant(empresa Empresa,Aluno usuario, HttpSession session, RedirectAttributes ra, pdf1 Pdf, @PathVariable int id){
         usuario = this.acessoBanco.getOne(id);
+        session.setAttribute("empresa", Empresa);
+        session.removeAttribute("volta");
         session.setAttribute("usuarioLogado", usuario);
         return "perfil-estudante";
     }
+    @GetMapping("/estudante/{id}/{idEmpresa}")
+    public String perfilEstudante(empresa Empresa,Aluno usuario, HttpSession session, RedirectAttributes ra, pdf1 Pdf, @PathVariable int id,@PathVariable int idEmpresa){
+        usuario = this.acessoBanco.getOne(id);
+        Empresa = this.salvamentoEmpresa.getOne(idEmpresa);
+        session.setAttribute("usuarioLogado", usuario);
+        session.setAttribute("perfil", Empresa);
+        session.setAttribute("volta", Empresa);
+        session.removeAttribute("empresa");
+        return "perfil-estudante";
+    }
+
      
   
     @PostMapping("/Alea/{Id}")
