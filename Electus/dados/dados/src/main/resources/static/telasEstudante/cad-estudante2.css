@@ -53,15 +53,15 @@ header li a:hover {
     font-weight: 800;
 }
 
-.backgraund-img {
+/* .backgraund-img {
     height: 140vh;
     width: 100%;
     background-image: url('../Imagens/img-Principal.jpg');
     background-size: cover;
     background-position: left;
-}
+} */
 
-.opacity {
+/* .opacity {
     height: 140vh;
     position: absolute;
     padding: 2rem;
@@ -69,11 +69,10 @@ header li a:hover {
     align-items: center;
     background-color: rgba(0, 0, 0, 0.596);
     width: 100%;
-}
+} */
 
 main {
-    background-color: rgb(216, 216, 216);
-
+background-color: #e1e0df;
 }
 
 .informacoes h1 {
@@ -102,21 +101,31 @@ main {
     width: 100%;
     display: flex;
     justify-content: space-around;
+    padding: 5rem;
 }
 
 .box {
+  
     height: 105vh;
     width: 35vw;
     padding: 5px;
     text-align: center;
-    background-color: #f78e0c;
+    background-color: white;
     border-radius: 0px 0px 20px 20px;
 
+}
+.roda{
+    width: 50px;
+    height: 50px;
+    background-color: #f78e0c;
+    border-radius: 100%;
+    margin: 10px;
+   
 }
 
 .title-box {
     font-weight: bold;
-    border: solid 1px black;
+    border: solid 1px #f78e0c;
     border-top: none;
     border-left: none;
     border-right: none;
@@ -164,7 +173,7 @@ main {
     background: none;
     outline: none;
     position: relative;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid #f78e0c;
     margin: 15px 0;
     font-weight: 500;
 }

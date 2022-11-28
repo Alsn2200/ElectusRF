@@ -7,6 +7,8 @@
 }
 html,body{
     height: 100%;
+    background-color: #edebe8;
+
 
 }
 
@@ -65,7 +67,7 @@ header li a:hover{
 
 }
 .box2{
-    background-color: #edebe8;
+    background-color: white;
     width: 60%;
 }
 .boxTabelas{
@@ -124,24 +126,26 @@ header li a:hover{
     font-size: 18px;
  }
  .btnInscreva{
-    padding: 8rem 0rem 2rem 0rem;
+    padding: 10rem 0rem 1rem 0rem;
     text-align: center;
+
+    
  }
  #Enviar{
-    width: 60%;
-    height: 40px;
-    text-align: center;
+    width: 95%;
+    height: 80px;
     cursor: pointer;
     border: none;
-    font-size: 17px;
-    border-radius: 20px;
+    font-size: 25px;
+ 
+ 
+ }
+  #Enviar:hover{
+transition: 0.8s;
     background-color: #f78e0c;
- }
- #Enviar:hover{
-    transition: .3s;
-    background-color: #edebe8;
-    border: 1px solid black;
- }
+
+ } 
+
 /* ----- */
 .container-vaga{
     width: 100%;
