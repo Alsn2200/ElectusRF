@@ -133,9 +133,9 @@
                                                 </div>
                                             <div th:each="ins : ${inscricoes}" class="candidatos">
                                                 <tr>
-                                                   <td th:if="${session.empresa.nome == ins.nome_empresa}"><a  th:text="${ins.nome}" th:href="|/estudante/${ins.id}/${session.empresa.id}|"></a></td>
-                                                    <td th:if="${session.empresa.nome == ins.nome_empresa}" th:text="${ins.curso}" class="borda"></td>
-                                                    <td h:if="${session.empresa.nome == ins.nome_empresa}" th:text="${ins.modulo}"></td>
+                                                   <td ><a  th:text="${ins.nome}" th:href="|/estudante/${ins.id}/${session.empresa.id}|"></a></td>
+                                                    <td  th:text="${ins.curso}" class="borda"></td>
+                                                    <td  th:text="${ins.modulo}"></td>
                                                 </tr>
                                                 
                                             </div>

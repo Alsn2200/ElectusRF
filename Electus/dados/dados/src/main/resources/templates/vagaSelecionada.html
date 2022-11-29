@@ -175,10 +175,12 @@
 
 
 
-        <p th:text="${session.vaga.cbo}" id="cbo" style="display: none;"></p>
+         -->
+         <p th:if="${session.aluno != null}" th:text="${session.vaga.cbo}" id="cbo" style="display: none;"></p>
+         <p th:if="${session.aluno != null}" th:text="${session.vaga.departamento}" id="departamento" style="display: none;"></p>
         <p th:if="${session.aluno != null}" th:text="${session.aluno.aluno}" style="display: none;" id="aluno"></p>
         <p th:if="${session.aluno != null}" th:text="${session.aluno.curso}" style="display: none;" id="curso"></p>
-        <p th:if="${session.aluno != null}" th:text="${session.aluno.modulo}" style="display: none;" id="modulo"></p>  -->
+        <p th:if="${session.aluno != null}" th:text="${session.aluno.modulo}" style="display: none;" id="modulo"></p> 
     </main>
 
     <script th:src="@{/Electus_Scripts/vagaSelecionada.js}"></script>

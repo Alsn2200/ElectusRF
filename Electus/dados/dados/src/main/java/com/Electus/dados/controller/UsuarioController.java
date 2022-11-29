@@ -131,7 +131,7 @@ public class UsuarioController {
                 e.printStackTrace();
            }
           
-           return "/Principal";
+           return "redirect:/perfil-estudante/" + usuario.getId();
                 
     }
     @GetMapping("/exibirPdf1/{id}")
