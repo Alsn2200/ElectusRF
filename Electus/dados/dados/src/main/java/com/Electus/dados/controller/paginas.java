@@ -64,6 +64,7 @@ public class paginas {
         Empresa = this.salvamentoEmpresa.getOne(id);
         session.setAttribute("empresa", Empresa);
         model.addAttribute("inscricoes", bancoVagaAluno.findAll());
+        model.addAttribute("alunos", acessoBanco.findAll());
         model.addAttribute("lista",   salvamentoVaga.findAll());
         return "perfil-empresa";
     }

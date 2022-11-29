@@ -16,6 +16,7 @@ public class vagaaluno{
     private String cbo;
     private String departamento;
     private String nome;
+    private int idAluno;
     private String curso;
     private String modulo;
     public String getCurso() {
@@ -59,5 +60,14 @@ public class vagaaluno{
     }
     public void setNome(String nome) {
         this.nome = nome;
+    }
+
+
+    public void setIdAluno( int idAluno){
+        this.idAluno = idAluno;
+    }
+
+    public int getIdAluno(){
+        return this.idAluno;
     }
 }

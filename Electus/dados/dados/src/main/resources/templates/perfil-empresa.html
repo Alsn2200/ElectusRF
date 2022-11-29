@@ -126,18 +126,17 @@
                                                         <th class="borda">Curso</th>
                                                         <th>Modulo</th>
                                                     </tr>
-                                                   
-                                                   
-                                                   
-                                                   
+   
                                                 </div>
                                             <div th:each="ins : ${inscricoes}" class="candidatos">
-                                                <tr>
-                                                   <td ><a  th:text="${ins.nome}" th:href="|/estudante/${ins.id}/${session.empresa.id}|"></a></td>
-                                                    <td  th:text="${ins.curso}" class="borda"></td>
-                                                    <td  th:text="${ins.modulo}"></td>
-                                                </tr>
-                                                
+                                              <div   th:each="alunos : ${alunos}">
+                                                <tr th:if="${ins.nome} == ${alunos.aluno}">
+                                                    <td ><a  th:text="${ins.nome}" th:href="|/estudante/${alunos.id}/${session.empresa.id}|"></a></td>
+                                                     <td  th:text="${ins.curso}" class="borda"></td>
+                                                     <td  th:text="${ins.modulo}"></td>
+                                                 </tr>
+                                                 
+                                              </div>
                                             </div>
                                             </table>
                                             </div>

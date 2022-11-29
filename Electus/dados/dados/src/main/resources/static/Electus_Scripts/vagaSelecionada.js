@@ -11,6 +11,7 @@ document.getElementById('Enviar').addEventListener('click', function Enviar(){
             cbo:document.getElementById('cbo').textContent,
             departamento:document.getElementById('departamento').textContent,
             nome:document.getElementById('aluno').textContent,
+            idAluno:document.getElementById('idAluno').textContent,
             curso: document.getElementById('curso').textContent,
             modulo: document.getElementById('modulo').textContent
         })

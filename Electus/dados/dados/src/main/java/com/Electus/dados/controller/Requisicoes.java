@@ -60,10 +60,12 @@ public class Requisicoes {
     public List<Aluno> ListUsuario(){
         return (List<Aluno>) acessoBanco.findAll();
     }
+    
     @PostMapping("/vaga")
     public void Vaga1(@RequestBody vaga Vaga) {
              salvamentoVaga.save(Vaga);
     }
+
     @PostMapping("/estrela")
     public void Estrela(@RequestBody Aluno aluno){
         int id = aluno.getId();
