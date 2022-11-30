@@ -7,7 +7,7 @@ document.getElementById('Enviar').addEventListener('click', function Enviar(){
         },
         method: "POST",
         body: JSON.stringify({
-            nome_empresa: document.getElementById('nome').textContent,
+            nome_empresa: document.getElementById('empresa').textContent,
             cbo:document.getElementById('cbo').textContent,
             departamento:document.getElementById('departamento').textContent,
             nome:document.getElementById('aluno').textContent,

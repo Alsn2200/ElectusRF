@@ -89,6 +89,6 @@ function start() {
 }
 
 window.addEventListener("load", start)
-document.getElementById('hamburg-mobile').addEventListener('click', function Interacao(){
-    document.getElementById('navegacao').classList.toggle('acao')
-})
+// document.getElementById('hamburg-mobile').addEventListener('click', function Interacao(){
+//     document.getElementById('navegacao').classList.toggle('acao')
+// })

@@ -142,6 +142,7 @@ document.getElementById('a').addEventListener('click', function enviarDados(){
          alteracao_armazenamento_dados: avaliacao7[0],
          atualizacao_documentacao_programa: avaliacao8[0],
          
+         
       })
   
   })
@@ -155,6 +156,6 @@ console.log(avaliacao6[0])
 console.log(avaliacao7[0])
 console.log(avaliacao8[0])
 
-  
+window.location.href=window.location.href
   
 })

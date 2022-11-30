@@ -43,7 +43,7 @@ public class Requisicoes {
     }
 
     @PostMapping("/vagaAluno")
-    public void candidatura(@RequestBody vagaaluno Cadastro){
+    public void a(@RequestBody vagaaluno Cadastro){
         bancoVagaAluno.save(Cadastro);
     }
 

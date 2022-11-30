@@ -31,6 +31,7 @@
     </header>
     <main>
      <h2 th:text="${session.docente.materia}"  class="turma-titulo"></h2>
+     <h2 th:text="${session.docente.id}"  id="Docenteid"></h2>
      <h2>Alunos</h2>
     <div th:each="alunos : ${Turmas}" th:if="${alunos.curso } == ${session.docente.materia}">
         <p  th:text="${alunos.aluno}"></p>
@@ -146,7 +147,7 @@
               </div>
           </div>
   
-            <a th:href="|/Turma/${session.docente.id}" th:id="a" type="button">Enviar</a>
+            <button th:id="a" >Enviar</button>
   
             </div>
 

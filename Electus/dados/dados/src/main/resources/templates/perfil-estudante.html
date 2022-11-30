@@ -194,7 +194,7 @@
                                 <p th:text="${session.usuarioLogado.atualizacao_documentacao_programa}" id="Avaliacao8" style="display: none;"></p>
                                 <h2 class="tituloAvaliacao">Avaliação do docente </h2>
                                 
-                                <p th:if="${session.usuarioLogado.validacao == null}" class="semValidacao">Sua conta ainda não foi avaliada</p>
+                                <p th:if="${session.usuarioLogado.validacao == null}" class="semValidacao">Essa conta ainda não foi avaliada</p>
 
                                 <div th:if="${session.usuarioLogado.validacao} eq 'validado'">
                                     <div class="align-flex">

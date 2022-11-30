@@ -638,6 +638,7 @@ a {
 }
 header ul{
    display: flex;
+   justify-content: center;
    gap: 40px;
 }
 header li{
@@ -926,4 +927,23 @@ table{
     text-align: center;
     width: 37rem;
     justify-content: space-between;
+}
+@media (max-width: 590px){
+    .titulo {
+       display: block;
+        margin: 0;
+        width: 100%;
+       
+    }
+    .caixaBox2 { 
+        padding: 45px 14px;   
+        width: 95%;
+    }
+    .vaga {
+        display: block;
+        border-radius: 0;
+         box-shadow:none;
+        border: 2px solid beige;
+
+    }
 }
