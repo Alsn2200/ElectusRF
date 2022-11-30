@@ -70,100 +70,77 @@ header li a:hover {
     background-color: rgba(0, 0, 0, 0.596);
     width: 100%;
 } */
-
+/* ----------- */
 main {
-background-color: #e1e0df;
-}
-
-.informacoes h1 {
-    width: 450px;
-    color: white;
-}
-
-.informacoes p {
-    color: #fff;
-    margin-top: 10px;
-    width: 450px;
-    font-size: 16pt;
 
 }
-
-.button-inform {
-    margin-top: 10px;
-    padding: 10px;
-    font-size: 11pt;
-    border-radius: 5px;
-    border: 0.5px solid black;
-    background-color: #f78e0c;
-}
-
-.container-box {
+.Box1{
     width: 100%;
-    display: flex;
-    justify-content: space-around;
-    padding: 5rem;
+    height: 40vh;
+    background-color: rgb(241, 241, 241);
 }
-
-.box {
-  
-    height: 105vh;
-    width: 35vw;
-    padding: 5px;
-    text-align: center;
-    background-color: white;
-    border-radius: 0px 0px 20px 20px;
-
-}
-.roda{
-    width: 50px;
-    height: 50px;
+.Box2{
+    width: 100%;
     background-color: #f78e0c;
+}
+.d-flex{
+        display: flex;
+    
+}
+.caixaConteudo{
+    width: 100%;
+ 
+}
+.roda {
+    background-color: #f78e0c;
+    width: 60px;
+    height: 60px;
     border-radius: 100%;
-    margin: 10px;
-   
-}
+    display: block;
 
-.title-box {
-    font-weight: bold;
-    border: solid 1px #f78e0c;
-    border-top: none;
-    border-left: none;
-    border-right: none;
-    padding: 15px 0 20px 0;
 }
-
-.box h2 {
-    margin-top: -25px;
+.tituloCadastro{
+    font-size: 40px;
 }
-
-.box-icone {
-    height: 16vh;
-    margin: 0 auto;
-    background-image: url('../Imagens/aperto-de-mao(1).png');
-    background-size: contain;
+.caixaBox{
     position: relative;
-    background-repeat: no-repeat;
-    top: -50px;
-    border-radius: 50px;
-    box-shadow: 0.2rem 0.2rem 5px 2px #fff;
-    width: 8vw;
-    background-color: #e99a39;
+    top: -30vh;
+    padding: 15px;
+    background-color: white;
+    width: 55vw;
+    text-align: center;
+    margin: 0 auto;
 }
-
 .itens-box {
     text-align: left;
     padding: 20px 40px;
 }
-
+.barra{
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    margin: 2rem 0rem 2rem 0rem;
+}
+.btn-cadastrar {
+    border: none;
+    display: block;
+    width: 50%;
+    height: 50px;
+    border-radius: 50px;
+    margin-top: 3%;
+    font-size: 20px;
+    font-weight: 700;
+    cursor: pointer;
+    background-color: #f78e0c;
+    margin: 0 auto;
+   
+}
 .label-input {
     position: absolute;
     transform: translateY(-50%);
     font-size: 15px;
     pointer-events: none;
-
-
 }
-
 .inputUser {
     width: 100%;
     padding: 0 5px;
@@ -177,9 +154,6 @@ background-color: #e1e0df;
     margin: 15px 0;
     font-weight: 500;
 }
-
-
-
 #sexo-outro {
     margin-bottom: 5%;
 }
@@ -209,83 +183,27 @@ background-color: #e1e0df;
     width: 34%;
 
 }
-
-.btn-cadastrar {
-    display: block;
-    width: 100%;
-    height: 50px;
-    border: 1px solid black;
-    border-radius: 50px;
-    margin-top: 3%;
-    font-size: 20px;
-    font-weight: 700;
-    cursor: pointer;
-    background-color: rgba(255, 255, 255, 0.548);
-
-
-}
-
 a {
     text-decoration: none;
 }
-
 .Teste4 {
     display: none;
 }
-
 .btn-cadastrar:hover {
     transform: scale(1.1);
     transition: .1s;
-
 }
-
 #nova-senha {
 
     width: 49%;
 }
-
 #senha {
     width: 49%;
 }
-
 .margin {
     margin-top: 10%;
-
 }
-/* FOOTER */
-.caixaRodape {
-    width: 100%;
-    display: flex;
-    padding: 4% 1.5%;
-    height: 40vh;
-    align-items: center;
-    justify-content: space-between;
-    background-color: #f78e0c;
-    border-top: 1px solid black;
-}
-.caixaRodape .logo{
-    width: 25vw;
-    height: 28vh;
-}
-.footer-inform{
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-}
-.caixaRodape ul{
-    list-style: none;
-}
-.caixaRodape .footer-inform h4{
-    font-size: calc(5pt + 1vw);
-}
-.caixaRodape ul li{
-    font-size: 9pt;
-}
-a{
-    text-decoration: none;
-    color: black;
-}
-
+/* ---------- */
 @media (max-width: 2000px) {
     .box {
         width: 40vw;
