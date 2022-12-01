@@ -46,7 +46,7 @@
                                 </h1>
                                 <div class="descricao">
                                     <h5 class="titleDescricao">Descrição do perfil: </h5>
-                                  
+                                    <p  th:text="${session.usuarioLogado.descricao}"></p>
                                 </div>
                                 <h2 class="tituloDados">Dados</h2>
 
@@ -114,8 +114,8 @@
                                     </div>
                                     <div class="caixaBotoes">
                                         <div class="boxVerVagas">
-                                            <h3 class="titleVerVagas">Editar perfil</h3>
-                                            <a class="btnBotoes" th:href="|/Vagas/${session.usuarioLogado.id}|">
+                                            <h3 class="titleVerVagas">Configurações</h3>
+                                            <a class="btnBotoes" th:href="|/configEstudante/${session.usuarioLogado.id}|">
                                                 <div class="fundoBtn"><img th:src="@{/Imagens/seta-direita.png}"
                                                         alt="seta" id="imgSeta"></div>
                                             </a>
@@ -123,11 +123,7 @@
                                     </div>
                                     <div class="caixaBotoes">
                                         <div class="boxVerVagas">
-                                            <h3 class="titleVerVagas">Excluir perfil</h3>
-                                            <a th:href="|/deletar/${session.usuarioLogado.id}|" class="btnBotoes">
-                                                <div class="fundoBtn"><img th:src="@{/Imagens/seta-direita.png}"
-                                                        alt="seta" id="imgSeta"></div>
-                                            </a>
+                                            
                                         </div>
                                     </div>
 

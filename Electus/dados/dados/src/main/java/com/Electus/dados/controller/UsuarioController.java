@@ -210,6 +210,13 @@ public class UsuarioController {
         session.setAttribute("usuarioLogado", usuario);
         return "perfil-estudante";
     }
+    
+    @GetMapping("/configEstudante/{id}")
+    public String configEstudante(empresa Empresa,Aluno usuario, HttpSession session, RedirectAttributes ra, pdf1 Pdf, @PathVariable int id){
+        usuario = this.acessoBanco.getOne(id);
+        session.setAttribute("usuarioLogado", usuario);
+        return "ConfiguracaoEstudante";
+    }
     @GetMapping("/estudante/{id}/{idEmpresa}")
     public String perfilEstudante(empresa Empresa,Aluno usuario, HttpSession session, RedirectAttributes ra, pdf1 Pdf, @PathVariable int id,@PathVariable int idEmpresa){
         usuario = this.acessoBanco.getOne(id);
@@ -265,6 +272,7 @@ public class UsuarioController {
     public String deletarUsuario(@PathVariable int id){
         acessoBanco.deleteById(id);
         bancoT.deleteById(id);
+        acessoPdf1.deleteById(id);
         return "redirect:/index";
     }
 

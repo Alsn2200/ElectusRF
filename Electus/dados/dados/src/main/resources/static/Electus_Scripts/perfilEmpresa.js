@@ -32,5 +32,15 @@ document.getElementById('vaga-1').addEventListener('click', function Vaga(){
         })
     
     })
+    alert('Vaga registrada com sucesso! Atualize a pagina ou confira na pagina para visualizar a vaga')
+    document.getElementById('tarefas').value = ""
+    document.getElementById('cargo').value = ""
+    document.getElementById('cbo').value = ""
+    document.getElementById('Departamento').value = ""
+    document.getElementById('profissional').value = ""
+    document.getElementById('formacao').value = ""
+    document.getElementById('comportamentais').value = ""
+    document.getElementById('tecnicas').value = ""
+    document.getElementById('tarefas').value = ""
 
 })

@@ -68,6 +68,7 @@ public class paginas {
         model.addAttribute("lista",   salvamentoVaga.findAll());
         return "perfil-empresa";
     }
+    
     @GetMapping("/login-docente")
     public String loginDocente(){
         return "login-docente";

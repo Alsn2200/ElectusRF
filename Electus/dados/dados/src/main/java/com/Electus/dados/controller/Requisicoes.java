@@ -65,6 +65,20 @@ public class Requisicoes {
     public void Vaga1(@RequestBody vaga Vaga) {
              salvamentoVaga.save(Vaga);
     }
+    @PostMapping("/configEstudante")
+    public void configEstudante(@RequestBody Aluno aluno){
+        int id = aluno.getId();
+        acessoBanco.findById(id).map(alteracao ->{
+            alteracao.setAluno(aluno.getAluno());
+            alteracao.setEmail(aluno.getEmail());
+            alteracao.setNumero_telefone(aluno.getNumero_telefone());
+            alteracao.setEndereco(aluno.getEndereco());
+            alteracao.setNumero_casa(aluno.getNumero_casa());
+            alteracao.setDescricao(aluno.getDescricao());
+            alteracao.setSenha(aluno.getSenha());
+            return acessoBanco.save(alteracao);
+        });
+    }
 
     @PostMapping("/estrela")
     public void Estrela(@RequestBody Aluno aluno){

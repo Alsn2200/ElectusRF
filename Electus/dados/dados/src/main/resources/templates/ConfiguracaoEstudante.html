@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configurações Estudante</title>
+    <link rel="stylesheet" th:href="@{/Styles/Menu.css}">
+    <link rel="stylesheet" th:href="@{/Configuracoes/configEstudante.css}">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo"></div>
+
+        <div id="hamburg-mobile"></div>
+        <nav id="navegacao">
+
+            <ul id="mobile">
+                <li><a th:href="|/perfil-estudante/${session.usuarioLogado.id}|" id="link-2" >Volta para perfil</a></li>
+                <li><a th:href="|/Principal-Estudante/${session.usuarioLogado.id}" id="link-4">Inicio</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="container-main">
+            <h1 class="title-config" >Configurações</h1>
+            <hr>
+            <form action="">
+                <label for="name" class="label-input">Nome</label>
+            <input type="text" id="name" th:value="${session.usuarioLogado.aluno}" class="inputUser">
+
+            <label for="numero_tell" class="label-input">Numero de telefone</label>
+            <input type="text" id="numero_tell" th:value="${session.usuarioLogado.numero_telefone}" class="inputUser">
+
+
+            <label for="email" class="label-input">E-mail</label>
+            <input type="text" id="email" th:value="${session.usuarioLogado.email}" class="inputUser">
+
+            <label for="endereco" class="label-input">Endereço</label>
+            <input type="text" id="endereco" th:value="${session.usuarioLogado.endereco}" class="inputUser">
+
+            <label for="numero_casa" class="label-input">Numero casa</label>
+            <input type="text" id="numero_casa" th:value="${session.usuarioLogado.senha}" class="inputUser">
+
+
+            <label for="senha" class="label-input">Senha</label>
+            <input type="text" id="senha" th:value="${session.usuarioLogado.senha}" class="inputUser">
+
+                <button id="enviar" type="button">Salvar alterações</button>
+
+            </form>
+            <p th:text="${session.usuarioLogado.id}" id="id" style="display: none;"></p>
+            <hr>
+            <h2 class="descricao">Deseja inserir uma nova descrição ao seu perfil? </h2>
+            <input type="descricao" id="descricao" th:value="${session.usuarioLogado.descricao}" class="inputUser">
+            
+            
+
+            
+            <a   class="btnBotoes" th:href="|/deletar/${session.usuarioLogado.id}|"> 
+                Deletar conta
+            </a>
+        </div>
+    </main>
+
+    <script th:src="@{/Electus_Scripts/ConfigEstudante.js}"></script>
+</body>
+</html>
