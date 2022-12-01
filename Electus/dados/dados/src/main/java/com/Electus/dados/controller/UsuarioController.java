@@ -276,15 +276,14 @@ public class UsuarioController {
         return "redirect:/index";
     }
 
-    @GetMapping("/deletarVaga/{t}/{nome}")
-    public String deletarVaga(@PathVariable int t, @PathVariable String nome, vagaaluno Aluno){
+    @GetMapping("/deletarVaga/{t}/{nome}/{id}")
+    public String deletarVaga(@PathVariable int t, @PathVariable String nome, vagaaluno Aluno, @PathVariable int id){
         salvamentoVaga.deleteById(t);
-   
-         
+        
         System.out.println(Aluno.getId());
             
       
-        return "redirect:/index";
+        return "redirect:/perfil-empresa/" + id;
     }
     @GetMapping("/Vagaselecionada/{id}/{idAluno}")
     public String vagaSelecionada(HttpSession session, @PathVariable int id,vaga Vaga, Model model, Aluno aluno, @PathVariable int idAluno){

@@ -117,7 +117,7 @@
                                                </div>
                                                <div class="exclusao">
                                                 
-                                                <a th:if="${cont.nome == session.empresa.nome}" th:href="|/deletarVaga/${cont.id}/${cont.departamento}|">Excluir vaga</a>
+                                                <a th:if="${cont.nome == session.empresa.nome}" th:href="|/deletarVaga/${cont.id}/${cont.departamento}/${session.empresa.id}|">Excluir vaga</a>
                                                </div>
                                             </div>
                                             <table>
