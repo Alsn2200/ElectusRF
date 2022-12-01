@@ -9,7 +9,6 @@ btnEnviar.addEventListener('click', function Enviar(){
     var cpf = document.getElementById('cpf').value
     var telefone = document.getElementById('telefone').value
     var email = document.getElementById('email').value
-    var sexo = document.querySelector('input[name = "sexo"]:checked').value
     var enderco = document.getElementById('endereco').value
     var n_casa = document.getElementById('n-casa').value
     var curso = document.getElementById('curso').value
@@ -22,6 +21,7 @@ btnEnviar.addEventListener('click', function Enviar(){
         alert("Prencha todos os campos")
     }
     else if(Object.keys(vefificacao).length == 11){
+        var sexo = document.querySelector('input[name = "sexo"]:checked').value
         
             if(senha == senha2){
                 console.log('deu certo')
