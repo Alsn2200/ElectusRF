@@ -28,8 +28,13 @@
         
     </header>
     <main>
-     
-        <div id="slider">
+            <div class="caixaImg">
+                <img th:src="@{/Imagens/principal-vaga1.jpg}" alt="">
+                    <div class="itemTitulo">
+                <h1 class="tituloMain">Encontre sua vaga e transforme sua carreira profissional!</h1>
+            </div>
+            </div>
+        <!-- <div id="slider">
          
             <img th:src="@{/Imagens/principal-vaga1.jpg}" alt="">
        
@@ -41,7 +46,7 @@
             </container>
         </texto>
         
-         </div>
+         </div> -->
      
 <div th:if="${session.aluno != null}">
      <div class="container-vagas">

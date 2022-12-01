@@ -18,7 +18,7 @@
 
 <body>
     <header>
-       
+
         <div class="logo"></div>
 
         <div id="hamburg-mobile"></div>
@@ -28,97 +28,57 @@
                 <hr class="linha-mobile">
                 <li><a href="" id="link-3">Vagas</a></li>
                 <hr class="linha-mobile">
-                <li><a href="/index"id="link-4"> | Inicio</a></li>
+                <li><a href="/index" id="link-4"> | Inicio</a></li>
             </ul>
         </nav>
     </header>
-   
+
     <main>
-        
-      
-            <!-- <div class="vazia">
-                <div th:text="${mensagem}" th:if="${mensagem != null}" class="mensagem"></div>
-            </div> -->
-           
-            
-                <div class="container-box">
-                    <h1 class="title-box">Login da Empresa</h1>
-                    <div class="caixa">
-                       
-                        <div class="box">
-                            
-                          
-                            <div class="itens-box">
-                                <form action="/Principal-Empresa" method="POST" >
-                                <label for="cnpj" class="label-input">CNPJ:</label>
-                                <input type='number' id='cnpj' name='cnpj' class="inputUser" placeholder="Digite com o CNPJ..">
-    
-                                <div class="margin">
-                                    <label for="senha" class="label-input">Senha  de acesso:</label>
-                                    <input type='password' id='nova-senha' name='senha' required class="inputUser" placeholder="Digite a sua senha...">
-    
-                                    <br>
-                                
-                                </div>
-                                <button class="btn-logar" >Entrar</button>
-                            </form>
-    
-                               
+        <div class="vazia">
+            <div th:text="${mensagem}" th:if="${mensagem != null}" class="mensagem"></div>
+        </div>
+        <div class="box1"></div>
+        <div class="box2">
+            <div class="container-box">
+                <div class="box">
+                    <div class="roda"></div>
+                    <h1 class="title-box">Login Empresarial</h1>
+                    <hr>
+                    <div class="itens-box">
+                        <form action="/Principal-Empresa" method="POST">
+                            <label for="cnpj" class="label-input">CNPJ:</label>
+                            <input type='number' id='cnpj' name='cnpj' class="inputUser">
+
+                            <div class="margin">
+                                <label for="senha" class="label-input">Senha de acesso:</label>
+                                <input type='password' id='nova-senha' name='senha' required class="inputUser">
+                                <br>
+
                             </div>
-                            
-                        </div>
-                        <div class="cadastro">
-                            <a href="/Cadastro-empresa" class="cadastrese">Não tem uma conta? Cadastre-se aqui!</a>
-                        </div>
+                            <button class="btn-logar">Entrar</button>
+                        </form>
+
+
+                    </div>
+                    <div class="cadastro">
+                        <a href="/Cadastro-empresa" class="cadastrese"> Cadastre-se</a>
                     </div>
                 </div>
-           
-       
+
+            </div>
+        </div>
+        </div>
+
+        </div>
+        </div>
+        </div>
+
+
+
 
 
     </main>
-    <!-- <footer class="rodape">
-        <div class="caixaRodape">
-            <div class="logo"></div>
-            <div class="footer-inform">
-                <ul>
-                    <h4>Geral</h4>
-                    <li>Cadastre-se</li>
-                    <li>Centrar de Ajuda</li>
-                    <li>Sobre</li>
-                </ul>
-                <ul>
-                    <h4>Navegar pelo Electrus</h4>
-                    <li>Leading</li>
-                    <li>Vagas</li>
-                    <li>Salario</li>
-                </ul>
-                <ul>
-                    <h4>Soluções Business</h4>
-                    <li>Talentos</li>
-                    <li>Marketing</li>
-                    <li>Vendas</li>
-                </ul>
-                <ul>
-                    <h4>Diretórios</h4>
-                    <li>Usuarios</li>
-                    <li>Vagas</li>
-                    <li>Empresas</li>
-                    <li>Soluções</li>
-                    <li>Publicações</li>
-                    <li>Artigos</li>
-                </ul>
 
-                <ul>
-                    <h4>Programadores</h4>
-                    <li><a href="https://github.com/Alsn2200">Alisson Brito</a></li>
-                    <li><a href="">Beatriz Rodrigues</a></li>
-                    <li><a href="https://github.com/FellipeS13">Felipe do Santos</a></li>
-                    <li><a href="https://github.com/Thiag0nery">Thiago Nery</a></li>
-                </ul>
-            </div>
-        </div>
-    </footer> -->
     <script th:src="@{/btnMenu-scripts/Script-hamburg.js}"></script>
     <script th:src="@{/Electus_Scripts/empresaLogin.js}"></script>
 
