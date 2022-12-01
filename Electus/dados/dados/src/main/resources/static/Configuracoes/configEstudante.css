@@ -56,21 +56,29 @@ header li a {
     margin-right: 25vw;
 }
 main{
-    background-color: rgb(197, 191, 184);
+    background-color: rgb(241, 241, 241);
     padding: 4rem;
     display: flex;
     justify-content: center;
 }
 .container-main{
-    width: 80%;
-    background-color: rgb(235, 231, 227);
+    background-color: white;
+    width: 40%;
     padding: 10px;
-    border-radius: 8px;
     border: 1px solid black;
+    border: none;
 }
 .title-config{
     text-align: center;
     margin: 2px  0 25px 0;
+}
+.roda{
+    margin: 10px;
+    background-color: #f78e0c;
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    display: block;
 }
 .inputUser {
     width: 100%;
@@ -113,25 +121,26 @@ main{
 }
 .btnBotoes{
     padding: 8px;
-    box-shadow: 0 0 2px 1px black;
     width: 148px;
     display: block;
     font-size: 18px;
     border-radius: 5px;
     margin: 25px auto;
-    background-color: red;
+    background-color: #f78e0c;
+
     /* background-color: rgb(177, 8, 8);*/
 
 }
 .btnBotoes:hover{
-    background-color: rgb(216, 14, 14); 
+    background-color: #f78e0c; 
     cursor: pointer;
+    text-decoration: none;
 }
 #enviar{
     padding: 5px;
-    box-shadow: 0 0 3px 1px black;
     font-size: 18px;
-    border-radius: 5px;
+    border-radius: 50px;
+    border: none;
     margin: 25px auto;
     display: block;
     background-color: rgb(255, 153, 0);

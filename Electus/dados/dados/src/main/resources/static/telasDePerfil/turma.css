@@ -61,7 +61,6 @@ main{
 }
 .text-avaliacao{
   text-align: center;
-  background-color: #918d89;
   padding: 11px;
 }
 .turma-titulo{
@@ -83,7 +82,6 @@ main{
 }
 .container-avaliacao{
     margin-top: 15px;
-    background-color: #dfdfdf;
     box-shadow: 0 0 3px 1px;
     border-radius: 10px;
    
@@ -117,9 +115,9 @@ main{
     border-radius: 8px;
     border: none;
     margin: 12px auto;
+    cursor: pointer;
    }
    #a:hover{
-    background-color: #6a6a6a;
    }
   
   .codificacao,.desenvolvimento,.realizacao,.implementacao,.documentacao,.Correcao_Programa,.alteracao_armazenamento,.atualizacao_Documentacao{

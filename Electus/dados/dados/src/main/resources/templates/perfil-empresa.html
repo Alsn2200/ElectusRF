@@ -132,7 +132,7 @@
                                                 </div>
                                             <div th:each="ins : ${inscricoes}" class="candidatos">
                                               <div   th:each="alunos : ${alunos}">
-                                                <tr th:if="(${ins.nome} == ${alunos.aluno}) and (${ins.cbo} == ${cont.cbo}) and (${ins.nome_empresa} == ${session.empresa.nome})">
+                                                <tr th:if="(${ins.nome} == ${alunos.aluno}) ">
                                                     <td ><a  th:text="${ins.nome}" th:href="|/estudante/${alunos.id}/${session.empresa.id}|"></a></td>
                                                      <td  th:text="${ins.curso}" class="borda"></td>
                                                      <td  th:text="${ins.modulo}"></td>

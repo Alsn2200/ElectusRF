@@ -26,6 +26,7 @@
     </header>
     <main>
         <div class="container-main">
+            <div class="roda"></div>
             <h1 class="title-config" >Configurações</h1>
             <hr>
             <form action="">
@@ -49,7 +50,7 @@
             <label for="senha" class="label-input">Senha</label>
             <input type="text" id="senha" th:value="${session.usuarioLogado.senha}" class="inputUser">
 
-                <button id="enviar" type="button">Salvar alterações</button>
+              
 
             </form>
             <p th:text="${session.usuarioLogado.id}" id="id" style="display: none;"></p>
@@ -58,8 +59,8 @@
             <input type="descricao" id="descricao" th:value="${session.usuarioLogado.descricao}" class="inputUser">
             
             
-
             
+            <button id="enviar" type="button">Salvar alterações</button>
             <a   class="btnBotoes" th:href="|/deletar/${session.usuarioLogado.id}|"> 
                 Deletar conta
             </a>

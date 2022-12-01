@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login do docente</title>
-    <link rel="stylesheet" th:href="@{/telasEstudante/login-docente}">
+    <link rel="stylesheet" th:href="@{/telasEstudante/login-docente.css}">
     <link rel="stylesheet" th:href="@{/Styles/Menu.css}">
     <!-- Link de Font  -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -43,11 +43,14 @@
                         <h1 class="title-box">Login do docente</h1>
                         <hr>
                         <div class="itens-box">
-                            <form action="/Principal" method="POST" >
-                                <label for="cpf" class="label-input">CPF:</label>
-                                <input type='text' id='cpf' name='cpf' class="inputUser">
+
+                            <form action="/login-docente" method="POST" th:object="${docente}">
+                                <label for="codico" class="label-input">Código</label>
+                                <input type='text' id='codico' name='codico' class="inputUser">
+                           
 
                             <div class="margin">
+                                
                                 <label for="senha" class="label-input">Senha:</label>
                                 <input type='password' id='senha' name='senha' required class="inputUser">
 
@@ -55,8 +58,8 @@
                             </div>
                             <button  class="btn-logar">Entrar</button>
 
-                            
-                            <a href="/Cadastro-estudante" class="cadastrese">Cadastre-se</a>
+
+                           
                             </form>
                         </div>
                     
