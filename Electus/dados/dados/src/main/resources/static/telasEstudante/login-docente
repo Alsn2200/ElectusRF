@@ -1,0 +1,312 @@
+/* Geral codicos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+.vazia{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.mensagem{
+    position:absolute;
+    z-index: 99;
+    width: 15rem;
+    background-color: rgba(255, 255, 255, 0.521);
+    padding: 1%;
+    text-align: center;
+    margin: 0 auto;
+    height: 5rem;
+}
+html,
+body {
+    height: 100%;
+
+}
+
+header {
+    width: 100%;
+    height: 13.5vh;
+    background-color: #f78e0c;
+    padding: 10px 4rem;
+    display: flex;
+    box-shadow: 0 0 1rem 0.3rem black;
+    z-index: 1;
+    border-bottom: 1px solid black;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    background-image: url('../Imagens/Logo.png');
+    width: 12vw;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 11vh;
+}
+
+header ul {
+    display: flex;
+    gap: 40px;
+}
+
+header li {
+    list-style: none;
+}
+
+header li a {
+    text-decoration: none;
+    color: black;
+    font-size: 15pt;
+}
+
+header li a:hover {
+    font-weight: 800;
+}
+/* header */
+
+
+
+.box1{
+    height: 50vh;
+    background-color:  rgb(241, 241, 241);
+}
+.box2{
+
+    height:40vh;
+    background-color: #f78e0c;
+}
+
+.container-box {
+    position: relative;
+    top: -40vh;
+    width: 100%;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-around;
+    
+}
+hr{
+    border: 1px solid black;
+}
+.roda{
+    margin: 10px;
+    background-color: #f78e0c;
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    display: block;
+}
+.box {
+    width: 35vw;
+    text-align: center;
+    background-color: white;
+
+}
+
+.title-box {
+    font-weight: bold;
+    padding: 15px 0 20px 0;
+}
+
+.box h2 {
+    margin-top: -25px;
+}
+
+.itens-box {
+    text-align: left;
+    padding: 20px 40px;
+}
+
+.label-input {
+    position: absolute;
+    transform: translateY(-50%);
+    font-size: 15px;
+    pointer-events: none;
+
+
+}
+
+.inputUser {
+    width: 100%;
+    padding: 0 5px;
+    height: 25px;
+    font-size: 15px;
+    border: none;
+    background: none;
+    outline: none;
+    position: relative;
+    border-bottom: 1px solid black;
+    margin: 15px 0;
+    font-weight: 500;
+}
+
+#cpf {
+    width: 100%;
+}
+
+.btn-logar {
+    display: block;
+    width: 100%;
+    height: 50px;
+    border: none;
+    border-radius: 50px;
+    margin-top: 3%;
+    font-size: 20px;
+    font-weight: 700;
+    cursor: pointer;
+    background-color: #f78e0c;
+
+}
+
+.Teste4 {
+    display: none;
+}
+
+.btn-logar:hover {
+    transform: scale(1.1);
+    transition: .1s;
+}
+
+.cadastrese {
+   
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    margin-top: 10px;
+}
+
+#nova-senha {
+
+    width: 100%;
+}
+
+
+
+.margin {
+    margin-top: 10%;
+
+}
+
+/* RESPONSIVE */
+@media (max-width: 2000px) {
+    .box {
+        width: 40vw;
+      
+
+    }
+}
+
+
+@media (max-width: 1400px) {
+    .box {
+        width: 35vw;
+        
+    }
+
+
+
+
+    .Teste4 {
+        display: block;
+    }
+}
+
+@media (max-width: 1100px) {
+    .box {
+        width: 48vw;
+        
+    }
+
+}
+@media (max-width: 850px){
+   
+    
+    .footer-inform {
+     display: flex;
+     width: 100%;
+     justify-content: center;
+     flex-wrap: wrap;
+     gap: 35px;
+     
+     }
+     .caixaRodape ul {
+        font-size: 9pt;
+        text-align: center;
+    }
+     .caixaRodape ul li {
+         font-size: 9pt;
+         text-align: center;
+     }
+     .caixaRodape .footer-inform h4 {
+         font-size: calc(5pt + 2vw);
+     }
+ }
+ 
+ @media (max-width: 851px){
+    #navegacao {
+        
+        top: 94px!important;
+       
+    }
+}
+
+@media (max-width: 800px) {
+    .box {
+        width: 55vw;
+       
+
+    }
+
+    .inputUser1 {
+        width: 100%;
+        padding: 0 5px;
+        height: 25px;
+        font-size: 15px;
+        border: none;
+        background: none;
+        outline: none;
+        position: relative;
+        border-bottom: 1px solid black;
+        margin: 15px 0;
+        font-weight: 500;
+    }
+
+    .Teste4 {
+        display: block;
+    }
+}
+
+@media (max-width: 730px) {
+    .box {
+        width: 60vw;
+        
+    }
+}
+
+@media (max-width: 640px) {
+    .box {
+        width: 70vw;
+        
+    }
+}
+
+@media(max-width: 572px) {
+    .box {
+        width: 90vh;
+        
+    }
+
+    .title-box{
+        width: 200px;
+        margin: 0 auto;
+    }
+
+    #cpf {
+        width: 100%;
+    }
+}

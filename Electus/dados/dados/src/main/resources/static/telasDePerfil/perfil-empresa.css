@@ -692,9 +692,9 @@ header li a:hover{
     background-color: black;
 }
 th{
-    border: 2px solid black;
+    border:none;
     /* background-color: #55cbeb; */
-    background-color: #55cbeb;
+    background-color: #f78e0c;
 }
 .borda{
     border-left: 1px solid black;
@@ -839,16 +839,16 @@ table{
     text-align: center;
 }
 .exclusao{
-    border-radius: 8px;
-    box-shadow: 0 0 8px 1px black;
-    background-color: #f51b1bf5;
+    border-radius: 50px;
+    border: none;
+    background-color: #f78e0c;
     display: flex;
-    align-items: center;
-    width: 19%;
+    margin: 0 auto;
+    width: 23%;
     justify-content: center;
 }
 .exclusao:hover{
-    background-color: #ed0606f5;
+    background-color:#f78e0c;
 }
 .itens-box {
     text-align: left;
@@ -864,9 +864,9 @@ table{
     flex-wrap: wrap;
 }
 .vagaDisponiveis{
-    width: 100%;
-    border-radius: 8px;
-    box-shadow: 0 0 8px 1px black;
+    width: 95%;
+
+    border: 2px solid #f78e0c;
     background-color: #fffffff5;
 }
 .vaga{
@@ -881,27 +881,29 @@ table{
 }
 .vaga h3{
     text-align: center;
-    background-color: #55cbeb;
-    border-radius: 10px 10px 0 0;
+    background-color: #f78e0c;
+   
+    border-left: none;
+    border-right: none;
 }
 .vaga input{
     outline: 0;
-    border: 1px solid #55cbeb;
+    border: 1px solid #f78e0c;
     width: 100%;
     height: 2rem;
     margin-bottom: 15px;
-    border-radius: 0 0 12px 12px;
+    
     text-align: center;
 }
 .vaga textarea{
     outline: 0;
-    border: 1px solid #55cbeb;
+    border: 1px solid #f78e0c;
     width: 100%;
     resize: none;
     padding: 4px;
     height: 4rem;
     margin-bottom: 15px;
-    border-radius: 0 0 12px 12px;
+    
 }
 .vaga input#tecnicas{
     margin-bottom: 0;
@@ -911,14 +913,14 @@ table{
     display: block;
     margin: 10px auto;
     width: 8rem;
-    background-color: #55cbeb;
+    background-color: #f78e0c;
     border-radius: 10px;
-    box-shadow: 0 0 6px 1px black;
+    border: none;
     font-size: 13.5pt;
     height: 3rem;
  }
  #vaga-1:hover{
-    background-color: #4eb7d4;
+    background-color: #f78e0c;
     cursor: pointer;
  }
  

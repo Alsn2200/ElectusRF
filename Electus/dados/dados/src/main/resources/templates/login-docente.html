@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login do Estudante</title>
-    <link rel="stylesheet" th:href="@{/telasEstudante/loginEstudante.css}">
+    <title>Login do docente</title>
+    <link rel="stylesheet" th:href="@{/telasEstudante/login-docente}">
     <link rel="stylesheet" th:href="@{/Styles/Menu.css}">
     <!-- Link de Font  -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -32,80 +32,39 @@
         </nav>
     </header>
     <main>
-        <!-- <div class="vazia">
+        <div class="vazia">
             <div th:text="${mensagem}" th:if="${mensagem != null}" class="mensagem"></div>
-        </div> -->
-        <div class="backgraund-img">
-            <div class="opacity">
+        </div>
+            <div class="box1"></div>
+            <div class="box2">
                 <div class="container-box">
                     <div class="box">
-                        <h1 class="title-box">Login docente</h1>
+                        <div class="roda"></div>
+                        <h1 class="title-box">Login do docente</h1>
                         <hr>
                         <div class="itens-box">
-
-                            <form action="/login-docente" method="POST" th:object="${docente}">
-                                <label for="codico" class="label-input">Codico</label>
-                                <input type='text' id='codico' name='codico' class="inputUser">
+                            <form action="/Principal" method="POST" >
+                                <label for="cpf" class="label-input">CPF:</label>
+                                <input type='text' id='cpf' name='cpf' class="inputUser">
 
                             <div class="margin">
-                                <label for="senha" class="label-input">Senha</label>
-                                <input type='text' id='senha' name='senha' required class="inputUser">
+                                <label for="senha" class="label-input">Senha:</label>
+                                <input type='password' id='senha' name='senha' required class="inputUser">
 
                                 <br>
                             </div>
                             <button  class="btn-logar">Entrar</button>
 
+                            
+                            <a href="/Cadastro-estudante" class="cadastrese">Cadastre-se</a>
                             </form>
                         </div>
+                    
                     </div>
                 </div>
             </div>
-        </div>
-
-
     </main>
-    <footer class="rodape">
-        <div class="caixaRodape">
-            <div class="logo"></div>
-            <div class="footer-inform">
-                <ul>
-                    <h4>Geral</h4>
-                    <li>Cadastre-se</li>
-                    <li>Centrar de Ajuda</li>
-                    <li>Sobre</li>
-                </ul>
-                <ul>
-                    <h4>Navegar pelo Electrus</h4>
-                    <li>Leading</li>
-                    <li>Vagas</li>
-                    <li>Salario</li>
-                </ul>
-                <ul>
-                    <h4>Soluções Business</h4>
-                    <li>Talentos</li>
-                    <li>Marketing</li>
-                    <li>Vendas</li>
-                </ul>
-                <ul>
-                    <h4>Diretórios</h4>
-                    <li>Usuarios</li>
-                    <li>Vagas</li>
-                    <li>Empresas</li>
-                    <li>Soluções</li>
-                    <li>Publicações</li>
-                    <li>Artigos</li>
-                </ul>
-
-                <ul>
-                    <h4>Programadores</h4>
-                    <li><a href="https://github.com/Alsn2200" >Alisson Brito</a></li>
-                    <li><a href="">Beatriz Rodrigues</a></li>
-                    <li><a href="https://github.com/FellipeS13">Felipe do Santos</a></li>
-                    <li><a href="https://github.com/Thiag0nery">Thiago Nery</a></li>
-                </ul>
-            </div>
-        </div>
-    </footer>
+   
     <script th:src="@{/Electus_Scripts/EstudanteLogin.js}"></script>
     <script th:src="@{/btnMenu-scripts/Script-hamburg.js}"></script>
 </body>
