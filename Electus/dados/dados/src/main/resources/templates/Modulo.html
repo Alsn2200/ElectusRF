@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" th:href="@{/Styles/Menu.css}">
+    <link rel="stylesheet" th:href="@{/instituicao.css}">
+    <title>Principal</title>
+    <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+
+</head>
+<body>
+
+<header id="header">
+    <div class="logo"></div>
+    <div id="hamburg-mobile"></div>
+        <nav id="navegacao">
+            <ul id="mobile">
+                <li  th:if="${session.aluno != null}"><a th:href="|/perfil-estudante/${session.aluno.id}|" id="link-1" >Meu perfil</a></li>
+                <li  th:if="${session.empresa != null}"><a th:href="|/perfil-empresa/${session.empresa.id}|" id="link-2" >Meu perfil</a></li>
+                <hr class="linha-mobile">
+              
+                <li><a href="/index" id="link-3">Sair</a></li>
+            </ul>
+        </nav>     
+    
+</header>
+    <main>
+        <h1 th:text="${session.nome}"></h1>
+        <!-- <a th:href="|/Alunos-curso/1/Desenvolvimento de Sistemas/${session.empresa.id}|" class="Cursos">Desenvolvimento de Sistemas</a> -->
+        <div class="flex">
+            <a th:href="|/Alunos-curso/Modulo 1/Desenvolvimento de Sistemas/${session.empresa.id}|">Modulo 1</a>
+            <a th:href="|/Alunos-curso/Modulo 2/Desenvolvimento de Sistemas/${session.empresa.id}|">Modulo 2</a>
+            <a th:href="|/Alunos-curso/Modulo 3/Desenvolvimento de Sistemas/${session.empresa.id}|">Modulo 3</a>
+        </div>
+       
+    </main>
+<footer class="rodape">
+    <div class="caixaRodape">
+        <div class="logo"></div>
+        <div class="footer-inform">
+            <ul>
+                <h4>Geral</h4>
+                <li>Cadastre-se</li>
+                <li>Centrar de Ajuda</li>
+                <li>Sobre</li>
+            </ul>
+            <ul>
+                <h4>Navegar pelo Electrus</h4>
+                <li>Leading</li>
+                <li>Vagas</li>
+                <li>Salario</li>
+            </ul>
+            <ul>
+                <h4>Soluções Business</h4>
+                <li>Talentos</li>
+                <li>Marketing</li>
+                <li>Vendas</li>
+            </ul>
+            <ul>
+                <h4>Diretórios</h4>
+                <li>Usuarios</li>
+                <li>Vagas</li>
+                <li>Empresas</li>
+                <li>Soluções</li>
+                <li>Publicações</li>
+                <li>Artigos</li>
+            </ul>
+
+            <ul>
+                <h4>Programadores</h4>
+                <li><a href="https://github.com/Alsn2200">Alisson Brito</a></li>
+                <li><a href="">Beatriz Rodrigues</a></li>
+                <li><a href="https://github.com/FellipeS13">Felipe do Santos</a></li>
+                <li><a href="https://github.com/Thiag0nery">Thiago Nery</a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+<script th:src="@{/btnMenu-scripts/Script-hamburg.js}"></script>
+</body>
+</html>

@@ -110,9 +110,11 @@
  
 <div th:if="${session.empresa != null}">
 <div class="container-vagas">
+   
     <h1 class="titulo-vaga">Vagas lançadas <span th:text="${session.empresa.nome}"></span></h1>
+    
     <div class="container-flex-primeiro">
-        
+      
         <div th:each=" cont : ${lista}"  id="vagas"  th:if="${cont.nome} == ${session.empresa.nome}">
             
             <div th:if= "${session.empresa.nome} == ${cont.nome}">
@@ -142,6 +144,10 @@
         <h2 >Nenhuma vaga a mais</h2>
     </div>
 
+</div>
+
+<div class="link-instituicao">
+    <a th:href="|/instituicao/${session.empresa.id}|" class="instituicao">Visitar instuição</a>
 </div>
 </div> 
 </div> 

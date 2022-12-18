@@ -188,6 +188,38 @@ public class UsuarioController {
         session.removeAttribute("aluno");
         return "principal";
     }
+    @GetMapping("instituicao/{id}")
+    public String instituicao(empresa Empresa, HttpSession session, Model model, @PathVariable int id){
+        Empresa = this.salvamentoEmpresa.getOne(id);
+        model.addAttribute("lista", (List<vaga>) salvamentoVaga.findAll());
+        session.setAttribute("empresa", Empresa);
+        session.removeAttribute("aluno");
+        return "instituicao";
+    }
+    @GetMapping("Modulo/{nome}/{id}")
+    public String Modulocurso(empresa Empresa,Aluno usuario ,HttpSession session, Model model, @PathVariable int id, @PathVariable String nome){
+        Empresa = this.salvamentoEmpresa.getOne(id);
+        session.setAttribute("Alunos", usuario);
+        session.setAttribute("empresa", Empresa);
+        session.setAttribute("nome", nome);
+        session.removeAttribute("aluno");
+        model.addAttribute("Turmas",  acessoBanco.findAll());
+        
+        return "Modulo";
+    }
+    @GetMapping("Alunos-curso/{modulo}/{nome}/{id}")
+    public String curso(empresa Empresa,Aluno usuario ,HttpSession session, Model model, @PathVariable int id, @PathVariable String nome, @PathVariable String modulo){
+        Empresa = this.salvamentoEmpresa.getOne(id);
+        session.setAttribute("Alunos", usuario);
+        session.setAttribute("empresa", Empresa);
+        session.setAttribute("nome", nome);
+        session.setAttribute("modulo", modulo);
+        session.removeAttribute("aluno");
+        model.addAttribute("Turmas",  acessoBanco.findAll());
+        
+        return "curso";
+    }
+
     @PostMapping("/Principal-Empresa")
     public String EmpresaLogin(empresa Empresa, HttpSession session, RedirectAttributes ra, Model model){
         Empresa = this.salvamentoEmpresa.findByCnpjAndSenha(Empresa.getCnpj(), Empresa.getSenha());
