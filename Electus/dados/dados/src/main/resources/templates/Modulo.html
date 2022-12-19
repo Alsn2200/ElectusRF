@@ -32,9 +32,9 @@
         <h1 th:text="${session.nome}"></h1>
         <!-- <a th:href="|/Alunos-curso/1/Desenvolvimento de Sistemas/${session.empresa.id}|" class="Cursos">Desenvolvimento de Sistemas</a> -->
         <div class="flex">
-            <a th:href="|/Alunos-curso/Modulo 1/Desenvolvimento de Sistemas/${session.empresa.id}|">Modulo 1</a>
-            <a th:href="|/Alunos-curso/Modulo 2/Desenvolvimento de Sistemas/${session.empresa.id}|">Modulo 2</a>
-            <a th:href="|/Alunos-curso/Modulo 3/Desenvolvimento de Sistemas/${session.empresa.id}|">Modulo 3</a>
+            <a th:href="|/Alunos-curso/Modulo 1/${session.nome}/${session.empresa.id}|">Modulo 1</a>
+            <a th:href="|/Alunos-curso/Modulo 2/${session.nome}/${session.empresa.id}|">Modulo 2</a>
+            <a th:href="|/Alunos-curso/Modulo 3/${session.nome}/${session.empresa.id}|">Modulo 3</a>
         </div>
        
     </main>

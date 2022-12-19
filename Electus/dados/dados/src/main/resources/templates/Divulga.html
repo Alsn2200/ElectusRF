@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" th:href="@{/Styles/Menu.css}">
+    <link rel="stylesheet" th:href="@{/telasDePerfil/perfil-empresa.css}">
+   
+    <title>Perfil Empresa</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="logo"></div>
+
+        <div id="hamburg-mobile"></div>
+        <nav id="navegacao">
+
+            <ul id="mobile">
+              
+
+                <li><a th:href="|/Principal-empresa/${session.empresa.id}|" id="link-4">Inicio</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="lancarVaga">
+            <div class="formulario-vaga">
+                <h2>Deseja lançar uma vaga? Preença o formulário!</h2>
+            <div class="vaga" id="select1">
+               
+                <form>
+                    <div class="titulo">
+                        <div class="d-block">
+                            <h3>Cargo</h3>
+                            <input type="text" id="cargo">
+                        </div>
+                        <div class="d-block">
+                            <h3>Departamento</h3>
+                            <input type="text" id="Departamento">
+                        </div>
+                        
+                        <div class="d-block">
+                            <h3>Cbo</h3>
+                            <input type="text" id="cbo">
+                        </div>
+                        
+                    </div>
+                    <h3>Atribuições principais</h3>
+                 
+                    <textarea type="text" id="atribuicoes"cols="30" rows="10"></textarea>
+
+                    <h3>Tarefas e Descrição detalhada:</h3>
+                    <textarea type="text" id="tarefas" cols="30" rows="10"></textarea>
+                
+                    <h3>Formação academica:</h3>
+                    <textarea type="text" id="formacao" cols="30" rows="10"></textarea>                
+
+                    <h3>Experiência profiossional</h3>
+                    <textarea type="text" id="profissional" cols="30" rows="10"></textarea>
+                 
+                    <h3>Habilidades comportamentais</h3>
+                    <textarea type="text" id="comportamentais" cols="30" rows="10"></textarea>
+                
+                    <h3>Habilidades tecnicas, cursos e idiomas</h3>
+                    <textarea type="text" id="tecnicas" cols="30" rows="10"></textarea>
+                  
+                    <button id="vaga-1" type="button">Lançar vaga</button>
+                </form>
+            </div>
+            </div>
+        </div>
+    </main>
+    <p th:text="${session.empresa.id}" id="teste"  style="display: none;"></p>    
+    <p th:text="${session.empresa.nome}" id="nome"  style="display: none;"></p>   
+    <p th:text="${session.empresa.area}" id="area"  style="display: none;"></p>     
+    <p th:text="${session.empresa.email}" id="email"  style="display: none;"></p>   
+    <p th:text="${session.empresa.tel}" id="tel"  style="display: none;"></p>   
+    <p th:text="${session.empresa.cidade}" id="cidade"  style="display: none;"></p>   
+    <p th:text="${session.empresa.uf}" id="uf"  style="display: none;"></p>   
+    <p th:text="${session.empresa.id}" id="id"  style="display: none;"></p>   
+    <p th:text="${session.empresa.endereco}" id="endereco"  style="display: none;"></p> 
+    <script th:src="@{/Electus_Scripts/perfilEmpresa.js}"></script>
+    <script th:src="@{/btnMenu-scripts/Script-hamburg.js}"></script>
+</body>
+</html>

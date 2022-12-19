@@ -87,7 +87,15 @@
                                             </a>
                                         </div>
                                     </div>
-                                    
+                                    <div class="caixaBotoes">
+                                        <div class="boxVerVagas">
+                                            <h3 class="titleVerVagas">Lançar Vagas</h3>
+                                            <a class="btnBotoes" th:href="|/Divulgar/${session.empresa.id}|">
+                                                <div class="fundoBtn"><img th:src="@{/Imagens/seta-direita.png}"
+                                                        alt="seta" id="imgSeta"></div>
+                                            </a>
+                                        </div>
+                                    </div>
 
                                 </div>
 
@@ -147,52 +155,7 @@
 
                             </div>
 
-                            <div class="lancarVaga">
-                                <div class="formulario-vaga">
-                                    <h2>Deseja lançar uma vaga? Preença o formulário!</h2>
-                                <div class="vaga" id="select1">
-                                   
-                                    <form>
-                                        <div class="titulo">
-                                            <div class="d-block">
-                                                <h3>Cargo</h3>
-                                                <input type="text" id="cargo">
-                                            </div>
-                                            <div class="d-block">
-                                                <h3>Departamento</h3>
-                                                <input type="text" id="Departamento">
-                                            </div>
-                                            
-                                            <div class="d-block">
-                                                <h3>Cbo</h3>
-                                                <input type="text" id="cbo">
-                                            </div>
-                                            
-                                        </div>
-                                        <h3>Atribuições principais</h3>
-                                     
-                                        <textarea type="text" id="atribuicoes"cols="30" rows="10"></textarea>
-
-                                        <h3>Tarefas e Descrição detalhada:</h3>
-                                        <textarea type="text" id="tarefas" cols="30" rows="10"></textarea>
-                                    
-                                        <h3>Formação academica:</h3>
-                                        <textarea type="text" id="formacao" cols="30" rows="10"></textarea>                
-
-                                        <h3>Experiência profiossional</h3>
-                                        <textarea type="text" id="profissional" cols="30" rows="10"></textarea>
-                                     
-                                        <h3>Habilidades comportamentais</h3>
-                                        <textarea type="text" id="comportamentais" cols="30" rows="10"></textarea>
-                                    
-                                        <h3>Habilidades tecnicas, cursos e idiomas</h3>
-                                        <textarea type="text" id="tecnicas" cols="30" rows="10"></textarea>
-                                      
-                                        <button id="vaga-1" type="button">Lançar vaga</button>
-                                    </form>
-                                </div>
-                                </div>
-                            </div>
+                            
                             
                         </div>
                         

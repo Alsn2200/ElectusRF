@@ -317,6 +317,15 @@ public class UsuarioController {
       
         return "redirect:/perfil-empresa/" + id;
     }
+    @GetMapping("Divulgar/{id}")
+    public String divulgar(Model model,  @PathVariable int id,HttpSession session, empresa Empresa){
+        Empresa = this.salvamentoEmpresa.getOne(id);
+        session.setAttribute("empresa", Empresa);
+        model.addAttribute("inscricoes", bancoVagaAluno.findAll());
+        model.addAttribute("alunos", acessoBanco.findAll());
+        model.addAttribute("lista",   salvamentoVaga.findAll());
+        return "Divulga";
+    }
     @GetMapping("/Vagaselecionada/{id}/{idAluno}")
     public String vagaSelecionada(HttpSession session, @PathVariable int id,vaga Vaga, Model model, Aluno aluno, @PathVariable int idAluno){
         aluno = acessoBanco.getOne(idAluno);

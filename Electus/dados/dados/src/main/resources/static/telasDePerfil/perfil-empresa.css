@@ -65,7 +65,6 @@ main {
 
 }
 
-.containerMain {}
 
 .itenBox1 {
     width: 100%;
@@ -108,6 +107,7 @@ main {
 #Nome-aluno{
     margin-top: 2vh;
     font-size: 80px;
+    text-align: center;
 }
 
 .caixaImagem{
@@ -220,10 +220,10 @@ main {
 .containerBotoes{
     display: flex;
     margin-top: 90px;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 .caixaConteudo{
-    width: 44vw;
+    width: 100%;
 }
 .divisao{
     margin: 21px 0;
@@ -253,10 +253,10 @@ main {
     height: 1px;
     background-color: black;
 }
-.d-flex{
+/* .d-flex{
     display: flex;
     justify-content: space-between;
-}
+} */
 .containerArquivo{
     display: flex;
 }
@@ -797,6 +797,11 @@ th{
 .Nome-aluno{
     margin-top: 10px;
 }
+.lancarVaga{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
 
 .box-icone {
     height: 16vh;
@@ -931,11 +936,9 @@ table{
     justify-content: space-between;
 }
 @media (max-width: 590px){
-    .titulo {
-       display: block;
-        margin: 0;
-        width: 100%;
-       
+    #Nome-aluno {
+        margin-top: 2vh;
+        font-size: 63px;
     }
     .caixaBox2 { 
         padding: 45px 14px;   
