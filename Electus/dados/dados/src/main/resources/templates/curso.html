@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" th:href="@{/Styles/Menu.css}">
     <link rel="stylesheet" th:href="@{/instituicao.css}">
+    <link rel="stylesheet" th:href="@{/curso.css}">
     <title>Principal</title>
     <link
     href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
@@ -30,11 +31,14 @@
     
 </header>
     <main>
-       <p th:text="|${session.nome} - ${session.modulo}|"></p>
+       <div class="Curso">
+        <div class="roda"></div>
+        <p class="titulo" th:text="|${session.nome} - ${session.modulo}|"></p>
        <div th:each="alunos : ${Turmas}"  th:if="(${session.nome} == ${alunos.curso}) and (${session.modulo} == ${alunos.modulo})" >
            
             <a  th:text="${alunos.aluno}" th:href="|/estudante/${alunos.id}/${session.empresa.id}|"></a>
         </div>
+       </div>
     </main>
    
 <footer class="rodape">

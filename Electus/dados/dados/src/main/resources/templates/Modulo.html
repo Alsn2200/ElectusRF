@@ -29,12 +29,12 @@
     
 </header>
     <main>
-        <h1 th:text="${session.nome}"></h1>
+        <h1 class="titulo" th:text="${session.nome}"></h1>
         <!-- <a th:href="|/Alunos-curso/1/Desenvolvimento de Sistemas/${session.empresa.id}|" class="Cursos">Desenvolvimento de Sistemas</a> -->
         <div class="flex">
-            <a th:href="|/Alunos-curso/Modulo 1/${session.nome}/${session.empresa.id}|">Modulo 1</a>
-            <a th:href="|/Alunos-curso/Modulo 2/${session.nome}/${session.empresa.id}|">Modulo 2</a>
-            <a th:href="|/Alunos-curso/Modulo 3/${session.nome}/${session.empresa.id}|">Modulo 3</a>
+            <a th:href="|/Alunos-curso/Modulo 1/${session.nome}/${session.empresa.id}|"><div class="Curso"><div class="roda"></div>Modulo 1</div></a>
+            <a th:href="|/Alunos-curso/Modulo 2/${session.nome}/${session.empresa.id}|"><div class="Curso"><div class="roda"></div>Modulo 2</div></a>
+            <a th:href="|/Alunos-curso/Modulo 3/${session.nome}/${session.empresa.id}|"><div class="Curso"><div class="roda"></div>Modulo 3</div></a>
         </div>
        
     </main>

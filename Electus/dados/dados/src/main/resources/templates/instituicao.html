@@ -29,56 +29,29 @@
     
 </header>
     <main>
+        <h1 class="titulo">Cursos</h1>
        <div class="flex">
-        <a th:href="|/Modulo/Desenvolvimento de Sistemas/${session.empresa.id}|" class="Cursos">Desenvolvimento de Sistemas</a>
-        <!-- <a href="">AUTOMAÇÃO INDUSTRIAL</a>
-        <a href="">Edificações</a> -->
-        <a th:href="|/Modulo/Eletrotécnica/${session.empresa.id}|" class="Cursos">Eletrotécnica</a>
-        <!-- <a href="">Eletrotécnica</a> -->
+        <a th:href="|/Modulo/Desenvolvimento de Sistemas/${session.empresa.id}|" ><div class="Curso">
+            <div class="roda"></div>
+           Desenvolvimento de Sistemas</div></a>
+           <a th:href="|/Modulo/Eletrotécnica/${session.empresa.id}|" ><div class="Curso">  <div class="roda"></div>Eletrotécnica</div></a>
+           <a th:href="|/Modulo/Administração/${session.empresa.id}|"><div class="Curso">  <div class="roda"></div>Administração</div></a>
+           <a th:href="|/Modulo/Automação industrial/${session.empresa.id}|"><div class="Curso">  <div class="roda"></div>Automação industrial</div></a>
+           <a th:href="|/Modulo/Edificações/${session.empresa.id}|" ><div class="Curso">  <div class="roda"></div>Edificações</div></a>
+           <a th:href="|/Modulo/Eletromecânina/${session.empresa.id}|" ><div class="Curso">   <div class="roda"></div>Eletromecânina</div></a>
+           <a th:href="|/Modulo/Logistica/${session.empresa.id}|"> <div class="Curso">  <div class="roda"></div>Logistica</div></a>
+           <a th:href="|/Modulo/Manutenção automotiva/${session.empresa.id}|" > <div class="Curso">  <div class="roda"></div>Manutenção automotiva</div></a>
+        <a th:href="|/Modulo/Mecânica/${session.empresa.id}|"><div class="Curso"> <div class="roda"></div>Mecânica </div></a>
+        <a th:href="|/Modulo/Mecatronica/${session.empresa.id}|"><div class="Curso"><div class="roda"></div> Mecatronica </div></a>
+        <a th:href="|/Modulo/Petroquimica/${session.empresa.id}|" ><div class="Curso">  <div class="roda"></div> Petroquimica</div></a>
+        <a th:href="|/Modulo/Química/${session.empresa.id}|" ><div class="Curso">  <div class="roda"></div> Química</div></a>
+        <a th:href="|/Modulo/Rede de Computadores/${session.empresa.id}|" ><div class="Curso">  <div class="roda"></div>Rede de Computadores</div></a>
+        <a th:href="|/Modulo/Refrigeração e Climatização/${session.empresa.id}|" ><div class="Curso">   <div class="roda"></div>Refrigeração e Climatização</div></a>
+        <a th:href="|/Modulo/Seguranca do trabalho/${session.empresa.id}|" ><div class="Curso">  <div class="roda"></div>Seguranca do trabalho</div></a>
+      
        </div>
     </main>
-<footer class="rodape">
-    <div class="caixaRodape">
-        <div class="logo"></div>
-        <div class="footer-inform">
-            <ul>
-                <h4>Geral</h4>
-                <li>Cadastre-se</li>
-                <li>Centrar de Ajuda</li>
-                <li>Sobre</li>
-            </ul>
-            <ul>
-                <h4>Navegar pelo Electrus</h4>
-                <li>Leading</li>
-                <li>Vagas</li>
-                <li>Salario</li>
-            </ul>
-            <ul>
-                <h4>Soluções Business</h4>
-                <li>Talentos</li>
-                <li>Marketing</li>
-                <li>Vendas</li>
-            </ul>
-            <ul>
-                <h4>Diretórios</h4>
-                <li>Usuarios</li>
-                <li>Vagas</li>
-                <li>Empresas</li>
-                <li>Soluções</li>
-                <li>Publicações</li>
-                <li>Artigos</li>
-            </ul>
 
-            <ul>
-                <h4>Programadores</h4>
-                <li><a href="https://github.com/Alsn2200">Alisson Brito</a></li>
-                <li><a href="">Beatriz Rodrigues</a></li>
-                <li><a href="https://github.com/FellipeS13">Felipe do Santos</a></li>
-                <li><a href="https://github.com/Thiag0nery">Thiago Nery</a></li>
-            </ul>
-        </div>
-    </div>
-</footer>
 <script th:src="@{/btnMenu-scripts/Script-hamburg.js}"></script>
 </body>
 </html>

@@ -7,7 +7,7 @@
 }
 html,body{
     height: 100%;
-
+    background-color: rgb(243, 243, 243);
 }
 
 header{
@@ -56,14 +56,36 @@ main{
     height: 100vh;
     padding: 2rem;
 }
+
 .flex{
     width: 100%;
     display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 13px;
+}
+.roda{
+    width: 50px;
+    height: 50px;
+    background-color: #f78e0c;
+    border-radius: 100%;
+    margin: 10px;
+    margin-bottom: 50px;
+}
+.titulo{
+    text-align: center;
+    padding: 2rem;
+}
+.Curso{
+    width: 19.5rem;
+    font-size: 18px;
+    display: flex;
+    text-align: center;
+    padding: 1rem 1rem 5rem 1rem;
+    background-color: white;
     justify-content: space-between;
     flex-wrap: wrap;
-}
-.Cursos{
-   
+    flex-direction: column;
 }
 .caixaRodape {
     margin-top: 100px;
