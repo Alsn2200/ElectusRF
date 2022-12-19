@@ -11,7 +11,7 @@ document.getElementById('vaga-1').addEventListener('click', function Vaga(){
         },
         method: "POST",
         body: JSON.stringify({
-            id:  document.getElementById('id').textContent,
+           
             nome:  document.getElementById('nome').textContent,
             area:  document.getElementById('area').textContent,
             email:  document.getElementById('email').textContent,
